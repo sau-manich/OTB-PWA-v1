@@ -29,7 +29,7 @@ $(window).load(function(){
     }
 
     if (!$('.login, .four-zero')[0]) {
-        notify('Welcome back Mallinda Hollaway', '-light');
+        notify('Bienvenido a ACUOTB 21-Septiembre', '-light');
     }
 });
 
