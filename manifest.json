@@ -1,7 +1,7 @@
 {
-    "name": "Sistema PWA-Agua",
-    "short_name": "Agua21-OTB",
-    "description": "Bienvenido a Agua21-OTB, la primera aplicacion PWA para uso personal de accionistas socios :)",
+    "name": "#ACUOTB-PWA",
+    "short_name": "ACUOTB",
+    "description": "Bienvenido a ACUOTB, la primera aplicacion PWA para uso personal de accionistas socios :)",
     "background_color": "#1E2A31",
     "theme_color": "#22313A",
     "orientation": "portrait",
