@@ -31,14 +31,28 @@
         <!-- Animate CSS -->
         <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
 
+        <!-- File CSS -->
+        <link href="css/file.css" rel="stylesheet">
+
         <!-- Material Design Icons -->
         <link href="vendors/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
 
         <!-- Malihu Scrollbar -->
         <link href="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
 
-        <!-- Full Calendar -->
-        <link href="vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+        <!-- FullCalendar -->
+        <script src="vendors/fullcalendar/dist/fullcalendar.min.js"></script>
+
+        <!-- Select 2 -->
+        <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+
+        <!-- Bootstrap Date/Time picker -->
+        <link href="vendors/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+
+         <!-- Demo only -->
+         <link href="demo/css/demo.css" rel="stylesheet">
+         <script src="demo/js/calendar.js"></script>
 
         <!-- Site CSS -->
         <link href="css/app-1.min.css" rel="stylesheet">
@@ -73,8 +87,8 @@
 
             <ul class="top-menu">
                 <li class="top-menu__trigger hidden-lg hidden-md">
-                        <h4 style="margin-left: -10%;">ACUOTB</h4>
-                        <h6 style="margin-left: -30%;">Sistema Cobro de Agua</h6>
+                    <h4 style="margin-left: -30%;">ACUOTB</h4>
+                    <h6 style="margin-left: -55%;">Sistema Cobro de Agua</h6>
                 </li>
                 
                 <li class="top-menu__apps dropdown hidden-xs hidden-sm">
@@ -357,9 +371,16 @@
                 <div class="navigation__menu c-overflow">
                     <ul>
                         <li class="navigation__active">
-                            <a href="index.html"><i class="zmdi zmdi-home"></i> Tablero</a>
+                            <a href="tablero.html"><i class="zmdi zmdi-home"></i> Tablero</a>
                         </li>
                         <li><a href="cobroFacturacion.html"><i class="zmdi zmdi-layers"></i> Cobro y facturación</a></li>
+                        <li class="navigation__sub">
+                            <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
+                            <ul>
+                                <li><a href="lecturaMedidor.html">Medidor</a></li>
+                                <li><a href="nuevoEvento.html">Asistencia Reunión</a></li>
+                            </ul>
+                        </li>
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-widgets"></i> Acciones</a>
 
@@ -368,13 +389,7 @@
                                 <li><a href="registroMedidor.html">Registro Medidores</a></li>
                             </ul>
                         </li>
-                        <li class="navigation__sub">
-                            <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
-                            <ul>
-                                <li><a href="lecturaMedidor.html">Medidor</a></li>
-                                <li><a href="lecturaAsistencia.html">Asistencia Reunión</a></li>
-                            </ul>
-                        </li>
+                        
                         
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-trending-up"></i>Reportes</a>
@@ -387,513 +402,179 @@
                             </ul>
                         </li>
                         
-                        <li><a href="calendario.html"><i class="zmdi zmdi-calendar"></i> Calendario</a></li>
                         
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-item"></i> Configuración</a>
                             <ul>
-                                <li><a href="perfil.html">Perfil</a></li>
-                                <li><a href="chat.html">Chat AcuOTB</a></li>
-                                <li><a href="login.html">Login</a></li>
+                                <li><a href="cuenta.html">Cuentas</a></li>
+                                <li><a href="avisos.html">Avisos</a></li>
+                                <li><a href="backup.html">Backup (BD)</a></li>
                                 
                             </ul>
                         </li>
                     </ul>
                 </div>
             </aside>
-            <section id="content">
-                    <div id="content__grid" data-columns>
 
-                        
-                            <div class="card">
-                                    <br>
-                                        <div class="card__header card__header--img" style="background-image: url(img/5.png); height: 270px;"></div>
-                                        <div class="card__header">
-                                            <h2>
-                                                Mensaje ACUOTB-21 "Reunión"
-                
-                                                <small>Enviado desde la central el 19 Diciembre 2019 at 09:10 AM</small>
-                                            </h2>
-                                        </div>
-                                        <div class="card__body">
-                                            <p>Estimados Socios de la OTB 21 de Septiembre, se les comunica que el día Domingo 20 Diciembre 2019 se realizara el cobro de agua a partir de las 08:00am hasta 11:00am, recordarles que pasando la hora no se llebara a cabo ni una atención, se les ruega puntualidad y compromiso, saludos.</p>
-                
-                                            <a href="" class="view-more text-left"><i class="zmdi zmdi-long-arrow-right"></i> Ver Aviso..</a>
-                                        </div>
-                                    </div>
-
-                            <div class="card widget-recent-signups">
-                                    <div class="card__header card__header--highlight">
-                                        <h2>Socios OTB-21<small>Lista de socios en promedio mensual</small></h2>
-                                        <div class="actions">
-                                            <div class="dropdown">
-                                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
-                                                <ul class="dropdown-menu pull-right">
-                                                    <li><a href="">Actualizar</a></li>
-                                                    <li><a href="">Reportar</a></li>
-                                                    <li><a href="">Configuración</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
             
-                                        <div class="chart-sparkline-line m-t-20">9,4,6,5,6,4,5,7,9,3,6,5,9</div>
-                                    </div>
-            
-                                    <div class="card__body widget-recent-signups__list">
-                                        <a href=""><div class="avatar-char">A</div></a>
-                                        <a href=""><img class="avatar-img" src="demo/img/profile-pics/5.jpg" alt=""></a>
-                                        <a href=""><div class="avatar-char">B</div></a>
-                                        <a href=""><div class="avatar-char">C</div></a>
-                                        <a href=""><img class="avatar-img" src="demo/img/profile-pics/4.jpg" alt=""></a>
-                                        <a href=""><div class="avatar-char">E</div></a>
-                                        <a href=""><div class="avatar-char">F</div></a>
-                                        <a href=""><div class="avatar-char">G</div></a>
-                                        <a href=""><div class="avatar-char">H</div></a>
-                                        <a href=""><div class="avatar-char">I</div></a>
-                                        <a href=""><img class="avatar-img" src="demo/img/profile-pics/3.jpg" alt=""></a>
-                                        <a href=""><div class="avatar-char">K</div></a>
-                                        <a href=""><img class="avatar-img" src="demo/img/profile-pics/9.jpg" alt=""></a>
-                                        <a href=""><div class="avatar-char">M</div></a>
-                                        <a href=""><div class="avatar-char">N</div></a>
-                                        <a href=""><div class="avatar-char">O</div></a>
-                                        <a href=""><img class="avatar-img" src="demo/img/profile-pics/7.jpg" alt=""></a>
-                                        <a href=""><img class="avatar-img" src="demo/img/profile-pics/6.jpg" alt=""></a>
-                                        <a href=""><img class="avatar-img" src="demo/img/profile-pics/8.jpg" alt=""></a>
-                                        <a href=""><div class="avatar-char">S</div></a>
-                                        <a href=""><div class="avatar-char">T</div></a>
-                                        <a href=""><div class="avatar-char">U</div></a>
-                                        <a href=""><div class="avatar-char">V</div></a>
-                                        <a href=""><div class="avatar-char">W</div></a>
-                                        <a href=""><div class="avatar-char">X</div></a>
-                                        <a href=""><div class="avatar-char">Y</div></a>
-                                        <a href=""><div class="avatar-char">Z</div></a>
-                                    </div>
+            <section>
+                <form action="" method="POST" enctype="multipart/form-data">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <div class="preview-zone hidden">
+                            <div class="box box-solid">
+                              <div class="box-header with-border">
+                                <div><b>Vista previa</b></div>
+                                <div class="box-tools pull-right">
+                                  <button type="button" class="btn btn-danger btn-xs remove-preview">
+                                    <i class="fa fa-times"></i> Resetear carga
+                                  </button>
                                 </div>
-
-        
-                           
-        
-                            <div class="card widget-past-days">
-                                <div class="card__header">
-                                    <h2>Estado mensual 30 días <small>Los resultados se actualizaran cada mes</small></h2>
-                                    <div class="actions">
-                                        <div class="dropdown">
-                                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
-                                            <ul class="dropdown-menu pull-right">
-                                                    <li><a href="">Actualizar</a></li>
-                                                    <li><a href="">Reportar</a></li>
-                                                    <li><a href="">Configuración</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-        
-                                <div class="flot-chart-edge">
-                                    <div class="flot-chart flot-chart--sm" id="chart-past-days"></div>
-                                </div>
-        
-                                <div class="list-group list-group--striped">
-                                    <div class="list-group-item">
-                                        <div class="widget-past-days__chart hidden-sm">
-                                            <div class="chart-sparkline-bar">6,9,5,6,3,7,5,4,6,5,6,4,2,5,8,2,6,9</div>
-                                        </div>
-        
-                                        <div class="widget-past-days__info">
-                                            <small>Cubos de agua</small>
-                                            <h3>47,896,536</h3>
-                                        </div>
-                                    </div>
-        
-                                    <div class="list-group-item">
-                                            <div class="widget-past-days__chart hidden-sm">
-                                                <div class="chart-sparkline-bar">3,9,1,3,5,6,7,6,8,2,5,2,7,5,6,7,6,8</div>
-                                            </div>
-            
-                                            <div class="widget-past-days__info">
-                                                <small>Rendimiento mes anterior</small>
-                                                <h3>198</h3>
-                                            </div>
-                                        </div>
-
-                                    <div class="list-group-item">
-                                        <div class="widget-past-days__chart hidden-sm">
-                                            <div class="chart-sparkline-bar">5,7,2,5,2,8,6,7,6,5,3,1,9,3,5,8,2,4</div>
-                                        </div>
-        
-                                        <div class="widget-past-days__info">
-                                            <small>Socios Cancelados</small>
-                                            <h3>24,456,799</h3>
-                                        </div>
-                                    </div>
-        
-                                    <div class="list-group-item">
-                                        <div class="widget-past-days__chart hidden-sm">
-                                            <div class="chart-sparkline-bar">5,7,2,5,2,8,6,7,6,5,3,1,9,3,5,8,2,4</div>
-                                        </div>
-        
-                                        <div class="widget-past-days__info">
-                                            <small>Socios Faltantes</small>
-                                            <h3>13,965</h3>
-                                        </div>
-                                    </div>
-        
-                                </div>
+                              </div>
+                              <div class="box-body"></div>
                             </div>
-        
-                         
-        
-                            <div class="card widget-todo-lists">
-                                <div class="card__header card__header--highlight">
-                                    <h2>Lista pendientes <small>Lista de Pendientes por hacer y terminados</small></h2>
-        
-                                    <button class="btn btn--float"><i class="zmdi zmdi-plus"></i></button>
-                                </div>
-        
-                                <div class="list-group">
-                                    <div class="list-group-item">
-                                        <div class="checkbox checkbox--char">
-                                            <label>
-                                                <input type="checkbox" checked>
-                                                <span class="checkbox__helper"><i>D</i></span>
-                                                <span class="widget-todo-lists__info">
-                                                    Cambio de medidor, acción 232
-                                                    <small>Miercoles de 8:30 AM</small>
-                                                </span>
-        
-                                                <span class="list-group__attrs">
-                                                    <span>#Socio</span>
-                                                    <span>!!!</span>
-                                                </span>
-                                            </label>
-                                        </div>
-        
-                                        <div class="actions list-group__actions">
-                                            <div class="dropdown">
-                                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
-        
-                                                <ul class="dropdown-menu pull-right">
-                                                    <li><a href="">Actualizar</a></li>
-                                                    <li><a href="">Reportar</a></li>
-                                                    <li><a href="" data-demo-action="delete-listing">Eliminar</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <div class="list-group-item">
-                                        <div class="checkbox checkbox--char">
-                                            <label>
-                                                <input type="checkbox" checked>
-                                                <span class="checkbox__helper"><i>N</i></span>
-                                                <span class="widget-todo-lists__info">
-                                                    Cambio de tuberia, calle Primavera a 21 Sept.
-                                                    <small>Lunes de 11:30 PM</small>
-                                                </span>
-        
-                                                <span class="list-group__attrs">
-                                                    <span>#Calle</span>
-                                                    <span>!!</span>
-                                                </span>
-                                            </label>
-                                        </div>
-        
-                                        <div class="actions list-group__actions">
-                                            <div class="dropdown">
-                                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
-        
-                                                <ul class="dropdown-menu pull-right">
-                                                    <li><a href="">Actualizar</a></li>
-                                                    <li><a href="">Reportar</a></li>
-                                                    <li><a href="" data-demo-action="delete-listing">Eliminar</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <div class="list-group-item">
-                                        <div class="checkbox checkbox--char">
-                                            <label>
-                                                <input type="checkbox">
-                                                <span class="checkbox__helper"><i>C</i></span>
-                                                <span class="widget-todo-lists__info">
-                                                    Reunion de Agua para nuevo tanque y mantenimiento
-                                                    <small>Jueves de 07:30 PM</small>
-                                                </span>
-        
-                                                <span class="list-group__attrs">
-                                                    <span>#Socios</span>
-                                                    <span>!!</span>
-                                                </span>
-                                            </label>
-                                        </div>
-        
-                                        <div class="actions list-group__actions">
-                                            <div class="dropdown">
-                                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
-        
-                                                <ul class="dropdown-menu pull-right">
-                                                    <li><a href="">Actualizar</a></li>
-                                                    <li><a href="">Reportar</a></li>
-                                                    <li><a href="" data-demo-action="delete-listing">Eliminar</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <div class="list-group-item">
-                                            <div class="checkbox checkbox--char">
-                                                <label>
-                                                    <input type="checkbox" checked>
-                                                    <span class="checkbox__helper"><i>D</i></span>
-                                                    <span class="widget-todo-lists__info">
-                                                        Cambio de medidor, acción 232
-                                                        <small>Miercoles de 8:30 AM</small>
-                                                    </span>
-            
-                                                    <span class="list-group__attrs">
-                                                        <span>#Socio</span>
-                                                        <span>!!!</span>
-                                                    </span>
-                                                </label>
-                                            </div>
-            
-                                            <div class="actions list-group__actions">
-                                                <div class="dropdown">
-                                                    <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
-            
-                                                    <ul class="dropdown-menu pull-right">
-                                                        <li><a href="">Actualizar</a></li>
-                                                        <li><a href="">Reportar</a></li>
-                                                        <li><a href="" data-demo-action="delete-listing">Eliminar</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-        
-                                     <div class="list-group-item">
-                                        <div class="checkbox checkbox--char">
-                                            <label>
-                                                <input type="checkbox" checked>
-                                                <span class="checkbox__helper"><i>N</i></span>
-                                                <span class="widget-todo-lists__info">
-                                                    Cambio de tuberia, calle Primavera a 21 Sept.
-                                                    <small>Lunes de 11:30 PM</small>
-                                                </span>
-        
-                                                <span class="list-group__attrs">
-                                                    <span>#Calle</span>
-                                                    <span>!!</span>
-                                                </span>
-                                            </label>
-                                        </div>
-        
-                                        <div class="actions list-group__actions">
-                                            <div class="dropdown">
-                                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
-        
-                                                <ul class="dropdown-menu pull-right">
-                                                    <li><a href="">Actualizar</a></li>
-                                                    <li><a href="">Reportar</a></li>
-                                                    <li><a href="" data-demo-action="delete-listing">Eliminar</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-        
-                                <a href="" class="view-more"><i class="zmdi zmdi-long-arrow-right"></i> Ver Todos</a>
+                          </div>
+                          <div class="dropzone-wrapper">
+                            <div class="dropzone-desc">
+                              <i class="glyphicon glyphicon-download-alt"></i>
+                              <p>Seleccione una imagen.</p>
                             </div>
-        
-                            <div class="card widget-calendar">
-                                <div class="card__header card__header--highlight">
-                                    <div class="widget-calendar__year"></div>
-                                    <div class="widget-calendar__day"></div>
-        
-                                    <button class="btn btn--float"><i class="zmdi zmdi-plus"></i></button>
-                                </div>
-        
-                                <div class="card__body--sm">
-                                    <div id="widget-calendar__main"></div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                    <div class="card__header">
-                                        <h2>Directiva OTB-Agua <small>Responsables Comición de Agua</small></h2>
-                                        <div class="actions">
-                                            <div class="dropdown">
-                                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
-                                                <ul class="dropdown-menu pull-right">
-                                                    <li><a href="">Refrescar</a></li>
-                                                    <li><a href="">Reportar</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="list-group">
-                                        <a href="" class="list-group-item media">
-                                            <div class="pull-left">
-                                                <img class="avatar-img" src="demo/img/profile-pics/user.png" alt="">
-                                            </div>
-            
-                                            <div class="media-body">
-                                                <div class="list-group__heading">Eliseo Rioja</div>
-                                                <small class="list-group__text">Presidente de la comición de Agua</small>
-                                            </div>
-                                        </a>
-            
-                                        <a href="" class="list-group-item media">
-                                            <div class="pull-left">
-                                                <img class="avatar-img" src="demo/img/profile-pics/5.jpg" alt="">
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="list-group__heading">Viky Gutierrez</div>
-                                                <small class="list-group__text">Secretaria de actas de comición de Agua y reuniones OTB.</small>
-                                            </div>
-                                        </a>
-            
-                                        <a href="" class="list-group-item media">
-                                            <div class="pull-left">
-                                                <img class="avatar-img" src="demo/img/profile-pics/4.jpg" alt="">
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="list-group__heading">Alberto Cruz Villca</div>
-                                                <small class="list-group__text">Tesorero interino de comición de Agua</small>
-                                            </div>
-                                        </a>
-            
-                                        <a href="" class="list-group-item media">
-                                            <div class="pull-left">
-                                                <img class="avatar-img" src="demo/img/profile-pics/2.jpg" alt="">
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="list-group__heading">Saúl Mamani Choque</div>
-                                                <small class="list-group__text">Encargado de Sistema Informatico y mantenimiento ACUOTB</small>
-                                            </div>
-                                        </a>
-            
-                                        <a href="" class="view-more">
-                                            <i class="zmdi zmdi-long-arrow-right"></i> Ver detalle
-                                        </a>
-                                    </div>
-                                </div>
-                            
+                            <input type="file" name="img_logo" class="dropzone">
+                          </div>
                         </div>
-            </section>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </section>
+              
+              <script src="assets/app.js"></script>
 
-            
-            
+
             <footer id="footer">
-                    Copyright &copy; s@u!_m@n!ch 2020
+                    Copyright &copy; s@u-Crgt 2020
     
                     <ul class="footer__menu">
-                        <li><a href="#">Avanzados</a></li>
-                        <li><a href="#">Contactame</a></li>
+                        <li><a href="#">¿Problemas?</a></li>
                         <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Soporte</a></li>
-                        <li><a href="#">Calendario</a></li>
+                        <li><a href="#">¡Soporte!</a></li>
                     </ul>
                 </footer>
-
-        </section>
-
-        <!-- Older IE Warning -->
-        <!--[if lt IE 9]>
-            <div class="ie-warning">
-                <h1>Warning!!</h1>
-                <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
-                <div class="ie-warning__container">
-                    <ul class="ie-warning__download">
-                        <li>
-                            <a href="http://www.google.com/chrome/">
-                                <img src="img/browsers/chrome.png" alt="">
-                                <div>Chrome</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.mozilla.org/en-US/firefox/new/">
-                                <img src="img/browsers/firefox.png" alt="">
-                                <div>Firefox</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://www.opera.com">
-                                <img src="img/browsers/opera.png" alt="">
-                                <div>Opera</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.apple.com/safari/">
-                                <img src="img/browsers/safari.png" alt="">
-                                <div>Safari</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                                <img src="img/browsers/ie.png" alt="">
-                                <div>IE (New)</div>
-                            </a>
-                        </li>
-                    </ul>
+    
+            </section>
+    
+            <!-- Older IE Warning -->
+            <!--[if lt IE 9]>
+                <div class="ie-warning">
+                    <h1>Warning!!</h1>
+                    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+                    <div class="ie-warning__container">
+                        <ul class="ie-warning__download">
+                            <li>
+                                <a href="http://www.google.com/chrome/">
+                                    <img src="img/browsers/chrome.png" alt="">
+                                    <div>Chrome</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                                    <img src="img/browsers/firefox.png" alt="">
+                                    <div>Firefox</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.opera.com">
+                                    <img src="img/browsers/opera.png" alt="">
+                                    <div>Opera</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.apple.com/safari/">
+                                    <img src="img/browsers/safari.png" alt="">
+                                    <div>Safari</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                                    <img src="img/browsers/ie.png" alt="">
+                                    <div>IE (New)</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p>Sorry for the inconvenience!</p>
                 </div>
-                <p>Sorry for the inconvenience!</p>
-            </div>
-        <![endif]-->
+            <![endif]-->
+    
+    
+            <!-- Javascript Libraries -->
+    
+            <!-- jQuery -->
+            <script src="vendors/jquery/dist/jquery.min.js"></script>
+    
+            <!-- Bootstrap -->
+            <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+            <!-- Malihu ScrollBar -->
+            <script src="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    
+            <!-- Bootstrap Notify -->
+            <script src="vendors/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
 
+            <!-- Bootstrap Wizard -->
+            <script src="vendors/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
 
-        <!-- Javascript Libraries -->
+            <!-- Bootstrap Date/Time Picker -->
+            <script src="vendors/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+            
+            <!-- Moment -->
+            <script src="vendors/moment/min/moment.min.js"></script>
+    
+            <!-- FullCalendar -->
+            <script src="vendors/fullcalendar/dist/fullcalendar.min.js"></script>
+    
+            <!-- Simple Weather -->
+            <script src="vendors/simpleWeather/jquery.simpleWeather.min.js"></script>
+    
+            <!-- Salvattore -->
+            <script src="vendors/salvattore/dist/salvattore.min.js"></script>
 
-        <!-- jQuery -->
-        <script src="vendors/jquery/dist/jquery.min.js"></script>
+            <!-- Select 2 -->
+            <script src="vendors/select2/dist/js/select2.full.min.js"></script>
+    
+            <!-- Flot Charts -->
+            <script src="vendors/flot/jquery.flot.js"></script>
+            <script src="vendors/flot/jquery.flot.resize.js"></script>
+            <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+    
+            <!-- Sparkline Charts -->
+            <script src="vendors/jquery.sparkline/jquery.sparkline.min.js"></script>
+    
+            <!-- EasyPie Charts -->
+            <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+    
+            <!-- Placeholder for IE9 -->
+            <!--[if IE 9 ]>
+                <script src="vendors/jquery-placeholder/jquery.placeholder.min.js"></script>
+            <![endif]-->
+    
+            <!-- Demo Only -->
+            <script src="demo/js/flot-charts/curved-line.js"></script>
+            <script src="demo/js/flot-charts/line.js"></script>
+            <script src="demo/js/easy-pie-charts.js"></script>
+            <script src="demo/js/sparkline-charts.js"></script>
+            <script src="demo/js/calendar.js"></script>
 
-        <!-- Bootstrap -->
-        <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-
-        <!-- Malihu ScrollBar -->
-        <script src="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-
-        <!-- Bootstrap Notify -->
-        <script src="vendors/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
-
-        <!-- Moment -->
-        <script src="vendors/moment/min/moment.min.js"></script>
-
-        <!-- FullCalendar -->
-        <script src="vendors/fullcalendar/dist/fullcalendar.min.js"></script>
-
-        <!-- Simple Weather -->
-        <script src="vendors/simpleWeather/jquery.simpleWeather.min.js"></script>
-
-        <!-- Salvattore -->
-        <script src="vendors/salvattore/dist/salvattore.min.js"></script>
-
-        <!-- Flot Charts -->
-        <script src="vendors/flot/jquery.flot.js"></script>
-        <script src="vendors/flot/jquery.flot.resize.js"></script>
-        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
-
-        <!-- Sparkline Charts -->
-        <script src="vendors/jquery.sparkline/jquery.sparkline.min.js"></script>
-
-        <!-- EasyPie Charts -->
-        <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
-
-        <!-- Placeholder for IE9 -->
-        <!--[if IE 9 ]>
-            <script src="vendors/jquery-placeholder/jquery.placeholder.min.js"></script>
-        <![endif]-->
-
-        <!-- Demo Only -->
-        <script src="demo/js/flot-charts/curved-line.js"></script>
-        <script src="demo/js/flot-charts/line.js"></script>
-        <script src="demo/js/easy-pie-charts.js"></script>
-        <script src="demo/js/sparkline-charts.js"></script>
-        <script src="demo/js/calendar.js"></script>
-
-        <!-- Site Functions & Actions -->
-        <script src="js/app.min.js"></script>
-
-        <!-- PWA script -->
-        <script src="script.js"></script>
-    </body>
-</html>
+            <!-- File -->
+            <script src="js/file.js"></script>
+    
+            <!-- Site Functions & Actions -->
+            <script src="js/app.min.js"></script>
+    
+            <!-- PWA script -->
+            <script src="script.js"></script>
+        </body>
+    </html>
+    
