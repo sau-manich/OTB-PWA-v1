@@ -357,9 +357,16 @@
                 <div class="navigation__menu c-overflow">
                     <ul>
                         <li>
-                            <a href="index.html"><i class="zmdi zmdi-home"></i> Tablero</a>
+                            <a href="tablero.html"><i class="zmdi zmdi-home"></i> Tablero</a>
                         </li>
-                        <li class="navigation__active"><a href="cobroFacturacion.html"><i class="zmdi zmdi-layers"></i> Cobro y facturación</a></li>
+                        <li class="navigation__active"><a href="cobroFacturacion.html"><i class="zmdi zmdi-layers"></i> Cobro y facturación</a></li class="navigation__active">
+                        <li class="navigation__sub">
+                            <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
+                            <ul>
+                                <li><a href="lecturaMedidor.html">Medidor</a></li>
+                                <li><a href="nuevoEvento.html">Asistencia Reunión</a></li>
+                            </ul>
+                        </li>
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-widgets"></i> Acciones</a>
 
@@ -368,13 +375,7 @@
                                 <li><a href="registroMedidor.html">Registro Medidores</a></li>
                             </ul>
                         </li>
-                        <li class="navigation__sub">
-                            <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
-                            <ul>
-                                <li><a href="lecturaMedidor.html">Medidor</a></li>
-                                <li><a href="lecturaAsistencia.html">Asistencia Reunión</a></li>
-                            </ul>
-                        </li>
+                        
                         
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-trending-up"></i>Reportes</a>
@@ -387,14 +388,13 @@
                             </ul>
                         </li>
                         
-                        <li><a href="calendario.html"><i class="zmdi zmdi-calendar"></i> Calendario</a></li>
                         
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-item"></i> Configuración</a>
                             <ul>
-                                <li><a href="perfil.html">Perfil</a></li>
-                                <li><a href="chat.html">Chat AcuOTB</a></li>
-                                <li><a href="login.html">Login</a></li>
+                                <li><a href="cuenta.html">Cuentas</a></li>
+                                <li><a href="avisos.html">Avisos</a></li>
+                                <li><a href="backup.html">Backup (BD)</a></li>
                                 
                             </ul>
                         </li>
@@ -403,589 +403,346 @@
             </aside>
 
             <section id="content">
-                    <div class="">
-                        <div class="content__header">
-                            <h2>Socios</h2>
-    
-                            <div class="actions">
-                            <a href=""><i class="zmdi zmdi-check-all"></i></a>
-                            <a href=""><i class="zmdi zmdi-trending-up"></i></a>
-                            <div class="dropdown">
-                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="">Actualizar</a></li>
-                                    <li><a href="">Avanzados</a></li>
+                <div class="">
+                    <div class="action-header action-header--dark">
+                        <ul class="action-header__menu action-header__menu--padding" align="center">
+                            <li class="active"><a href="#">Consumo y Reunión<br> 25-01-20</a></li>
+                        </ul>
+                       
+                        <div class="action-header__search">
+                            <input type="text" placeholder="Busquemos..." class="action-header__input">
+                            <i class="action-header__close zmdi zmdi-long-arrow-left"></i>
+                            
+                        </div>
+                        
+                        
+                        <div class="actions action-header__actions">
+                            <a href="" class="action-header__toggle" data-trigger="hover" data-toggle="popover" data-placement="bottom" data-content="Podremos buscar por: Número de medidor, Nombre y Apellido" title="" data-original-title="Información"><i class="zmdi zmdi-search"></i></a>
+                            
+
+                            <div class="dropdown hidden-xs">
+                                <a href="" data-toggle="dropdown">
+                                    <i class="zmdi zmdi-more-vert"></i>
+                                </a>
+
+                               <ul class="dropdown-menu pull-right"> 
+                                    <li align="center">
+                                        <a href="">Consumo Agua</a>
+                                    </li>
+                                    <li align="center">
+                                        <a href="">Asambleas</a>
+                                    </li>
                                 </ul>
                             </div>
-                            </div>
-                        </div>
-    
-                        <div class="action-header action-header--dark">
-                            <ul class="action-header__menu action-header__menu--padding" align="center">
-                                <li class="active"><a href="#">Socios</a></li>
-                            </ul>
-
-                            <div class="action-header__search">
-                                <input type="text" placeholder="Busquemos..." class="action-header__input">
-                                <i class="action-header__close zmdi zmdi-long-arrow-left"></i>
-                                
-                            </div>
-                            
-    
-                            <div class="actions action-header__actions">
-                                <a href="" class="action-header__toggle"><i class="zmdi zmdi-search"></i></a>
-                                <a href="" class="hidden-xs"><i class="zmdi zmdi-time"></i></a>
-    
-                               
-    
-                                <a href="" class="hidden-xs"><i class="zmdi zmdi-info"></i></a>
-    
-                                <div class="dropdown hidden-xs">
-                                    <a href="" data-toggle="dropdown">
-                                        <i class="zmdi zmdi-more-vert"></i>
-                                    </a>
-    
-                                   <ul class="dropdown-menu pull-right">
-                                        <li>
-                                            <a href="">Actualizar</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Ajustes</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="contacts row">
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/1.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div>
-
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/2.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Stella Flores</strong>
-                                        <small>stella@example.com</small>
-                                    </div>
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                    </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/3.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Marilyn Thomas</strong>
-                                        <small>marilyn@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/4.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Dwight Gilbert</strong>
-                                        <small>dwight@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/5.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cody Moreno</strong>
-                                        <small>moreno@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/6.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Jamie Freeman</strong>
-                                        <small>freeman@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/7.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Charles Spencer</strong>
-                                        <small>charles@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/8.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Vickie Reed</strong>
-                                        <small>reed@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/9.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Lauren Ruiz</strong>
-                                        <small>ruiz@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/10.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Marlene Vasquez</strong>
-                                        <small>vasquez@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/11.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Loretta Morrisonz</strong>
-                                        <small>morrisonz@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/12.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Yvonne Wood</strong>
-                                        <small>wood@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/13.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Denise Franklin</strong>
-                                        <small>franklin@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/14.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Joseph Gonzalez</strong>
-                                        <small>gonzalez@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/15.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Rick Graham</strong>
-                                        <small>graham@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/16.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Alexander Bailey</strong>
-                                        <small>bailey@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/1.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/2.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Stella Flores</strong>
-                                        <small>stella@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/3.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Marilyn Thomas</strong>
-                                        <small>marilyn@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/4.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Dwight Gilbert</strong>
-                                        <small>dwight@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/5.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cody Moreno</strong>
-                                        <small>moreno@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/6.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Jamie Freeman</strong>
-                                        <small>freeman@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/7.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Charles Spencer</strong>
-                                        <small>charles@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/8.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Vickie Reed</strong>
-                                        <small>reed@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/9.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Lauren Ruiz</strong>
-                                        <small>ruiz@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/10.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Marlene Vasquez</strong>
-                                        <small>vasquez@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/11.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Loretta Morrisonz</strong>
-                                        <small>morrisonz@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/12.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Yvonne Wood</strong>
-                                        <small>wood@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/13.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Denise Franklin</strong>
-                                        <small>franklin@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="demo/img/contacts/14.jpg" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Joseph Gonzalez</strong>
-                                        <small>gonzalez@example.com</small>
-                                    </div>
-    
-                                    <a href="cobroAgua.html">
-                                        <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                                    </a>
-                                </div>
-                            </div>
-    
-                        </div>
-    
-                        <div class="text-center m-t-20">
-                            <a href="" class="btn btn--icon-text btn-default"><i class="zmdi zmdi-refresh-alt"></i> Refrescar...</a>
                         </div>
                     </div>
-                </section>
+
+                    <div class="contacts row">
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/boy-5.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/boy-4.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/boy-3.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/girl.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/girl-7.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/girl-5.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/boy-5.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/boy-4.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/boy-3.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/girl.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/girl-7.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/girl-5.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/boy-5.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/boy-4.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/boy-3.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/girl.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/girl-7.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4">
+                            <div class="contacts__item">
+                                <a href="" class="contacts__img">
+                                    <img src="img/usuarios/girl-5.png" alt="">
+                                </a>
+
+                                <div class="contacts__info">
+                                    <strong>Cathy Shelton</strong>
+                                    <small>cathy.shelton31@example.com</small>
+                                </div><br>
+                                <a href="cobroAgua.html">
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center m-t-20">
+                        <a href="" class="btn btn--icon-text btn-default"><i class="zmdi zmdi-refresh-alt"></i> Refrescar...</a>
+                    </div>
+                </div>
+            </section>
 
 
             <footer id="footer">
-                    Copyright &copy; s@u!_m@n!ch 2020
-    
-                    <ul class="footer__menu">
-                        <li><a href="#">Avanzados</a></li>
-                        <li><a href="#">Contactame</a></li>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Soporte</a></li>
-                        <li><a href="#">Calendario</a></li>
-                    </ul>
-                </footer>
+                Copyright &copy; s@u-Crgt 2020
+
+                <ul class="footer__menu">
+                    <li><a href="#">¿Problemas?</a></li>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">¡Soporte!</a></li>
+                </ul>
+            </footer>
     
             </section>
     

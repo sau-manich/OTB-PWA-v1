@@ -37,8 +37,19 @@
         <!-- Malihu Scrollbar -->
         <link href="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
 
-        <!-- Full Calendar -->
-        <link href="vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+        <!-- FullCalendar -->
+        <script src="vendors/fullcalendar/dist/fullcalendar.min.js"></script>
+
+        <!-- Select 2 -->
+        <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+
+        <!-- Bootstrap Date/Time picker -->
+        <link href="vendors/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+
+         <!-- Demo only -->
+         <link href="demo/css/demo.css" rel="stylesheet">
+         <script src="demo/js/calendar.js"></script>
 
         <!-- Site CSS -->
         <link href="css/app-1.min.css" rel="stylesheet">
@@ -357,9 +368,16 @@
                 <div class="navigation__menu c-overflow">
                     <ul>
                         <li>
-                            <a href="index.html"><i class="zmdi zmdi-home"></i> Tablero</a>
+                            <a href="tablero.html"><i class="zmdi zmdi-home"></i> Tablero</a>
                         </li>
-                        <li class="navigation__active"><a href="cobroFacturacion.html"><i class="zmdi zmdi-layers"></i> Cobro y facturación</a></li>
+                        <li><a href="cobroFacturacion.html"><i class="zmdi zmdi-layers"></i> Cobro y facturación</a></li class="navigation__active">
+                        <li class="navigation__sub navigation__active">
+                            <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
+                            <ul>
+                                <li><a href="lecturaMedidor.html">Medidor</a></li>
+                                <li class="navigation__active"><a href="nuevoEvento.html">Asistencia Reunión</a></li>
+                            </ul>
+                        </li>
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-widgets"></i> Acciones</a>
 
@@ -368,13 +386,7 @@
                                 <li><a href="registroMedidor.html">Registro Medidores</a></li>
                             </ul>
                         </li>
-                        <li class="navigation__sub">
-                            <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
-                            <ul>
-                                <li><a href="lecturaMedidor.html">Medidor</a></li>
-                                <li><a href="lecturaAsistencia.html">Asistencia Reunión</a></li>
-                            </ul>
-                        </li>
+                        
                         
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-trending-up"></i>Reportes</a>
@@ -387,240 +399,246 @@
                             </ul>
                         </li>
                         
-                        <li><a href="calendario.html"><i class="zmdi zmdi-calendar"></i> Calendario</a></li>
                         
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-item"></i> Configuración</a>
                             <ul>
-                                <li><a href="perfil.html">Perfil</a></li>
-                                <li><a href="chat.html">Chat AcuOTB</a></li>
-                                <li><a href="login.html">Login</a></li>
+                                <li><a href="cuenta.html">Cuentas</a></li>
+                                <li><a href="avisos.html">Avisos</a></li>
+                                <li><a href="backup.html">Backup (BD)</a></li>
                                 
                             </ul>
                         </li>
                     </ul>
                 </div>
             </aside>
+
             <section id="content">
-                
-            <div class="">
-                <div class="contacts row">
-                    <div class="col-md-3 col-sm-4">
-                        <div class="contacts__item">
-                            <a href="" class="contacts__img">
-                                <img src="demo/img/contacts/1.jpg" alt="">
-                            </a>
-
-                            <div class="contacts__info">
-                                <strong>Cathy Shelton</strong>
-                                <small>cathy.shelton31@example.com</small>
-                            </div>
-
-                            <a href="cobroAgua.html">
-                                <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-9">
-                        <div class="card">
-                            <div class="card__header">
-                                <h2>Hover Row <small>Enable a hover state on table rows within a tbody</small></h2>
-                            </div>
-        
-                            <div class="card__body">
-                                <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Username</th>
-                                            <th>Nickname</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Alexandra</td>
-                                            <td>Christopher</td>
-                                            <td>@makinton</td>
-                                            <td>Ducky</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Madeleine</td>
-                                            <td>Hollaway</td>
-                                            <td>@hollway</td>
-                                            <td>Cheese</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Sebastian</td>
-                                            <td>Johnston</td>
-                                            <td>@sebastian</td>
-                                            <td>Jaycee</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Mitchell</td>
-                                            <td>Christin</td>
-                                            <td>@mitchell4u</td>
-                                            <td>AdskiDeAnus</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Elizabeth</td>
-                                            <td>Belkitt</td>
-                                            <td>@belkitt</td>
-                                            <td>Goat</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Benjamin</td>
-                                            <td>Parnell</td>
-                                            <td>@wayne234</td>
-                                            <td>Pokie</td>
-                                        </tr>
-                                        <tr>
-                                            <td>7</td>
-                                            <td>Katherine</td>
-                                            <td>Buckland</td>
-                                            <td>@anitabelle</td>
-                                            <td>Wokie</td>
-                                        </tr>
-                                        <tr>
-                                            <td>8</td>
-                                            <td>Nicholas</td>
-                                            <td>Walmart</td>
-                                            <td>@mwalmart</td>
-                                            <td>Spike</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                       
+                        <!-- Form -->
+                    <form class="card">
+                        <div class="card__header card__header--highlight">
+                            <h2 align="center">Nuevo Evento <small>Crearemos una nueva reunión de la OTB, asegurate de crearlo correctamente</small></h2>
+                            <br>
+                            
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <p align="center">Selecciona una fecha</p>
+    
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                            <div class="form-group">
+                                            <input type='text' class="form-control date-picker" placeholder="Busquemos aqui...">
+                                            <i class="form-group__bar"></i>
+                                        </div>
+                                    </div><br>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="zmdi zmdi-home"></i></span>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Nombre del evento">
+                                            <i class="form-group__bar"></i>
+                                        </div>
+                                    </div>
+    
+                                    <br/>
+    
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="zmdi zmdi-local-atm"></i></span>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" placeholder="Monto de la multa">
+                                            <i class="form-group__bar"></i>
+                                        </div>
+                                    </div>
+    
+                                    <br/>
+    
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="zmdi zmdi-pin"></i></span>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Dirección de Reunión">
+                                            <i class="form-group__bar"></i>
+                                        </div>
+                                    </div>
+                                </div><br>
+                                <div class="col-sm-3">
+                                    <p align="center"> Realizar Acción
+                                        <br><br>
+                                        <button class="btn btn-success btn--icon" data-trigger="hover" data-toggle="popover" data-placement="bottom" data-content="Se creara un evento.." title="" data-original-title="Crear"><i class="zmdi zmdi-check"></i></button>
+                                        <button class="btn btn--light btn--icon" data-trigger="hover" data-toggle="popover" data-placement="bottom" data-content="Se cancelara el registro.." title="" data-original-title="Cancelar"><i class="zmdi zmdi-close"></i></button>
+                                    </p>
+                                    <br>
                                 </div>
                             </div>
+                            
+                            
                         </div>
-                    </div>
-                </div>
-                    <!-- <div class="card widget-contacts">
+
+                    </form>
+
+
+                    <div class="action-header action-header--dark">
+                        <ul class="action-header__menu action-header__menu--padding" align="center">
+                            <li class="active"><a>Nuevo Evento</a></li>
+                        </ul>
+                       
+                        <div class="action-header__search">
+                            <input type="text" placeholder="Busquemos..." class="action-header__input">
+                            <i class="action-header__close zmdi zmdi-long-arrow-left"></i>
+                        </div>
                         
-                            <div class="card__header card__header--highlight text-center">
-                                    <img src="img/qr5.png" class="widget-profile__img" alt="">
-                                    <h5>ACUOTB - Sistema de cobro y facturación de agua</h5>
-                                </div>
-                            <div class="card__body">
-                                <ul class="icon-list">
-                                    <li><i class="zmdi zmdi-account-circle"></i> Facturado por OTB</li>
-                                    <li><i class="zmdi zmdi-phone"></i> +591 7257***6</li>
-                                    <li><i class="zmdi zmdi-email"></i> otb21_2020@otb.21.com</li>
-                                    <li><i class="zmdi zmdi-facebook-box"></i> fulano.fulanito</li>
-                                    <li><i class="zmdi zmdi-pin"></i>
-                                            21 Septiembre <br> Teniente Venabides <br>
-                                            Primavera
+                        
+                        <div class="actions action-header__actions">
+                            <div class="dropdown hidden-xs">
+                                <a href="" data-toggle="dropdown">
+                                    <i class="zmdi zmdi-more-vert"></i>
+                                </a>
+
+                               <ul class="dropdown-menu pull-right"> 
+                                    <li align="center">
+                                        <a href="">Refrescar</a>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="widget-past-days__info">
-                                    <h5 align="center">.....................................................................</h5>
-                                    <h5 align="center">Entregue Conforme</h5>
-                            </div>
-                    </div>
-
-                    <div class="card widget-contacts">
-                            <div class="card__header card__header--highlight">
-                                <h2 align="center">OTB - 21 de Septiembre <small>Sistema de facturación y cobro de agua ACUOTB</small></h2>
-                            </div>
-                            <div class="card__body">
-                                <br><br><br>
-                                <ul class="icon-list">
-                                    <li><i class="zmdi zmdi-account-circle"></i> Fulano Fulanito de Fulano</li>
-                                    <li><i class="zmdi zmdi-phone"></i> +591 7257***6</li>
-                                    <li><i class="zmdi zmdi-email"></i> socio@otb.21.com</li>
-                                    <li><i class="zmdi zmdi-facebook-box"></i> fulano.fulanito</li>
-                                    <li><i class="zmdi zmdi-pin"></i> 149 - Teniente Venabides</li>
-                                    <li><i class="zmdi zmdi-cloud-done"></i> Registro Exitoso</li>
-                                   
-                                </ul>
-                            </div>
-                            <br><br><br>
-                            <div class="widget-past-days__info">
-                                    <h5 align="center">.....................................................................</h5>
-                                    <h5 align="center">Recibi Conforme</h5>
-                            </div>
-                            
-                    </div>
-                        
-                    <div class="card widget-past-days">
-                         <div class="card__header">
-                        <h2 align="center">30 Diciembre 2018 <small>Factura : 00659762 - Medidor Nº 205</small></h2>
-                        <div class="actions">
-                            <div class="dropdown">
-                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
-                                <ul class="dropdown-menu pull-right">
-                                        <li><a href="">Actualizar</a></li>
-                                        <li><a href="">Reportar</a></li>
-                                        <li><a href="">Configuración</a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
 
-                    <div class="flot-chart-edge">
-                        <div class="flot-chart flot-chart--sm" id="chart-past-days"></div>
-                    </div>
+                    
 
-                    <div class="list-group list-group--striped">
-                        <div class="list-group-item">
-                            <div class="widget-past-days__chart hidden-sm">
-                                <div class="chart-sparkline-bar">6,9,5,6,3,7,5,4,6,5,6,4,2,5,8,2,6,9</div>
-                            </div>
-
-                            <div class="widget-past-days__info">
-                                <small>Lectura del mes</small>
-                                <h3>4536</h3>
+                    <div class="card">
+                        <div class="card__header">
+                            <h2>Selection Example <small>Ensure that the data attribute [data-identifier="true"] is set on one column header.</small></h2>
+                        </div>
+    
+                        <div class="card__body">
+                            <div class="table-responsive">
+                                <table id="data-table-selection" class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th data-column-id="id" data-type="numeric" data-identifier="true">ID</th>
+                                            <th data-column-id="sender">Sender</th>
+                                            <th data-column-id="received" data-order="desc">Received</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>10238</td>
+                                            <td>eduardo@pingpong.com</td>
+                                            <td>14.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10243</td>
+                                            <td>eduardo@pingpong.com</td>
+                                            <td>19.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10248</td>
+                                            <td>eduardo@pingpong.com</td>
+                                            <td>24.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10253</td>
+                                            <td>eduardo@pingpong.com</td>
+                                            <td>29.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10234</td>
+                                            <td>lila@google.com</td>
+                                            <td>10.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10239</td>
+                                            <td>lila@google.com</td>
+                                            <td>15.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10244</td>
+                                            <td>lila@google.com</td>
+                                            <td>20.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10249</td>
+                                            <td>lila@google.com</td>
+                                            <td>25.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10237</td>
+                                            <td>robert@bingo.com</td>
+                                            <td>13.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10242</td>
+                                            <td>robert@bingo.com</td>
+                                            <td>18.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10247</td>
+                                            <td>robert@bingo.com</td>
+                                            <td>23.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10252</td>
+                                            <td>robert@bingo.com</td>
+                                            <td>28.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10236</td>
+                                            <td>simon@yahoo.com</td>
+                                            <td>12.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10241</td>
+                                            <td>simon@yahoo.com</td>
+                                            <td>17.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10246</td>
+                                            <td>simon@yahoo.com</td>
+                                            <td>22.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10251</td>
+                                            <td>simon@yahoo.com</td>
+                                            <td>27.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10235</td>
+                                            <td>tim@microsoft.com</td>
+                                            <td>11.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10240</td>
+                                            <td>tim@microsoft.com</td>
+                                            <td>16.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10245</td>
+                                            <td>tim@microsoft.com</td>
+                                            <td>21.10.2013</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10250</td>
+                                            <td>tim@microsoft.com</td>
+                                            <td>26.10.2013</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-
-                        <div class="list-group-item">
-                                <div class="widget-past-days__chart hidden-sm">
-                                    <div class="chart-sparkline-bar">3,9,1,3,5,6,7,6,8,2,5,2,7,5,6,7,6,8</div>
-                                </div>
-
-                                <div class="widget-past-days__info">
-                                    <small>Consumo de agua</small>
-                                    <h3>Bs. 52.00</h3>
-                                </div>
-                            </div>
-
-                        <div class="list-group-item">
-                            <div class="widget-past-days__chart hidden-sm">
-                                <div class="chart-sparkline-bar">5,7,2,5,2,8,6,7,6,5,3,1,9,3,5,8,2,4</div>
-                            </div>
-
-                            <div class="widget-past-days__info">
-                                <small>Multas retraso</small>
-                                <h3>Bs. 30.00</h3>
-                            </div>
-                        </div>
-
                     </div>
-                    </div> -->
-                
-            </div>
-        </section>
+    
+                    </div>
+                </section>
 
 
-            <footer id="footer">
-                    Copyright &copy; s@u!_m@n!ch 2020
+                <footer id="footer">
+                    Copyright &copy; s@u-Crgt 2020
     
                     <ul class="footer__menu">
-                        <li><a href="#">Avanzados</a></li>
-                        <li><a href="#">Contactame</a></li>
+                        <li><a href="#">¿Problemas?</a></li>
                         <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Soporte</a></li>
-                        <li><a href="#">Calendario</a></li>
+                        <li><a href="#">¡Soporte!</a></li>
                     </ul>
                 </footer>
     
@@ -671,59 +689,76 @@
     
     
             <!-- Javascript Libraries -->
-    
-            <!-- jQuery -->
-            <script src="vendors/jquery/dist/jquery.min.js"></script>
-    
-            <!-- Bootstrap -->
-            <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    
-            <!-- Malihu ScrollBar -->
-            <script src="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-    
-            <!-- Bootstrap Notify -->
-            <script src="vendors/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
-    
-            <!-- Moment -->
-            <script src="vendors/moment/min/moment.min.js"></script>
-    
-            <!-- FullCalendar -->
-            <script src="vendors/fullcalendar/dist/fullcalendar.min.js"></script>
-    
-            <!-- Simple Weather -->
-            <script src="vendors/simpleWeather/jquery.simpleWeather.min.js"></script>
-    
-            <!-- Salvattore -->
-            <script src="vendors/salvattore/dist/salvattore.min.js"></script>
-    
-            <!-- Flot Charts -->
-            <script src="vendors/flot/jquery.flot.js"></script>
-            <script src="vendors/flot/jquery.flot.resize.js"></script>
-            <script src="vendors/flot.curvedlines/curvedLines.js"></script>
-    
-            <!-- Sparkline Charts -->
-            <script src="vendors/jquery.sparkline/jquery.sparkline.min.js"></script>
-    
-            <!-- EasyPie Charts -->
-            <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
-    
-            <!-- Placeholder for IE9 -->
-            <!--[if IE 9 ]>
-                <script src="vendors/jquery-placeholder/jquery.placeholder.min.js"></script>
-            <![endif]-->
-    
-            <!-- Demo Only -->
-            <script src="demo/js/flot-charts/curved-line.js"></script>
-            <script src="demo/js/flot-charts/line.js"></script>
-            <script src="demo/js/easy-pie-charts.js"></script>
-            <script src="demo/js/sparkline-charts.js"></script>
-            <script src="demo/js/calendar.js"></script>
-    
-            <!-- Site Functions & Actions -->
-            <script src="js/app.min.js"></script>
-    
-            <!-- PWA script -->
-            <script src="script.js"></script>
+
+        <!-- jQuery -->
+        <script src="vendors/jquery/dist/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Malihu ScrollBar -->
+        <script src="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <!-- Bootstrap Notify -->
+        <script src="vendors/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
+
+        <!-- Moment -->
+        <script src="vendors/moment/min/moment.min.js"></script>
+
+        <!-- FullCalendar -->
+        <script src="vendors/fullcalendar/dist/fullcalendar.min.js"></script>
+
+        <!-- Bootstrap Date/Time Picker -->
+        <script src="vendors/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+
+        <!-- Simple Weather -->
+        <script src="vendors/simpleWeather/jquery.simpleWeather.min.js"></script>
+
+        <!-- Salvattore -->
+        <script src="vendors/salvattore/dist/salvattore.min.js"></script>
+
+        <!-- Flot Charts -->
+        <script src="vendors/flot/jquery.flot.js"></script>
+        <script src="vendors/flot/jquery.flot.resize.js"></script>
+        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+
+        <!-- Sparkline Charts -->
+        <script src="vendors/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+        <!-- EasyPie Charts -->
+        <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+
+
+        <!-- Bootstrap -->
+        <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Bootstrap Notify -->
+        <script src="vendors/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
+
+        <!-- Bootgrid -->
+        <script src="vendors/jquery.bootgrid/dist/jquery.bootgrid.min.js"></script>
+
+
+        <!-- Demo Only -->
+        <script src="demo/js/flot-charts/curved-line.js"></script>
+        <script src="demo/js/flot-charts/line.js"></script>
+        <script src="demo/js/easy-pie-charts.js"></script>
+        <script src="demo/js/sparkline-charts.js"></script>
+        <script src="demo/js/calendar.js"></script>
+
+        <!-- Site Functions & Actions -->
+        <script src="js/app.min.js"></script>
+        <script src="demo/js/data-table.js"></script>
+
+        <!-- PWA script -->
+        <script src="script.js"></script>
         </body>
     </html>
     

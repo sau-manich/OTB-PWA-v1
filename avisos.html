@@ -24,9 +24,13 @@
 
 
 
+
         <title>ACUOTB PWA</title>
 
         <!-- Vendors -->
+
+        <!-- File CSS -->
+        <link href="css/file.css" rel="stylesheet">
 
         <!-- Animate CSS -->
         <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
@@ -37,8 +41,17 @@
         <!-- Malihu Scrollbar -->
         <link href="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
 
-        <!-- Full Calendar -->
-        <link href="vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+        <!-- NoUiSlider -->
+        <link href="vendors/nouislider/distribute/nouislider.min.css" rel="stylesheet">
+
+        <!-- Bootstrap Date/Time picker -->
+        <link href="vendors/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+        <!-- Farbtastic Color Picker-->
+        <link href="vendors/farbtastic/farbtastic.css" rel="stylesheet">
+
+        <!-- Select 2 -->
+        <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet">
 
         <!-- Site CSS -->
         <link href="css/app-1.min.css" rel="stylesheet">
@@ -147,7 +160,7 @@
 
                     <ul class="dropdown-menu pull-right dropdown-menu--icon">
                         <li>
-                            <a href="perfil.html"><i class="zmdi zmdi-account"></i> Ver Perfil</a>
+                            <a href="profile-about.html"><i class="zmdi zmdi-account"></i> Ver Perfil</a>
                         </li>
                         <li>
                             <a href=""><i class="zmdi zmdi-input-antenna"></i> Comprobar Red</a>
@@ -357,9 +370,16 @@
                 <div class="navigation__menu c-overflow">
                     <ul>
                         <li>
-                            <a href="index.html"><i class="zmdi zmdi-home"></i> Tablero</a>
+                            <a href="tablero.html"><i class="zmdi zmdi-home"></i> Tablero</a>
                         </li>
                         <li><a href="cobroFacturacion.html"><i class="zmdi zmdi-layers"></i> Cobro y facturación</a></li>
+                        <li class="navigation__sub">
+                            <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
+                            <ul>
+                                <li><a href="lecturaMedidor.html">Medidor</a></li>
+                                <li><a href="nuevoEvento.html">Asistencia Reunión</a></li>
+                            </ul>
+                        </li>
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-widgets"></i> Acciones</a>
 
@@ -368,13 +388,7 @@
                                 <li><a href="registroMedidor.html">Registro Medidores</a></li>
                             </ul>
                         </li>
-                        <li class="navigation__sub">
-                            <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
-                            <ul>
-                                <li><a href="lecturaMedidor.html">Medidor</a></li>
-                                <li><a href="lecturaAsistencia.html">Asistencia Reunión</a></li>
-                            </ul>
-                        </li>
+                        
                         
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-trending-up"></i>Reportes</a>
@@ -387,243 +401,225 @@
                             </ul>
                         </li>
                         
-                        <li><a href="calendario.html"><i class="zmdi zmdi-calendar"></i> Calendario</a></li>
                         
                         <li class="navigation__sub navigation__active">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-item"></i> Configuración</a>
                             <ul>
-                                <li><a href="perfil.html">Perfil</a></li>
-                                <li><a href="chat.html">Chat AcuOTB</a></li>
-                                <li><a href="login.html">Login</a></li>
+                                <li><a href="cuenta.html">Cuentas</a></li>
+                                <li class="navigation__active"><a href="avisos.html">Avisos</a></li>
+                                <li><a href="backup.html">Backup (BD)</a></li>
                                 
                             </ul>
                         </li>
                     </ul>
                 </div>
             </aside>
-
-
+        
             <section id="content" class="content--boxed">
-                    <div class="content__header">
-                            <h2>Chat Interno <small>Si tienes alguna pregunta, ahora puedes escribirlo.</small></h2>
-                        </div>
-        
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="card wall__posting">
-                                    <textarea class="form-control textarea-autosize" placeholder="Escríbeme..."></textarea>
-        
-                                    <div class="wall__actions">
-                                        <div class="wall__actions__items">
-                                            <a href=""><i class="zmdi zmdi-image"></i></a>
-                                            <a href=""><i class="zmdi zmdi-play-circle"></i></a>
-                                            <a href=""><i class="zmdi zmdi-link"></i></a>
-                                        </div>
-        
-                                        <button class="wall__actions__btn btn btn-default">Enviar</button>
+    
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card wall__posting">
+                                <div class="card__header card__header--highlight text-center">
+                                    <textarea class="form-control textarea-autosize" placeholder="Redactar anuncio..."></textarea>
+                                    <button class="btn btn--float"><i class="zmdi zmdi-email"></i></button>
+                                </div>
+
+                                <div class="wall__actions">
+                                    <div class="wall__actions__items">
+                                        <a href=""><i class="zmdi zmdi-image"></i></a>
+                                        <a href=""><i class="zmdi zmdi-play-circle"></i></a>
+                                        <a href=""><i class="zmdi zmdi-link"></i></a>
                                     </div>
                                 </div>
-        
+                            </div>
+    
+                            <div class="card">
+                                <div class="card__header">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="avatar-img" src="demo/img/contacts/saul.jpg" alt="">
+                                        </div>
+    
+                                        <div class="media-body">
+                                            <h2>Saul Mamani Choque <small>Respondio hace 29min - 25 Diciembre 2019 hr 21:10pm.</small></h2>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="card__body">
+                                    <p>Saludos [usuario] con respecto a tu pregunta, el costo del cambio de nombre es de Bs. 500.00 de igual manera la información se encuentra en el apartado de Configuración/Perfil.</p>
+                                    <p>Saludos OTB-21 de Septiembre</p>
+                                    <div class="wall__img lightbox">
+                                        <div class="wall__img__item" data-src="demo/img/headers/4.png" style="background-image: url(demo/img/headers/4.png);">
+                                            <img src="demo/img/headers/4.png" alt="">
+                                        </div>
+                                    </div>
+    
+                                    <div class="wall__attrs">
+                                        <div class="wall__stats">
+                                            <span><i class="zmdi zmdi-comments"></i> 1</span>
+                                            <span><i class="zmdi zmdi-favorite"></i> 1</span>
+                                        </div>
+    
+                                        <div class="wall__people hidden-xs">
+                                            <a href=""><img src="img/usuarios/girl.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="wall-comments">
+                                    <form class="wall__comments__input">
+                                        <textarea class="textarea-autosize" placeholder="Responder..."></textarea>
+                                    </form>
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-4 hidden-sm hidden-xs">
                                 <div class="card">
                                     <div class="card__header">
-                                        <div class="media">
-                                            <div class="pull-left">
-                                                <img class="avatar-img" src="demo/img/contacts/saul.jpg" alt="">
-                                            </div>
-        
-                                            <div class="media-body">
-                                                <h2>Saul Mamani Choque <small>Respondio hace 29min - 25 Diciembre 2019 hr 21:10pm.</small></h2>
-                                            </div>
-                                        </div>
+                                        <h2>Mensaje Enviado</h2>
                                     </div>
         
                                     <div class="card__body">
-                                        <p>Saludos [usuario] con respecto a tu pregunta, el costo del cambio de nombre es de Bs. 500.00 de igual manera la información se encuentra en el apartado de Configuración/Perfil.</p>
-                                        <p>Saludos OTB-21 de Septiembre</p>
-        
-                                        <div class="wall__attrs">
-                                            <div class="wall__stats">
-                                                <span><i class="zmdi zmdi-comments"></i> 1</span>
-                                                <span><i class="zmdi zmdi-favorite"></i> 1</span>
-                                            </div>
-        
-                                            <div class="wall__people hidden-xs">
-                                                <a href=""><img src="demo/img/contacts/4.jpg" alt=""></a>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <div class="wall-comments">
-                                        <form class="wall__comments__input">
-                                            <textarea class="textarea-autosize" placeholder="Responder..."></textarea>
-                                        </form>
+                                        En este apartado podras contactarte directamente con el encargado de sistemas para despejar tus dudas.
                                     </div>
                                 </div>
         
+        
+                                <div class="card widget-contacts">
+                                    <div class="card__header card__header--highlight">
+                                        <h2>Información del contacto <small>Si deceas contactarte de otros medios te dejamos la información necesaria para comunicarte con el encargado de sistemas.</small></h2>
+                                    </div>
+                                    <div class="card__body">
+                                        <ul class="icon-list">
+                                            <li><i class="zmdi zmdi-phone"></i> +591 65504799</li>
+                                            <li><i class="zmdi zmdi-email"></i> saulmamani73h@otb.21.com</li>
+                                            <li><i class="zmdi zmdi-facebook-box"></i> saul.manich</li>
+                                            <li><i class="zmdi zmdi-twitter"></i> @saumanich (twitter.com/sau)</li>
+                                            <li>
+                                                <i class="zmdi zmdi-pin"></i>
+                                                <address>
+                                                    Nº 205 Teniente venabides <br>
+                                                    Garaje morado <br>
+                                                    Tocar timbre
+                                                </address>
+                                            </li>
+                                        </ul>
+                                    </div>
+        
+                                    <a class="widget-contacts__map" href="">
+                                        <img src="demo/img/map.png" alt="">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-md-4 hidden-sm hidden-xs">
-                                    <div class="card">
-                                        <div class="card__header">
-                                            <h2>Mensaje Enviado</h2>
-                                        </div>
-            
-                                        <div class="card__body">
-                                            En este apartado podras contactarte directamente con el encargado de sistemas para despejar tus dudas.
-                                        </div>
-                                    </div>
-            
-            
-                                    <div class="card widget-contacts">
-                                        <div class="card__header card__header--highlight">
-                                            <h2>Información del contacto <small>Si deceas contactarte de otros medios te dejamos la información necesaria para comunicarte con el encargado de sistemas.</small></h2>
-                                        </div>
-                                        <div class="card__body">
-                                            <ul class="icon-list">
-                                                <li><i class="zmdi zmdi-phone"></i> +591 65504799</li>
-                                                <li><i class="zmdi zmdi-email"></i> saulmamani73h@otb.21.com</li>
-                                                <li><i class="zmdi zmdi-facebook-box"></i> saul.manich</li>
-                                                <li><i class="zmdi zmdi-twitter"></i> @saumanich (twitter.com/sau)</li>
-                                                <li>
-                                                    <i class="zmdi zmdi-pin"></i>
-                                                    <address>
-                                                        Nº 205 Teniente venabides <br>
-                                                        Garaje morado <br>
-                                                        Tocar timbre
-                                                    </address>
-                                                </li>
-                                            </ul>
-                                        </div>
-            
-                                        <a class="widget-contacts__map" href="">
-                                            <img src="demo/img/map.png" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                            
-                        </div>
-        
-        </section>
-
-
-            <footer id="footer">
-                    Copyright &copy; s@u!_m@n!ch 2020
-    
-                    <ul class="footer__menu">
-                        <li><a href="#">Avanzados</a></li>
-                        <li><a href="#">Contactame</a></li>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Soporte</a></li>
-                        <li><a href="#">Calendario</a></li>
-                    </ul>
-                </footer>
+                        
+                    </div>
     
             </section>
-    
-            <!-- Older IE Warning -->
-            <!--[if lt IE 9]>
-                <div class="ie-warning">
-                    <h1>Warning!!</h1>
-                    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
-                    <div class="ie-warning__container">
-                        <ul class="ie-warning__download">
-                            <li>
-                                <a href="http://www.google.com/chrome/">
-                                    <img src="img/browsers/chrome.png" alt="">
-                                    <div>Chrome</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.mozilla.org/en-US/firefox/new/">
-                                    <img src="img/browsers/firefox.png" alt="">
-                                    <div>Firefox</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://www.opera.com">
-                                    <img src="img/browsers/opera.png" alt="">
-                                    <div>Opera</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.apple.com/safari/">
-                                    <img src="img/browsers/safari.png" alt="">
-                                    <div>Safari</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                                    <img src="img/browsers/ie.png" alt="">
-                                    <div>IE (New)</div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <p>Sorry for the inconvenience!</p>
+
+            <footer id="footer">
+                Copyright &copy; s@u-Crgt 2020
+
+                <ul class="footer__menu">
+                    <li><a href="#">¿Problemas?</a></li>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">¡Soporte!</a></li>
+                </ul>
+            </footer>
+
+        </section>
+
+        <!-- Older IE Warning -->
+        <!--[if lt IE 9]>
+            <div class="ie-warning">
+                <h1>Warning!!</h1>
+                <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+                <div class="ie-warning__container">
+                    <ul class="ie-warning__download">
+                        <li>
+                            <a href="http://www.google.com/chrome/">
+                                <img src="img/browsers/chrome.png" alt="">
+                                <div>Chrome</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.mozilla.org/en-US/firefox/new/">
+                                <img src="img/browsers/firefox.png" alt="">
+                                <div>Firefox</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.opera.com">
+                                <img src="img/browsers/opera.png" alt="">
+                                <div>Opera</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.apple.com/safari/">
+                                <img src="img/browsers/safari.png" alt="">
+                                <div>Safari</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                                <img src="img/browsers/ie.png" alt="">
+                                <div>IE (New)</div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            <![endif]-->
-    
-    
-            <!-- Javascript Libraries -->
-    
-            <!-- jQuery -->
-            <script src="vendors/jquery/dist/jquery.min.js"></script>
-    
-            <!-- Bootstrap -->
-            <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    
-            <!-- Malihu ScrollBar -->
-            <script src="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+                <p>Sorry for the inconvenience!</p>
+            </div>
+        <![endif]-->
 
-            <!-- Light Gallery -->
-            <script src="vendors/lightgallery/lib/lightgallery-all.min.js"></script>
+        <!-- Javascript Libraries -->
 
-            <!-- Auto Size Textarea -->
-            <script src="vendors/autosize/dist/autosize.min.js"></script>
+        <!-- jQuery -->
+        <script src="vendors/jquery/dist/jquery.min.js"></script>
 
-    
-            <!-- Bootstrap Notify -->
-            <script src="vendors/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
-    
-            <!-- Moment -->
-            <script src="vendors/moment/min/moment.min.js"></script>
-    
-            <!-- FullCalendar -->
-            <script src="vendors/fullcalendar/dist/fullcalendar.min.js"></script>
-    
-            <!-- Simple Weather -->
-            <script src="vendors/simpleWeather/jquery.simpleWeather.min.js"></script>
-    
-            <!-- Salvattore -->
-            <script src="vendors/salvattore/dist/salvattore.min.js"></script>
-    
-            <!-- Flot Charts -->
-            <script src="vendors/flot/jquery.flot.js"></script>
-            <script src="vendors/flot/jquery.flot.resize.js"></script>
-            <script src="vendors/flot.curvedlines/curvedLines.js"></script>
-    
-            <!-- Sparkline Charts -->
-            <script src="vendors/jquery.sparkline/jquery.sparkline.min.js"></script>
-    
-            <!-- EasyPie Charts -->
-            <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
-    
-            <!-- Placeholder for IE9 -->
-            <!--[if IE 9 ]>
-                <script src="vendors/jquery-placeholder/jquery.placeholder.min.js"></script>
-            <![endif]-->
-    
-            <!-- Demo Only -->
-            <script src="demo/js/flot-charts/curved-line.js"></script>
-            <script src="demo/js/flot-charts/line.js"></script>
-            <script src="demo/js/easy-pie-charts.js"></script>
-            <script src="demo/js/sparkline-charts.js"></script>
-            <script src="demo/js/calendar.js"></script>
-    
-            <!-- Site Functions & Actions -->
-            <script src="js/app.min.js"></script>
-    
-            <!-- PWA script -->
-            <script src="script.js"></script>
-        </body>
-    </html>
-    
+        <!-- Bootstrap -->
+        <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Malihu ScrollBar -->
+        <script src="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <!-- Bootstrap Notify -->
+        <script src="vendors/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
+        
+        <!-- Moment -->
+        <script src="vendors/moment/min/moment.min.js"></script>
+
+        <!-- NoUiSlider -->
+        <script src="vendors/nouislider/distribute/nouislider.min.js"></script>
+
+        <!-- Bootstrap Date/Time Picker -->
+        <script src="vendors/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+        <!-- Select 2 -->
+        <script src="vendors/select2/dist/js/select2.full.min.js"></script>
+
+        <!-- Simple File Input -->
+        <script src="vendors/fileinput/fileinput.min.js"></script>
+
+        <!-- jQuery Mask -->
+        <script src="vendors/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+
+        <!-- Farbtastic Color Picker -->
+        <script src="vendors/farbtastic/farbtastic.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+        <!-- File -->
+        <script src="js/file.js"></script>
+
+
+        <!-- Site Functions & Actions -->
+        <script src="js/app.min.js"></script>
+    </body>
+</html>
