@@ -24,9 +24,13 @@
 
 
 
+
         <title>ACUOTB PWA</title>
 
         <!-- Vendors -->
+
+        <!-- File CSS -->
+        <link href="css/file.css" rel="stylesheet">
 
         <!-- Animate CSS -->
         <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
@@ -37,19 +41,17 @@
         <!-- Malihu Scrollbar -->
         <link href="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
 
-        <!-- FullCalendar -->
-        <script src="vendors/fullcalendar/dist/fullcalendar.min.js"></script>
-
-        <!-- Select 2 -->
-        <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+        <!-- NoUiSlider -->
+        <link href="vendors/nouislider/distribute/nouislider.min.css" rel="stylesheet">
 
         <!-- Bootstrap Date/Time picker -->
         <link href="vendors/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
+        <!-- Farbtastic Color Picker-->
+        <link href="vendors/farbtastic/farbtastic.css" rel="stylesheet">
 
-         <!-- Demo only -->
-         <link href="demo/css/demo.css" rel="stylesheet">
-         <script src="demo/js/calendar.js"></script>
+        <!-- Select 2 -->
+        <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet">
 
         <!-- Site CSS -->
         <link href="css/app-1.min.css" rel="stylesheet">
@@ -84,8 +86,8 @@
 
             <ul class="top-menu">
                 <li class="top-menu__trigger hidden-lg hidden-md">
-                    <h4 style="margin-left: -30%;">ACUOTB</h4>
-                    <h6 style="margin-left: -55%;">Sistema Cobro de Agua</h6>
+                        <h4 style="margin-left: -30%;">ACUOTB</h4>
+                        <h6 style="margin-left: -55%;">Sistema Cobro de Agua</h6>
                 </li>
                 
                 <li class="top-menu__apps dropdown hidden-xs hidden-sm">
@@ -141,7 +143,7 @@
                             <a data-mae-action="clear-localstorage" href=""><i class="zmdi zmdi-delete"></i> Eliminar Caches</a>
                         </li>
                         <li>
-                            <a href=""><i class="zmdi zmdi-face"></i> Configuracion Perfil</a>
+                            <a href=""><i class="zmdi zmdi-face"></i> Configuración Perfil</a>
                         </li>
                         <li>
                             <a href=""><i class="zmdi zmdi-settings"></i> Avanzados</a>
@@ -374,7 +376,7 @@
                         <li class="navigation__sub navigation__active">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
                             <ul>
-                                <li class="navigation__active"><a href="lecturaMedidor.html">Medidor</a></li>
+                                <li class="navigation__active"><a href="lecturaMedidor.html">Medidor</a></li class="navigation__active">
                                 <li><a href="nuevoEvento.html">Asistencia Reunión</a></li>
                             </ul>
                         </li>
@@ -400,7 +402,7 @@
                         </li>
                         
                         
-                        <li class="navigation__sub">
+                        <li class="navigation__sub ">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-item"></i> Configuración</a>
                             <ul>
                                 <li><a href="cuenta.html">Cuentas</a></li>
@@ -414,453 +416,502 @@
             </aside>
 
             <section id="content">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card wall__posting">
+                            
+                            <div class="card__header card__header--highlight text-center">
+                                <h2 align="center"><img class="avatar-img" src="img/calendario.png" alt=""><br><br></h2>
+                                <div class="col-sm-12 col-md-12">
     
-                        <div class="action-header action-header--dark">
-                            <ul class="action-header__menu action-header__menu--padding" align="center">
-                                <li class="active"><a href="#">Asistencias</a></li>
-                                <li><a href="">Connected</a></li>
-                                <li><a href="">Requested</a></li>
-                            </ul>
-                           
-                            <div class="action-header__search">
-                                <input type="text" placeholder="Busquemos..." class="action-header__input">
-                                <i class="action-header__close zmdi zmdi-long-arrow-left"></i>
-                                
-                            </div>
-                            
-                            
-                            <div class="actions action-header__actions">
-                                <a href="" class="action-header__toggle"><i class="zmdi zmdi-search"></i></a>
-                                <a class="hidden-header__toogle" data-trigger="hover" data-toggle="popover" data-placement="bottom" data-content="Busquemos un evento.." title="" data-original-title="Eventos"><i class="zmdi zmdi-time"></i></a>
-                                <!-- <div class="col-sm-6 col-md-4">
                                     <div class="form-group">
-                                        <select class="select2" data-placeholder="Select a brand">
+                                        <select class="select2" data-placeholder="Seleccione un mes para poder crearlo">
                                             <option>&nbsp;</option>
-                                            <option>Subaru</option>
-                                            <option>Mitsubishi</option>
-                                            <option>Scion</option>
-                                            <option>Daihatsu</option>
-                                            <option>Hino</option>
+                                            <option>Enero - 2020</option>
+                                            <option>Febrero - 2020</option>
+                                            <option>Marzo - 2020</option>
+                                            <option>Abril - 2020</option>
+                                            <option>Mayo - 2020</option>
+                                            <option>Junio - 2020</option>
+                                            <option>Julio - 2020</option>
+                                            <option>Agosto - 2020</option>
+                                            <option>Septiembre - 2020</option>
+                                            <option>Octubre - 2020</option>
+                                            <option>Noviembre - 2020</option>
+                                            <option>Diciembre - 2020</option>
                                         </select>
                                     </div>
-                                </div> -->
-    
-                                <div class="dropdown hidden-xs">
+                                </div>
+                                <button class="btn btn--float"><i class="zmdi zmdi-plus"></i></button>
+                            </div>
+
+                            <div class="wall__actions">
+                                <div class="wall__actions__items">
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card__header">
+                                <h2 align="center"><img class="avatar-img" src="img/usuarios/ees.png" alt=""> <br><br> Aviso Importante<small>Busca una reunion y marca a los que asistieron, caso contrario le sera asignada la multa registrada para ese evento.</small></h2>
+                            </div>
+                            <div class="card__header card__header--highlight text-center">
+                                <div class="col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <select class="select2" data-placeholder="Seleccione un mes para poder crearlo">
+                                            <option>&nbsp;</option>
+                                            <option>Enero - 2020</option>
+                                            <option>Febrero - 2020</option>
+                                            <option>Marzo - 2020</option>
+                                            <option>Abril - 2020</option>
+                                            <option>Mayo - 2020</option>
+                                            <option>Junio - 2020</option>
+                                            <option>Julio - 2020</option>
+                                            <option>Agosto - 2020</option>
+                                            <option>Septiembre - 2020</option>
+                                            <option>Octubre - 2020</option>
+                                            <option>Noviembre - 2020</option>
+                                            <option>Diciembre - 2020</option>
+                                        </select>
+                                    </div>
+                                </div><br>
+                                <button class="btn btn--float"><i class="zmdi zmdi-search"></i></button>
+                            </div>
+
+                            <div class="wall__actions">
+                                <div class="wall__actions__items">
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="content--boxed">
+
+
+                    <div class="card">
+                        <div class="action-header">
+                            <div class="action-header__label" align="center"><span class="hidden-xs">Lista de Asamblea / </span>Febrero - 2020</div>
+
+                            <div class="action-header__search">
+                                <input type="text" placeholder="Start typing..." class="action-header__input">
+                                <i class="action-header__close zmdi zmdi-long-arrow-left"></i>
+                            </div>
+
+                            <div class="actions action-header__actions">
+                                <a href="" class="action-header__toggle"><i class="zmdi zmdi-search"></i></a>
+
+                                <div class="dropdown ">
                                     <a href="" data-toggle="dropdown">
                                         <i class="zmdi zmdi-more-vert"></i>
                                     </a>
-    
-                                   <ul class="dropdown-menu pull-right"> 
-                                        <li align="center">
-                                            <a href="">Asistencia</a>
+
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="">Refrescar</a>
                                         </li>
-                                        <li align="center">
-                                            <a href="">Atrasos</a>
-                                        </li>
-                                        <li align="center">
-                                            <a href="">Faltas</a>
+                                        <li>
+                                            <a href="">Eliminar</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-    
-                        <div class="contacts row">
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/boy-5.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                        <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                        <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                        <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
+
+                        <div class="list-group list-group--striped">
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left list-group__checkbox list-group__checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <i class="input-helper"></i>
+                                    </label>
                                 </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/boy-4.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                            <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                            <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                            <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
+
+                                <div class="pull-left">
+                                    <div class="avatar-char">P</div>
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions">
+                                        <div class="dropdown">
+                                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                                            <ul class="dropdown-menu pull-right">
+                                                <li><a href="">Refresh</a></li>
+                                                <li><a href="">Listview Settings</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="list-group__heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+                                    <small class="list-group__text">Quisque non tortor ultricies, posuere elit id, lacinia purus curabitur.</small>
                                 </div>
                             </div>
 
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/boy-3.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                            <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                            <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                            <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left list-group__checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions">
+                                        <div class="dropdown">
+                                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                                            <ul class="dropdown-menu pull-right">
+                                                <li><a href="">Refresh</a></li>
+                                                <li><a href="">Listview Settings</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pull-left">
+                                    <div class="avatar-char">D</div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="list-group__heading">Dulla vel metus scelerisque ante sollicitudin commodo purus odio</div>
+                                    <small class="list-group__text">Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</small>
                                 </div>
                             </div>
 
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/girl.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                            <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                            <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                            <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left list-group__checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions">
+                                        <div class="dropdown">
+                                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                                            <ul class="dropdown-menu pull-right">
+                                                <li><a href="">Refresh</a></li>
+                                                <li><a href="">Listview Settings</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pull-left">
+                                    <div class="avatar-char">P</div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="list-group__heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+                                    <div class="list-group__attrs">
+                                        <div>Date Created: 09/06/1988</div>
+                                        <div>Members: 78954</div>
+                                        <div>Published: No</div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/girl-7.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                            <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                            <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                            <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left list-group__checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+
+                                <div class="pull-left">
+                                    <div class="avatar-char">D</div>
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions">
+                                        <div class="dropdown">
+                                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                                            <ul class="dropdown-menu pull-right">
+                                                <li><a href="">Refresh</a></li>
+                                                <li><a href="">Listview Settings</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="list-group__heading">Donec congue tempus ligula, varius hendrerit mi hendrerit sit amet. Duis ac quam sit amet leo feugiat iaculis</div>
+                                    <small class="list-group__text">An erant explicari salutatus duo, sumo doming delicata in cum. Eos at augue viderer principes</small>
+
+                                    <span class="list-group__attrs">
+                                        <span>Date Created: 09/06/1988</span>
+                                        <span>Members: 78954</span>
+                                        <span>Published: No</span>
+                                    </span>
                                 </div>
                             </div>
 
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/girl-5.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                            <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                            <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                            <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left list-group__checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+
+                                <div class="pull-left">
+                                    <img class="avatar-img" src="demo/img/profile-pics/1.jpg" alt="">
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions">
+                                        <div class="dropdown">
+                                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                                            <ul class="dropdown-menu pull-right">
+                                                <li><a href="">Refresh</a></li>
+                                                <li><a href="">Listview Settings</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="list-group__heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+                                    <small class="list-group__text">Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</small>
                                 </div>
                             </div>
 
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/boy-5.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                            <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                            <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                            <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left list-group__checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <i class="input-helper"></i>
+                                    </label>
                                 </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/boy-4.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                            <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                            <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                            <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
+
+                                <div class="pull-left">
+                                    <img class="avatar-img" src="demo/img/profile-pics/2.jpg" alt="">
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions">
+                                        <div class="dropdown">
+                                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                                            <ul class="dropdown-menu pull-right">
+                                                <li><a href="">Refresh</a></li>
+                                                <li><a href="">Listview Settings</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="list-group__heading">Wel ea elit iuvaret. Mea labitur definitiones ex, id atqui accusata vix, vim nibh mandamus ad</div>
+                                    <small class="list-group__text">Wendy create ipsum dolor sit amet, per cu solet docendi ntoenstion</small>
+
+                                    <span class="list-group__attrs">
+                                        <span>Date Created: 09/06/1988</span>
+                                        <span>Members: 78954</span>
+                                        <span>Published: No</span>
+                                    </span>
                                 </div>
                             </div>
 
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/boy-3.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                            <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                            <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                            <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left list-group__checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+
+                                <div class="pull-left">
+                                    <img class="avatar-img" src="demo/img/profile-pics/3.jpg" alt="">
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions">
+                                        <div class="dropdown">
+                                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                                            <ul class="dropdown-menu pull-right">
+                                                <li><a href="">Refresh</a></li>
+                                                <li><a href="">Listview Settings</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="list-group__heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+
+                                    <span class="list-group__attrs">
+                                        <span>Date Created: 11/06/1988</span>
+                                        <span>Members: 212</span>
+                                        <span>Published: Yes</span>
+                                    </span>
                                 </div>
                             </div>
 
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/girl.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                            <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                            <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                            <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left list-group__checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+
+                                <div class="pull-left">
+                                    <img class="avatar-img" src="demo/img/profile-pics/4.jpg" alt="">
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions">
+                                        <div class="dropdown">
+                                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                                            <ul class="dropdown-menu pull-right">
+                                                <li><a href="">Refresh</a></li>
+                                                <li><a href="">Listview Settings</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="list-group__heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+                                    <small class="list-group__text">Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</small>
                                 </div>
                             </div>
 
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/girl-7.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                            <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                            <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                            <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left list-group__checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions">
+                                        <div class="dropdown">
+                                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                                            <ul class="dropdown-menu pull-right">
+                                                <li><a href="">Refresh</a></li>
+                                                <li><a href="">Listview Settings</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="list-group__heading">Dulla vel metus scelerisque ante sollicitudin commodo purus odio</div>
+                                    <small class="list-group__text">Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</small>
                                 </div>
                             </div>
 
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/girl-5.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                            <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                            <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                            <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left list-group__checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions">
+                                        <div class="dropdown">
+                                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                                            <ul class="dropdown-menu pull-right">
+                                                <li><a href="">Refresh</a></li>
+                                                <li><a href="">Listview Settings</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="list-group__heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+                                    <span class="list-group__attrs">
+                                        <span>Date Created: 09/06/1988</span>
+                                        <span>Members: 78954</span>
+                                        <span>Published: No</span>
+                                    </span>
                                 </div>
                             </div>
 
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/boy-5.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                            <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                            <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                            <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left list-group__checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <i class="input-helper"></i>
+                                    </label>
                                 </div>
-                            </div>
-    
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/boy-4.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                            <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                            <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                            <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
-                                </div>
-                            </div>
 
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/boy-3.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                            <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                            <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                            <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
-                                </div>
-                            </div>
+                                <div class="pull-right">
+                                    <div class="actions">
+                                        <div class="dropdown">
+                                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
 
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/girl.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                            <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                            <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                            <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
+                                            <ul class="dropdown-menu pull-right">
+                                                <li><a href="">Refresh</a></li>
+                                                <li><a href="">Listview Settings</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/girl-7.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                            <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                            <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                            <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
-                                </div>
-                            </div>
+                                <div class="media-body">
+                                    <div class="list-group__heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+                                    <small class="list-group__text">An erant explicari salutatus duo, sumo doming delicata in cum. Eos at augue viderer principes</small>
 
-                            <div class="col-md-2 col-sm-4">
-                                <div class="contacts__item">
-                                    <a href="" class="contacts__img">
-                                        <img src="img/usuarios/girl-5.png" alt="">
-                                    </a>
-    
-                                    <div class="contacts__info">
-                                        <strong>Cathy Shelton</strong>
-                                        <small>cathy.shelton31@example.com</small>
-                                    </div><br>
-                                    <a href="#">
-                                        <p align="center">
-                                            <button class="btn btn-success btn--icon"><i class="zmdi zmdi-check"></i></button>
-                                            <button class="btn btn-warning btn--icon"><i class="zmdi zmdi-timer-off"></i></button>
-                                            <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
-                                        </p>
-                                        <br>
-                                    </a>
+                                    <span class="list-group__attrs">
+                                        <span>Date Created: 09/06/1988</span>
+                                        <span>Members: 78954</span>
+                                        <span>Published: No</span>
+                                    </span>
                                 </div>
                             </div>
                         </div>
-    
-                        <div class="text-center m-t-20">
-                            <a href="" class="btn btn--icon-text btn-default"><i class="zmdi zmdi-refresh-alt"></i> Refrescar...</a>
+
+                        <div class="text-center p-30">
+                            <ul class="pagination">
+                                <li><a href=""><i class="zmdi zmdi-long-arrow-left"></i></a></li>
+                                <li class="active"><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li><a href="">5</a></li>
+                                <li><a href=""><i class="zmdi zmdi-long-arrow-right"></i></a></li>
+                            </ul>
                         </div>
                     </div>
-                </section>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
 
+        <footer id="footer">
+            Copyright  2020 &copy; s@u!_m@n!ch
 
-                <footer id="footer">
-                    Copyright &copy; s@u-Crgt 2020
-    
-                    <ul class="footer__menu">
-                        <li><a href="#">¿Problemas?</a></li>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">¡Soporte!</a></li>
-                    </ul>
-                </footer>
+            <ul class="footer__menu">
+                <li><a href="#">¿Problema?</a></li>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">¡Soporte!</a></li>
+            </ul>
+        </footer>
+
     
             </section>
     
@@ -918,16 +969,17 @@
     
             <!-- Malihu ScrollBar -->
             <script src="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+            <!-- Light Gallery -->
+            <script src="vendors/lightgallery/lib/lightgallery-all.min.js"></script>
+
+            <!-- Auto Size Textarea -->
+            <script src="vendors/autosize/dist/autosize.min.js"></script>
+
     
             <!-- Bootstrap Notify -->
             <script src="vendors/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
-
-            <!-- Bootstrap Wizard -->
-            <script src="vendors/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
-
-            <!-- Bootstrap Date/Time Picker -->
-            <script src="vendors/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-            
+    
             <!-- Moment -->
             <script src="vendors/moment/min/moment.min.js"></script>
     
@@ -939,9 +991,6 @@
     
             <!-- Salvattore -->
             <script src="vendors/salvattore/dist/salvattore.min.js"></script>
-
-            <!-- Select 2 -->
-            <script src="vendors/select2/dist/js/select2.full.min.js"></script>
     
             <!-- Flot Charts -->
             <script src="vendors/flot/jquery.flot.js"></script>
@@ -953,6 +1002,9 @@
     
             <!-- EasyPie Charts -->
             <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+
+            <!-- Select 2 -->
+        <script src="vendors/select2/dist/js/select2.full.min.js"></script>
     
             <!-- Placeholder for IE9 -->
             <!--[if IE 9 ]>

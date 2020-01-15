@@ -24,9 +24,13 @@
 
 
 
+
         <title>ACUOTB PWA</title>
 
         <!-- Vendors -->
+
+        <!-- File CSS -->
+        <link href="css/file.css" rel="stylesheet">
 
         <!-- Animate CSS -->
         <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
@@ -37,19 +41,17 @@
         <!-- Malihu Scrollbar -->
         <link href="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
 
-        <!-- FullCalendar -->
-        <script src="vendors/fullcalendar/dist/fullcalendar.min.js"></script>
-
-        <!-- Select 2 -->
-        <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+        <!-- NoUiSlider -->
+        <link href="vendors/nouislider/distribute/nouislider.min.css" rel="stylesheet">
 
         <!-- Bootstrap Date/Time picker -->
         <link href="vendors/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
+        <!-- Farbtastic Color Picker-->
+        <link href="vendors/farbtastic/farbtastic.css" rel="stylesheet">
 
-         <!-- Demo only -->
-         <link href="demo/css/demo.css" rel="stylesheet">
-         <script src="demo/js/calendar.js"></script>
+        <!-- Select 2 -->
+        <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet">
 
         <!-- Site CSS -->
         <link href="css/app-1.min.css" rel="stylesheet">
@@ -84,8 +86,8 @@
 
             <ul class="top-menu">
                 <li class="top-menu__trigger hidden-lg hidden-md">
-                    <h4 style="margin-left: -30%;">ACUOTB</h4>
-                    <h6 style="margin-left: -55%;">Sistema Cobro de Agua</h6>
+                        <h4 style="margin-left: -30%;">ACUOTB</h4>
+                        <h6 style="margin-left: -55%;">Sistema Cobro de Agua</h6>
                 </li>
                 
                 <li class="top-menu__apps dropdown hidden-xs hidden-sm">
@@ -141,7 +143,7 @@
                             <a data-mae-action="clear-localstorage" href=""><i class="zmdi zmdi-delete"></i> Eliminar Caches</a>
                         </li>
                         <li>
-                            <a href=""><i class="zmdi zmdi-face"></i> Configuracion Perfil</a>
+                            <a href=""><i class="zmdi zmdi-face"></i> Configuración Perfil</a>
                         </li>
                         <li>
                             <a href=""><i class="zmdi zmdi-settings"></i> Avanzados</a>
@@ -374,8 +376,8 @@
                         <li class="navigation__sub navigation__active">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
                             <ul>
-                                <li><a href="lecturaMedidor.html">Medidor</a></li>
-                                <li class="navigation__active"><a href="nuevoEvento.html">Asistencia Reunión</a></li>
+                                <li><a href="lecturaMedidor.html">Medidor</a></li class="navigation__active">
+                                <li class="navigation__active"><a href="nuevoEvento.html">Asistencia Reunión</a></li class="navigation__active">
                             </ul>
                         </li>
                         <li class="navigation__sub">
@@ -400,7 +402,7 @@
                         </li>
                         
                         
-                        <li class="navigation__sub">
+                        <li class="navigation__sub ">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-item"></i> Configuración</a>
                             <ul>
                                 <li><a href="cuenta.html">Cuentas</a></li>
@@ -414,233 +416,95 @@
             </aside>
 
             <section id="content">
-                       
-                        <!-- Form -->
-                    <form class="card">
-                        <div class="card__header card__header--highlight">
-                            <h2 align="center">Nuevo Evento <small>Crearemos una nueva reunión de la OTB, asegurate de crearlo correctamente</small></h2>
-                            <br>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card wall__posting">
                             
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <p align="center">Selecciona una fecha</p>
+                            <div class="card__header card__header--highlight text-center">
+                                <h2 align="center"><img class="avatar-img" src="img/calendario.png" alt=""><br><br></h2>
+                                <div class="col-sm-12 col-md-12">
     
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
-                                            <div class="form-group">
-                                            <input type='text' class="form-control date-picker" placeholder="Busquemos aqui...">
-                                            <i class="form-group__bar"></i>
-                                        </div>
-                                    </div><br>
+                                    <div class="form-group">
+                                        <select class="select2" data-placeholder="Seleccione un mes para poder crearlo">
+                                            <option>&nbsp;</option>
+                                            <option>Enero - 2020</option>
+                                            <option>Febrero - 2020</option>
+                                            <option>Marzo - 2020</option>
+                                            <option>Abril - 2020</option>
+                                            <option>Mayo - 2020</option>
+                                            <option>Junio - 2020</option>
+                                            <option>Julio - 2020</option>
+                                            <option>Agosto - 2020</option>
+                                            <option>Septiembre - 2020</option>
+                                            <option>Octubre - 2020</option>
+                                            <option>Noviembre - 2020</option>
+                                            <option>Diciembre - 2020</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="col-sm-5">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="zmdi zmdi-home"></i></span>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Nombre del evento">
-                                            <i class="form-group__bar"></i>
-                                        </div>
-                                    </div>
-    
-                                    <br/>
-    
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="zmdi zmdi-local-atm"></i></span>
-                                        <div class="form-group">
-                                            <input type="number" class="form-control" placeholder="Monto de la multa">
-                                            <i class="form-group__bar"></i>
-                                        </div>
-                                    </div>
-    
-                                    <br/>
-    
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="zmdi zmdi-pin"></i></span>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Dirección de Reunión">
-                                            <i class="form-group__bar"></i>
-                                        </div>
-                                    </div>
-                                </div><br>
-                                <div class="col-sm-3">
-                                    <p align="center"> Realizar Acción
-                                        <br><br>
-                                        <button class="btn btn-success btn--icon" data-trigger="hover" data-toggle="popover" data-placement="bottom" data-content="Se creara un evento.." title="" data-original-title="Crear"><i class="zmdi zmdi-check"></i></button>
-                                        <button class="btn btn--light btn--icon" data-trigger="hover" data-toggle="popover" data-placement="bottom" data-content="Se cancelara el registro.." title="" data-original-title="Cancelar"><i class="zmdi zmdi-close"></i></button>
-                                    </p>
+                                <button class="btn btn--float"><i class="zmdi zmdi-plus"></i></button>
+                            </div>
+
+                            <div class="wall__actions">
+                                <div class="wall__actions__items">
                                     <br>
                                 </div>
                             </div>
-                            
-                            
                         </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card__header">
+                                <h2 align="center"><img class="avatar-img" src="img/usuarios/ees.png" alt=""> <br><br> Aviso Importante<small>Busca una reunion y marca a los que asistieron, caso contrario le sera asignada la multa registrada para ese evento.</small></h2>
+                            </div>
+                            <div class="card__header card__header--highlight text-center">
+                                <div class="col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <select class="select2" data-placeholder="Seleccione un mes para poder crearlo">
+                                            <option>&nbsp;</option>
+                                            <option>Enero - 2020</option>
+                                            <option>Febrero - 2020</option>
+                                            <option>Marzo - 2020</option>
+                                            <option>Abril - 2020</option>
+                                            <option>Mayo - 2020</option>
+                                            <option>Junio - 2020</option>
+                                            <option>Julio - 2020</option>
+                                            <option>Agosto - 2020</option>
+                                            <option>Septiembre - 2020</option>
+                                            <option>Octubre - 2020</option>
+                                            <option>Noviembre - 2020</option>
+                                            <option>Diciembre - 2020</option>
+                                        </select>
+                                    </div>
+                                </div><br>
+                                <button class="btn btn--float"><i class="zmdi zmdi-search"></i></button>
+                            </div>
 
-                    </form>
-
-
-                    <div class="action-header action-header--dark">
-                        <ul class="action-header__menu action-header__menu--padding" align="center">
-                            <li class="active"><a>Nuevo Evento</a></li>
-                        </ul>
-                       
-                        <div class="action-header__search">
-                            <input type="text" placeholder="Busquemos..." class="action-header__input">
-                            <i class="action-header__close zmdi zmdi-long-arrow-left"></i>
-                        </div>
-                        
-                        
-                        <div class="actions action-header__actions">
-                            <div class="dropdown hidden-xs">
-                                <a href="" data-toggle="dropdown">
-                                    <i class="zmdi zmdi-more-vert"></i>
-                                </a>
-
-                               <ul class="dropdown-menu pull-right"> 
-                                    <li align="center">
-                                        <a href="">Refrescar</a>
-                                    </li>
-                                </ul>
+                            <div class="wall__actions">
+                                <div class="wall__actions__items">
+                                    <br>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    
-
-                    <div class="card">
-                        <div class="card__header">
-                            <h2>Selection Example <small>Ensure that the data attribute [data-identifier="true"] is set on one column header.</small></h2>
-                        </div>
-    
-                        <div class="card__body">
-                            <div class="table-responsive">
-                                <table id="data-table-selection" class="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th data-column-id="id" data-type="numeric" data-identifier="true">ID</th>
-                                            <th data-column-id="sender">Sender</th>
-                                            <th data-column-id="received" data-order="desc">Received</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>10238</td>
-                                            <td>eduardo@pingpong.com</td>
-                                            <td>14.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10243</td>
-                                            <td>eduardo@pingpong.com</td>
-                                            <td>19.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10248</td>
-                                            <td>eduardo@pingpong.com</td>
-                                            <td>24.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10253</td>
-                                            <td>eduardo@pingpong.com</td>
-                                            <td>29.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10234</td>
-                                            <td>lila@google.com</td>
-                                            <td>10.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10239</td>
-                                            <td>lila@google.com</td>
-                                            <td>15.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10244</td>
-                                            <td>lila@google.com</td>
-                                            <td>20.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10249</td>
-                                            <td>lila@google.com</td>
-                                            <td>25.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10237</td>
-                                            <td>robert@bingo.com</td>
-                                            <td>13.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10242</td>
-                                            <td>robert@bingo.com</td>
-                                            <td>18.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10247</td>
-                                            <td>robert@bingo.com</td>
-                                            <td>23.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10252</td>
-                                            <td>robert@bingo.com</td>
-                                            <td>28.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10236</td>
-                                            <td>simon@yahoo.com</td>
-                                            <td>12.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10241</td>
-                                            <td>simon@yahoo.com</td>
-                                            <td>17.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10246</td>
-                                            <td>simon@yahoo.com</td>
-                                            <td>22.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10251</td>
-                                            <td>simon@yahoo.com</td>
-                                            <td>27.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10235</td>
-                                            <td>tim@microsoft.com</td>
-                                            <td>11.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10240</td>
-                                            <td>tim@microsoft.com</td>
-                                            <td>16.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10245</td>
-                                            <td>tim@microsoft.com</td>
-                                            <td>21.10.2013</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10250</td>
-                                            <td>tim@microsoft.com</td>
-                                            <td>26.10.2013</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
                     </div>
-    
-                    </div>
-                </section>
+                </div>
+                
+            </section>
 
+        <footer id="footer">
+            Copyright  2020 &copy; s@u!_m@n!ch
 
-                <footer id="footer">
-                    Copyright &copy; s@u-Crgt 2020
-    
-                    <ul class="footer__menu">
-                        <li><a href="#">¿Problemas?</a></li>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">¡Soporte!</a></li>
-                    </ul>
-                </footer>
+            <ul class="footer__menu">
+                <li><a href="#">¿Problema?</a></li>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">¡Soporte!</a></li>
+            </ul>
+        </footer>
+
     
             </section>
     
@@ -689,76 +553,69 @@
     
     
             <!-- Javascript Libraries -->
+    
+            <!-- jQuery -->
+            <script src="vendors/jquery/dist/jquery.min.js"></script>
+    
+            <!-- Bootstrap -->
+            <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+            <!-- Malihu ScrollBar -->
+            <script src="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
 
-        <!-- jQuery -->
-        <script src="vendors/jquery/dist/jquery.min.js"></script>
+            <!-- Light Gallery -->
+            <script src="vendors/lightgallery/lib/lightgallery-all.min.js"></script>
 
-        <!-- Bootstrap -->
-        <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+            <!-- Auto Size Textarea -->
+            <script src="vendors/autosize/dist/autosize.min.js"></script>
 
-        <!-- Malihu ScrollBar -->
-        <script src="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    
+            <!-- Bootstrap Notify -->
+            <script src="vendors/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
+    
+            <!-- Moment -->
+            <script src="vendors/moment/min/moment.min.js"></script>
+    
+            <!-- FullCalendar -->
+            <script src="vendors/fullcalendar/dist/fullcalendar.min.js"></script>
+    
+            <!-- Simple Weather -->
+            <script src="vendors/simpleWeather/jquery.simpleWeather.min.js"></script>
+    
+            <!-- Salvattore -->
+            <script src="vendors/salvattore/dist/salvattore.min.js"></script>
+    
+            <!-- Flot Charts -->
+            <script src="vendors/flot/jquery.flot.js"></script>
+            <script src="vendors/flot/jquery.flot.resize.js"></script>
+            <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+    
+            <!-- Sparkline Charts -->
+            <script src="vendors/jquery.sparkline/jquery.sparkline.min.js"></script>
+    
+            <!-- EasyPie Charts -->
+            <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
 
-        <!-- Bootstrap Notify -->
-        <script src="vendors/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
-
-        <!-- Moment -->
-        <script src="vendors/moment/min/moment.min.js"></script>
-
-        <!-- FullCalendar -->
-        <script src="vendors/fullcalendar/dist/fullcalendar.min.js"></script>
-
-        <!-- Bootstrap Date/Time Picker -->
-        <script src="vendors/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-
-
-        <!-- Simple Weather -->
-        <script src="vendors/simpleWeather/jquery.simpleWeather.min.js"></script>
-
-        <!-- Salvattore -->
-        <script src="vendors/salvattore/dist/salvattore.min.js"></script>
-
-        <!-- Flot Charts -->
-        <script src="vendors/flot/jquery.flot.js"></script>
-        <script src="vendors/flot/jquery.flot.resize.js"></script>
-        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
-
-        <!-- Sparkline Charts -->
-        <script src="vendors/jquery.sparkline/jquery.sparkline.min.js"></script>
-
-        <!-- EasyPie Charts -->
-        <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
-
-        <!-- Placeholder for IE9 -->
-        <!--[if IE 9 ]>
-            <script src="vendors/jquery-placeholder/jquery.placeholder.min.js"></script>
-        <![endif]-->
-
-
-
-        <!-- Bootstrap -->
-        <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-
-        <!-- Bootstrap Notify -->
-        <script src="vendors/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
-
-        <!-- Bootgrid -->
-        <script src="vendors/jquery.bootgrid/dist/jquery.bootgrid.min.js"></script>
-
-
-        <!-- Demo Only -->
-        <script src="demo/js/flot-charts/curved-line.js"></script>
-        <script src="demo/js/flot-charts/line.js"></script>
-        <script src="demo/js/easy-pie-charts.js"></script>
-        <script src="demo/js/sparkline-charts.js"></script>
-        <script src="demo/js/calendar.js"></script>
-
-        <!-- Site Functions & Actions -->
-        <script src="js/app.min.js"></script>
-        <script src="demo/js/data-table.js"></script>
-
-        <!-- PWA script -->
-        <script src="script.js"></script>
+            <!-- Select 2 -->
+        <script src="vendors/select2/dist/js/select2.full.min.js"></script>
+    
+            <!-- Placeholder for IE9 -->
+            <!--[if IE 9 ]>
+                <script src="vendors/jquery-placeholder/jquery.placeholder.min.js"></script>
+            <![endif]-->
+    
+            <!-- Demo Only -->
+            <script src="demo/js/flot-charts/curved-line.js"></script>
+            <script src="demo/js/flot-charts/line.js"></script>
+            <script src="demo/js/easy-pie-charts.js"></script>
+            <script src="demo/js/sparkline-charts.js"></script>
+            <script src="demo/js/calendar.js"></script>
+    
+            <!-- Site Functions & Actions -->
+            <script src="js/app.min.js"></script>
+    
+            <!-- PWA script -->
+            <script src="script.js"></script>
         </body>
     </html>
     
