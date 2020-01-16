@@ -418,6 +418,18 @@
             <section id="content">
                 <div class="row">
                     <div class="col-md-8">
+                        <div class="content__header">
+                            <h2>Nuevo Evento</h2>
+        
+                            <div class="actions">
+                                <div class="dropdown">
+                                    <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="">Refrescar</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                         <div class="card">
                             <div class="card__header card__header--highlight text-center">
                                 <!-- main codes start -->
@@ -468,25 +480,39 @@
                                     </li>
                                 </div>
                                 <div class="col-sm-12 col-md-12">
-                                    <div class="form-group">
-                                        <select class="select2" data-placeholder="Seleccione un mes para poder crearlo">
-                                            <option>&nbsp;</option>
-                                            <option>Enero - 2020</option>
-                                            <option>Febrero - 2020</option>
-                                            <option>Marzo - 2020</option>
-                                            <option>Abril - 2020</option>
-                                            <option>Mayo - 2020</option>
-                                            <option>Junio - 2020</option>
-                                            <option>Julio - 2020</option>
-                                            <option>Agosto - 2020</option>
-                                            <option>Septiembre - 2020</option>
-                                            <option>Octubre - 2020</option>
-                                            <option>Noviembre - 2020</option>
-                                            <option>Diciembre - 2020</option>
-                                        </select>
+                                    <div class="col-sm-3">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-money-box"></i></span>
+                                            <div class="form-group form-group--float">
+                                                <input type="number" class="form-control">
+                                                <label>Multa</label>
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-assignment"></i></span>
+                                            <div class="form-group form-group--float">
+                                                <input type="text" class="form-control">
+                                                <label>Motivo</label>
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-sm-4">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                                            <div class="form-group form-group--float">
+                                                <input type="text" class="form-control">
+                                                <label>Mensaje</label>
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div><br>
-                                <button class="btn btn--float"><i class="zmdi zmdi-search"></i></button>
+                                <button class="btn btn--float"><i class="zmdi zmdi-plus"></i></button>
                             </div>
 
                             <div class="wall__actions">
