@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- PWA desde aqui segun el video-->
+        <!-- Para pintar de color la barra de navegador de un navegador-->
+        <meta name="theme-color" content="#222">
+        <!-- Para decirle a los navegadores que tu sitio esta optimizado para moviles y que el sitio es amigable -->
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <!-- PWA para apple-->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <!-- icono-->
+        <link rel="shortcut icon" type="image/png" href="img/ico.png">
+        <!-- Pantalla de inicio-->
+        <link rel="apple-touch-icon" href="img/ico.png">
+        <link rel="apple-touch-startup-image" href="img/ico.png">
+        <!-- importante -->
+        <link rel="manifest" href="manifest.json">
+
+
+
+        <title>ACUOTB PWA</title>
+
+        <!-- Vendors -->
+
+        <!-- Animate CSS -->
+        <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link href="vendors/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+
+        <!-- Malihu Scrollbar -->
+        <link href="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+
+        <!-- Full Calendar -->
+        <link href="vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+
+        <!-- Site CSS -->
+        <link href="css/app-1.min.css" rel="stylesheet">
+
+        <!-- Page loader -->
+        <script src="js/page-loader.min.js"></script>
+
+        
+
+
+    </head>
+
+    <body>
+        <!-- Page Loader -->
+        <div id="page-loader">
+            <div class="preloader preloader--xl preloader--light">
+                <svg viewBox="25 25 50 50">
+                    <circle cx="50" cy="50" r="20" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <a href="index.html" class="hidden-xs" align="center">
+                    ACUOTB
+                    <small>Sistema de Agua-21</small>
+                </a>
+                <i class="logo__trigger zmdi zmdi-menu" data-mae-action="block-open" data-mae-target="#navigation"></i>
+            </div>
+
+            <ul class="top-menu">
+                <li class="top-menu__trigger hidden-lg hidden-md">
+                        <h4 style="margin-left: -10%;">ACUOTB</h4>
+                        <h6 style="margin-left: -30%;">Sistema Cobro de Agua</h6>
+                </li>
+                
+                <li class="top-menu__apps dropdown hidden-xs hidden-sm">
+                    <a data-toggle="dropdown" href="">
+                        <i class="zmdi zmdi-apps"></i>
+                    </a>
+                    <ul class="dropdown-menu pull-right">
+                            <li>
+                                <a href="">
+                                    <i class="zmdi zmdi-cloud-off"></i>
+                                    <small>Problemas</small>
+                                </a>
+                            </li>
+                              <li>
+                                  <a href="">
+                                      <i class="zmdi zmdi-calendar"></i>
+                                      <small>Calendario</small>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="">
+                                      <i class="zmdi zmdi-email"></i>
+                                      <small>Bandeja </small>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="">
+                                      <i class="zmdi zmdi-trending-up"></i>
+                                      <small>Reportes</small>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="">
+                                      <i class="zmdi zmdi-view-headline"></i>
+                                      <small>Noticias</small>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="">
+                                      <i class="zmdi zmdi-image"></i>
+                                      <small>Galeria</small>
+                                  </a>
+                              </li>
+                          </ul>
+                </li>
+                <li class="dropdown hidden-xs">
+                    <a data-toggle="dropdown" href=""><i class="zmdi zmdi-more-vert"></i></a>
+                    <ul class="dropdown-menu dropdown-menu--icon pull-right">
+                        <li class="hidden-xs">
+                            <a data-mae-action="fullscreen" href=""><i class="zmdi zmdi-fullscreen"></i> Pantalla Completa</a>
+                        </li>
+                        <li>
+                            <a data-mae-action="clear-localstorage" href=""><i class="zmdi zmdi-delete"></i> Eliminar Caches</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="zmdi zmdi-face"></i> Configuracion Perfil</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="zmdi zmdi-settings"></i> Avanzados</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- <li class="top-menu__alerts" data-mae-action="block-open" data-mae-target="#notifications" data-toggle="tab" data-target="#notifications__messages">
+                    <a href=""><i class="zmdi zmdi-notifications"></i></a>
+                </li> -->
+                <li class="top-menu__profile dropdown">
+                    <a data-toggle="dropdown" href="">
+                    <img src="img/usuarios/images.png" alt="">
+                    </a>
+
+                    <ul class="dropdown-menu pull-right dropdown-menu--icon">
+                        <li>
+                            <a href="profile-about.html"><i class="zmdi zmdi-account"></i> Ver Perfil</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="zmdi zmdi-input-antenna"></i> Comprobar Red</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="zmdi zmdi-settings"></i> Ajustes</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="zmdi zmdi-time-restore"></i> Salir</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <form class="top-search">
+                <input type="text" class="top-search__input" placeholder="Busquemos por medidor & número">
+                <i class="zmdi zmdi-search top-search__reset"></i>
+            </form>
+        </header>
+
+        <section id="main">
+            <aside id="notifications">
+                <ul class="tab-nav tab-nav--justified tab-nav--icon">
+                    <li><a class="user-alert__messages" href="#notifications__messages" data-toggle="tab"><i class="zmdi zmdi-email"></i></a></li>
+                    <li><a class="user-alert__notifications" href="#notifications__updates" data-toggle="tab"><i class="zmdi zmdi-notifications"></i></a></li>
+                    <li><a class="user-alert__tasks" href="#notifications__tasks" data-toggle="tab"><i class="zmdi zmdi-playlist-plus"></i></a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane" id="notifications__messages">
+                        <div class="list-group">
+                            <a href="" class="list-group-item media">
+                                <div class="pull-left">
+                                    <img class="avatar-img" src="demo/img/profile-pics/1.jpg" alt="">
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="list-group__heading">Fulano Villa Jacobs</div>
+                                    <small class="list-group__text">Poner alguna descripción en la lista</small>
+                                </div>
+                            </a>
+
+                            <a href="" class="list-group-item media">
+                                <div class="pull-left">
+                                    <img class="avatar-img" src="demo/img/profile-pics/5.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <div class="list-group__heading">Fulana de Barnes</div>
+                                    <small class="list-group__text">Poner alguna descripción en la lista</small>
+                                </div>
+                            </a>
+
+                            <a href="" class="list-group-item media">
+                                <div class="pull-left">
+                                    <img class="avatar-img" src="demo/img/profile-pics/3.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <div class="list-group__heading">Fulanito de Lawson</div>
+                                    <small class="list-group__text">Poner alguna descripción en la lista</small>
+                                </div>
+                            </a>
+
+                            <a href="" class="list-group-item media">
+                                <div class="pull-left">
+                                    <img class="avatar-img" src="demo/img/profile-pics/4.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <div class="list-group__heading">Fulanita de Mckinney</div>
+                                    <small class="list-group__text">Poner alguna descripción en la lista</small>
+                                </div>
+                            </a>
+
+                            <a href="" class="list-group-item media">
+                                <div class="pull-left">
+                                    <img class="avatar-img" src="demo/img/profile-pics/2.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <div class="list-group__heading">Fulanisos Rudolph Perez</div>
+                                    <small class="list-group__text">Poner alguna descripción en la lista</small>
+                                </div>
+                            </a>
+                        </div>
+
+                        <a href="" class="btn btn--float">
+                            <i class="zmdi zmdi-plus"></i>
+                        </a>
+                    </div>
+
+                    <div class="tab-pane" id="notifications__updates">
+                        <div class="list-group">
+                            <a href="" class="list-group-item media">
+                                <div class="pull-right">
+                                    <img class="avatar-img" src="demo/img/profile-pics/1.jpg" alt="">
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="list-group__heading">Fulano Villa Jacobs</div>
+                                    <small class="list-group__text">Poner alguna descripción en la lista</small>
+                                </div>
+                            </a>
+
+                            <a href="" class="list-group-item">
+                                <div class="list-group__heading">Fulana Candice Barnes</div>
+                                <small class="list-group__text">Poner alguna descripción en la lista</small>
+                            </a>
+
+                            <a href="" class="list-group-item">
+                                <div class="list-group__heading"> Fulanillo Jeannette Lawson</div>
+                                <small class="list-group__text">Poner alguna descripción en la lista</small>
+                            </a>
+
+                            <a href="" class="list-group-item media">
+                                <div class="pull-right">
+                                    <img class="avatar-img" src="demo/img/profile-pics/4.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <div class="list-group__heading">Filancirigillo </div>
+                                    <small class="list-group__text">Poner alguna descripción en la lista</small>
+                                </div>
+                            </a>
+
+                            <a href="" class="list-group-item media">
+                                <div class="pull-right">
+                                    <img class="avatar-img" src="demo/img/profile-pics/2.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <div class="list-group__heading">Rudolph Perez</div>
+                                    <small class="list-group__text">Poner alguna descripción en la lista</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="notifications__tasks">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <div class="list-group__heading m-b-5">Almacenamiento Socios</div>
+
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
+                                        <span class="sr-only">95% Complete (success)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <div class="list-group__heading m-b-5">Extención de Google Chrome </div>
+
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                        <span class="sr-only">80% Complete (success)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <div class="list-group__heading m-b-5">Socios activos</div>
+
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                        <span class="sr-only">20% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <div class="list-group__heading m-b-5">Rendimiento del Sistema</div>
+
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        <span class="sr-only">60% Complete (warning)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <div class="list-group__heading m-b-5">Tiempo de Actualizacion</div>
+
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                        <span class="sr-only">80% Complete (danger)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="" class="btn btn--float">
+                            <i class="zmdi zmdi-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <aside id="navigation">
+                <div class="navigation__header">
+                    <i class="zmdi zmdi-long-arrow-left" data-mae-action="block-close"></i> <h4 align="center" style="margin-top: -30px;">ACUOTB</h4>
+                </div>
+
+                <div class="navigation__toggles">
+                    <a href="" class="active" data-mae-action="block-open" data-mae-target="#notifications" data-toggle="tab" data-target="#notifications__messages">
+                        <i class="zmdi zmdi-email"></i>
+                    </a>
+                    <a href="" data-mae-action="block-open" data-mae-target="#notifications" data-toggle="tab" data-target="#notifications__updates">
+                        <i class="zmdi zmdi-notifications"></i>
+                    </a>
+                    <a href=""  data-mae-action="block-open" data-mae-target="#notifications" data-toggle="tab" data-target="#notifications__tasks">
+                        <i class="zmdi zmdi-playlist-plus"></i>
+                    </a>
+                </div>
+
+                <div class="navigation__menu c-overflow">
+                    <ul>
+                        <li>
+                            <a href="index.html"><i class="zmdi zmdi-home"></i> Tablero</a>
+                        </li>
+                        <li class="navigation__active"><a href="cobroFacturacion.html"><i class="zmdi zmdi-layers"></i> Cobro y facturación</a></li>
+                        <li class="navigation__sub">
+                            <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-widgets"></i> Acciones</a>
+
+                            <ul>
+                                <li><a href="registroSocio.html">Registro de Socios</a></li>
+                                <li><a href="registroMedidor.html">Registro Medidores</a></li>
+                            </ul>
+                        </li>
+                        <li class="navigation__sub">
+                            <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
+                            <ul>
+                                <li><a href="lecturaMedidor.html">Medidor</a></li>
+                                <li><a href="lecturaAsistencia.html">Asistencia Reunión</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="navigation__sub">
+                            <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-trending-up"></i>Reportes</a>
+                            <ul>
+                                <li><a href="#">Cubos de agua</a></li>
+                                <li><a href="#">Consumo de agua</a></li>
+                                <li><a href="#">Multas consumo de agua</a></li>
+                                <li><a href="#">Asistencia reunión</a></li>
+                                <li><a href="#">Multas inasistencia reunión</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="calendario.html"><i class="zmdi zmdi-calendar"></i> Calendario</a></li>
+                        
+                        <li class="navigation__sub">
+                            <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-item"></i> Configuración</a>
+                            <ul>
+                                <li><a href="perfil.html">Perfil</a></li>
+                                <li><a href="chat.html">Chat AcuOTB</a></li>
+                                <li><a href="login.html">Login</a></li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section id="content">
+                    <div class="">
+                        <div class="content__header">
+                            <h2>Inasistencias</h2>
+    
+                            <div class="actions">
+                            <a href=""><i class="zmdi zmdi-check-all"></i></a>
+                            <a href=""><i class="zmdi zmdi-trending-up"></i></a>
+                            <div class="dropdown">
+                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                <ul class="dropdown-menu pull-right">
+                                        <li><a href="">Actualizar</a></li>
+                                        <li><a href="">Avanzados</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+    
+                        <div class="action-header action-header--dark">
+                            <ul class="action-header__menu action-header__menu--padding" align="center">
+                                <li><a href="cobroFacturacion.html">Socios</a></li>
+                                <li><a href="cobroAgua.html">Consumo</a></li>
+                                <li class="active"><a href="#">Faltas</a></li>
+                            </ul>
+    
+                            <div class="action-header__search">
+                                <input type="text" placeholder="Busquemos..." class="action-header__input">
+                                <i class="action-header__close zmdi zmdi-long-arrow-left"></i>
+                            </div>
+    
+                            <div class="actions action-header__actions">
+                                <a href="" class="action-header__toggle"><i class="zmdi zmdi-search"></i></a>
+                                <a href="" class="hidden-xs"><i class="zmdi zmdi-time"></i></a>
+    
+                                
+    
+                                <a href="" class="hidden-xs"><i class="zmdi zmdi-info"></i></a>
+    
+                                <div class="dropdown hidden-xs">
+                                    <a href="" data-toggle="dropdown">
+                                        <i class="zmdi zmdi-more-vert"></i>
+                                    </a>
+    
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="">Actualizar</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Ajustes</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="contacts row">
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/1.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Cathy Shelton</strong>
+                                        <small>cathy.shelton31@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/2.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Stella Flores</strong>
+                                        <small>stella@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/3.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Marilyn Thomas</strong>
+                                        <small>marilyn@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/4.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Dwight Gilbert</strong>
+                                        <small>dwight@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/5.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Cody Moreno</strong>
+                                        <small>moreno@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/6.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Jamie Freeman</strong>
+                                        <small>freeman@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/7.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Charles Spencer</strong>
+                                        <small>charles@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/8.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Vickie Reed</strong>
+                                        <small>reed@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/9.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Lauren Ruiz</strong>
+                                        <small>ruiz@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/10.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Marlene Vasquez</strong>
+                                        <small>vasquez@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/11.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Loretta Morrisonz</strong>
+                                        <small>morrisonz@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/12.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Yvonne Wood</strong>
+                                        <small>wood@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/13.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Denise Franklin</strong>
+                                        <small>franklin@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/14.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Joseph Gonzalez</strong>
+                                        <small>gonzalez@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/15.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Rick Graham</strong>
+                                        <small>graham@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/16.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Alexander Bailey</strong>
+                                        <small>bailey@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/1.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Cathy Shelton</strong>
+                                        <small>cathy.shelton31@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/2.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Stella Flores</strong>
+                                        <small>stella@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/3.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Marilyn Thomas</strong>
+                                        <small>marilyn@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/4.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Dwight Gilbert</strong>
+                                        <small>dwight@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/5.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Cody Moreno</strong>
+                                        <small>moreno@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/6.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Jamie Freeman</strong>
+                                        <small>freeman@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/7.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Charles Spencer</strong>
+                                        <small>charles@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/8.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Vickie Reed</strong>
+                                        <small>reed@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/9.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Lauren Ruiz</strong>
+                                        <small>ruiz@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/10.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Marlene Vasquez</strong>
+                                        <small>vasquez@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/11.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Loretta Morrisonz</strong>
+                                        <small>morrisonz@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/12.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Yvonne Wood</strong>
+                                        <small>wood@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/13.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Denise Franklin</strong>
+                                        <small>franklin@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-2 col-sm-4">
+                                <div class="contacts__item">
+                                    <a href="" class="contacts__img">
+                                        <img src="demo/img/contacts/14.jpg" alt="">
+                                    </a>
+    
+                                    <div class="contacts__info">
+                                        <strong>Joseph Gonzalez</strong>
+                                        <small>gonzalez@example.com</small>
+                                    </div>
+    
+                                    <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-thumb-up"></i> Ver</button>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                        <div class="text-center m-t-20">
+                            <a href="" class="btn btn--icon-text btn-default"><i class="zmdi zmdi-refresh-alt"></i> Load More...</a>
+                        </div>
+                    </div>
+                </section>
+
+
+            <footer id="footer">
+                    Copyright &copy; s@u!_m@n!ch 2020
+    
+                    <ul class="footer__menu">
+                        <li><a href="#">Avanzados</a></li>
+                        <li><a href="#">Contactame</a></li>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Soporte</a></li>
+                        <li><a href="#">Calendario</a></li>
+                    </ul>
+                </footer>
+    
+            </section>
+    
+            <!-- Older IE Warning -->
+            <!--[if lt IE 9]>
+                <div class="ie-warning">
+                    <h1>Warning!!</h1>
+                    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+                    <div class="ie-warning__container">
+                        <ul class="ie-warning__download">
+                            <li>
+                                <a href="http://www.google.com/chrome/">
+                                    <img src="img/browsers/chrome.png" alt="">
+                                    <div>Chrome</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                                    <img src="img/browsers/firefox.png" alt="">
+                                    <div>Firefox</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.opera.com">
+                                    <img src="img/browsers/opera.png" alt="">
+                                    <div>Opera</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.apple.com/safari/">
+                                    <img src="img/browsers/safari.png" alt="">
+                                    <div>Safari</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                                    <img src="img/browsers/ie.png" alt="">
+                                    <div>IE (New)</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p>Sorry for the inconvenience!</p>
+                </div>
+            <![endif]-->
+    
+    
+            <!-- Javascript Libraries -->
+    
+            <!-- jQuery -->
+            <script src="vendors/jquery/dist/jquery.min.js"></script>
+    
+            <!-- Bootstrap -->
+            <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+            <!-- Malihu ScrollBar -->
+            <script src="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    
+            <!-- Bootstrap Notify -->
+            <script src="vendors/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
+    
+            <!-- Moment -->
+            <script src="vendors/moment/min/moment.min.js"></script>
+    
+            <!-- FullCalendar -->
+            <script src="vendors/fullcalendar/dist/fullcalendar.min.js"></script>
+    
+            <!-- Simple Weather -->
+            <script src="vendors/simpleWeather/jquery.simpleWeather.min.js"></script>
+    
+            <!-- Salvattore -->
+            <script src="vendors/salvattore/dist/salvattore.min.js"></script>
+    
+            <!-- Flot Charts -->
+            <script src="vendors/flot/jquery.flot.js"></script>
+            <script src="vendors/flot/jquery.flot.resize.js"></script>
+            <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+    
+            <!-- Sparkline Charts -->
+            <script src="vendors/jquery.sparkline/jquery.sparkline.min.js"></script>
+    
+            <!-- EasyPie Charts -->
+            <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+    
+            <!-- Placeholder for IE9 -->
+            <!--[if IE 9 ]>
+                <script src="vendors/jquery-placeholder/jquery.placeholder.min.js"></script>
+            <![endif]-->
+    
+            <!-- Demo Only -->
+            <script src="demo/js/flot-charts/curved-line.js"></script>
+            <script src="demo/js/flot-charts/line.js"></script>
+            <script src="demo/js/easy-pie-charts.js"></script>
+            <script src="demo/js/sparkline-charts.js"></script>
+            <script src="demo/js/calendar.js"></script>
+    
+            <!-- Site Functions & Actions -->
+            <script src="js/app.min.js"></script>
+    
+            <!-- PWA script -->
+            <script src="script.js"></script>
+        </body>
+    </html>
+    
