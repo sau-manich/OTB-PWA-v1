@@ -39,6 +39,10 @@
 
         <!-- Full Calendar -->
         <link href="vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+        
+        
+        <!-- Select 2 -->
+        <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet">
 
         <!-- Site CSS -->
         <link href="css/app-1.min.css" rel="stylesheet">
@@ -404,35 +408,36 @@
 
             <section id="content">
                 <div class="">
-                    <div class="action-header action-header--dark">
-                        <ul class="action-header__menu action-header__menu--padding" align="center">
-                            <li class="active"><a href="#">Consumo y Reunión<br> 25-01-20</a></li>
-                        </ul>
-                       
-                        <div class="action-header__search">
-                            <input type="text" placeholder="Busquemos..." class="action-header__input">
-                            <i class="action-header__close zmdi zmdi-long-arrow-left"></i>
-                            
+                    <div class="card">
+                        <div class="card__header">
+                            <h2 align="center"><img class="avatar-img" src="img/serr.png" alt=""> <br><br> Busqueda Inteligente<small>Una ves seleccionado al socio podremos ver las multas acumuladas del consumo de agua y las multas por inasistencia a una asamblea.</small></h2>
                         </div>
-                        
-                        
-                        <div class="actions action-header__actions">
-                            <a href="" class="action-header__toggle" data-trigger="hover" data-toggle="popover" data-placement="bottom" data-content="Podremos buscar por: Número de medidor, Nombre y Apellido" title="" data-original-title="Información"><i class="zmdi zmdi-search"></i></a>
-                            
+                        <div class="card__header card__header--highlight text-center">
+                            <div class="col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <select class="select2" data-placeholder="Busquemos al socio o medidor..">
+                                        <option>&nbsp;</option>
+                                        <option>001 - Guillermo Pelusa</option>
+                                        <option>002 - Juvenal Galarza</option>
+                                        <option>003 - Mario Chacon</option>
+                                        <option>004 - Rossa Mery </option>
+                                        <option>005 - Gustavo Cereso</option>
+                                        <option>006 - Saul Mamani</option>
+                                        <option>007 - Douglas Añez</option>
+                                        <option>008 - Evo Morales</option>
+                                        <option>009 - Fernando Camacho</option>
+                                        <option>010 - Romero Cruz</option>
+                                        <option>011 - Andronico Quispe</option>
+                                        <option>012 - Diana Mayta</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="btn btn--float"><i class="zmdi zmdi-search"></i></button>
+                        </div>
 
-                            <div class="dropdown hidden-xs">
-                                <a href="" data-toggle="dropdown">
-                                    <i class="zmdi zmdi-more-vert"></i>
-                                </a>
-
-                               <ul class="dropdown-menu pull-right"> 
-                                    <li align="center">
-                                        <a href="">Consumo Agua</a>
-                                    </li>
-                                    <li align="center">
-                                        <a href="">Asambleas</a>
-                                    </li>
-                                </ul>
+                        <div class="wall__actions">
+                            <div class="wall__actions__items">
+                                <br>
                             </div>
                         </div>
                     </div>
@@ -445,8 +450,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong>001 - Cathy Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -461,8 +466,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong>002 - Cathy Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -477,8 +482,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong>003 - Cathy Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -493,8 +498,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong>004 - Cathy Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -509,8 +514,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong>005 - Cathy Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -525,8 +530,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong>006 - Cathy Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -541,8 +546,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong>007 - Cathy Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -557,8 +562,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong>008 - Cathy Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -573,8 +578,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong> 009 - Cathy Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -589,8 +594,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong>010 - Cathy Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -605,8 +610,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong>011 - Cathy Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -621,8 +626,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong>012 - Cathy Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -637,8 +642,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong>013 - Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -653,8 +658,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong>014 - Cathy Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -669,8 +674,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong>015 - Cathy Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -685,8 +690,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong>016 - Cathy Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -701,8 +706,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong>017 - Cathy Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -717,8 +722,8 @@
                                 </a>
 
                                 <div class="contacts__info">
-                                    <strong>Cathy Shelton</strong>
-                                    <small>cathy.shelton31@example.com</small>
+                                    <strong>018 - Cathy Shelton</strong>
+                                    <small>Teniente Venabides</small>
                                 </div><br>
                                 <a href="cobroAgua.html">
                                     <button class="contacts__btn btn btn--icon-text btn--light"><i class="zmdi zmdi-eye"></i> Ver</button>
@@ -826,6 +831,9 @@
     
             <!-- EasyPie Charts -->
             <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+
+            <!-- Select 2 -->
+        <script src="vendors/select2/dist/js/select2.full.min.js"></script>
     
             <!-- Placeholder for IE9 -->
             <!--[if IE 9 ]>
