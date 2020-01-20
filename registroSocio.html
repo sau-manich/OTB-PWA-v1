@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--[if IE 9 ]><html class="ie9"><![endif]-->
+    <!--[if IE 9 ]><html class="ie9"><![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- PWA desde aqui segun el video-->
         <!-- Para pintar de color la barra de navegador de un navegador-->
@@ -24,6 +25,7 @@
 
 
 
+
         <title>ACUOTB PWA</title>
 
         <!-- Vendors -->
@@ -31,24 +33,32 @@
         <!-- Animate CSS -->
         <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
 
+        <!-- File CSS -->
+        <link href="css/file.css" rel="stylesheet">
+
         <!-- Material Design Icons -->
         <link href="vendors/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
 
         <!-- Malihu Scrollbar -->
         <link href="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
 
-        <!-- Full Calendar -->
-        <link href="vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+        <!-- NoUiSlider -->
+        <link href="vendors/nouislider/distribute/nouislider.min.css" rel="stylesheet">
+
+        <!-- Bootstrap Date/Time picker -->
+        <link href="vendors/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+        <!-- Farbtastic Color Picker-->
+        <link href="vendors/farbtastic/farbtastic.css" rel="stylesheet">
+
+        <!-- Select 2 -->
+        <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet">
 
         <!-- Site CSS -->
         <link href="css/app-1.min.css" rel="stylesheet">
 
         <!-- Page loader -->
         <script src="js/page-loader.min.js"></script>
-
-        
-
-
     </head>
 
     <body>
@@ -73,8 +83,8 @@
 
             <ul class="top-menu">
                 <li class="top-menu__trigger hidden-lg hidden-md">
-                        <h4 style="margin-left: -10%;">ACUOTB</h4>
-                        <h6 style="margin-left: -30%;">Sistema Cobro de Agua</h6>
+                        <h4 style="margin-left: -30%;">ACUOTB</h4>
+                        <h6 style="margin-left: -55%;">Sistema Cobro de Agua</h6>
                 </li>
                 
                 <li class="top-menu__apps dropdown hidden-xs hidden-sm">
@@ -130,7 +140,7 @@
                             <a data-mae-action="clear-localstorage" href=""><i class="zmdi zmdi-delete"></i> Eliminar Caches</a>
                         </li>
                         <li>
-                            <a href=""><i class="zmdi zmdi-face"></i> Configuracion Perfil</a>
+                            <a href=""><i class="zmdi zmdi-face"></i> Configuración Perfil</a>
                         </li>
                         <li>
                             <a href=""><i class="zmdi zmdi-settings"></i> Avanzados</a>
@@ -156,7 +166,7 @@
                             <a href=""><i class="zmdi zmdi-settings"></i> Ajustes</a>
                         </li>
                         <li>
-                            <a href=""><i class="zmdi zmdi-time-restore"></i> Salir</a>
+                            <a href="login.html"><i class="zmdi zmdi-time-restore"></i> Salir</a>
                         </li>
                     </ul>
                 </li>
@@ -357,24 +367,25 @@
                 <div class="navigation__menu c-overflow">
                     <ul>
                         <li>
-                            <a href="index.html"><i class="zmdi zmdi-home"></i> Tablero</a>
+                            <a href="tablero.html"><i class="zmdi zmdi-home"></i> Tablero</a>
                         </li>
                         <li><a href="cobroFacturacion.html"><i class="zmdi zmdi-layers"></i> Cobro y facturación</a></li>
-                        <li class="navigation__sub navigation__active">
-                            <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-widgets"></i> Acciones</a>
-
-                            <ul>
-                                <li><a href="registroSocio.html">Registro de Socios</a></li>
-                                <li><a href="registroMedidor.html">Registro Medidores</a></li>
-                            </ul>
-                        </li>
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
                             <ul>
                                 <li><a href="lecturaMedidor.html">Medidor</a></li>
-                                <li><a href="lecturaAsistencia.html">Asistencia Reunión</a></li>
+                                <li><a href="nuevoEvento.html">Asistencia Reunión</a></li>
                             </ul>
                         </li>
+                        <li class="navigation__sub navigation__active">
+                            <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-widgets"></i> Acciones</a>
+
+                            <ul>
+                                <li class="navigation__active"><a href="registroSocio.html">Registro de Socios</a></li>
+                                <li><a href="registroMedidor.html">Registro Medidores</a></li>
+                            </ul>
+                        </li>
+                        
                         
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-trending-up"></i>Reportes</a>
@@ -387,133 +398,703 @@
                             </ul>
                         </li>
                         
-                        <li><a href="calendario.html"><i class="zmdi zmdi-calendar"></i> Calendario</a></li>
                         
-                        <li class="navigation__sub">
+                        <li class="navigation__sub ">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-item"></i> Configuración</a>
                             <ul>
-                                <li><a href="perfil.html">Perfil</a></li>
-                                <li><a href="chat.html">Chat AcuOTB</a></li>
-                                <li><a href="login.html">Login</a></li>
+                                <li><a href="cuenta.html">Cuentas</a></li>
+                                <li><a href="avisos.html">Avisos</a></li>
+                                <li><a href="backup.html">Backup (BD)</a></li>
                                 
                             </ul>
                         </li>
                     </ul>
                 </div>
             </aside>
+        
+            <section id="content">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card__header">
+                                <h2>Input Groups <small>Extend form controls by adding text or buttons before, after, or on both sides of any text-based inputs.</small></h2>
+                            </div>
+        
+                            <div class="card__body">
+        
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                                            <div class="fileinput-preview" data-trigger="fileinput">
+                                            </div>
+                                            <span class="btn btn-default btn-file">
+                                                <span class="fileinput-new">Seleccionar Imagen</span>
+                                                <span class="fileinput-exists">Cambiar</span>
+                                                <input type="file" name="...">
+                                            </span>
+                                        </div>
+                                        <style>
+                                            .fileinput-preview{
+                                                width: 220%;
+                                                height: 250px;
+                                            }
+                                            .fileinput-exists{
+                                                width: 45%;
+                                            }
+                                            .btn{
+                                                opacity: 0;
+                                            }
+                                        </style>
+                                    </div>
+        
+                                    <div class="col-sm-4">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-landscape"></i></span>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Landscape">
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+        
+                                        <br/>
+        
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-landscape"></i></span>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Landscape">
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+        
+                                        <br/>
+        
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-landscape"></i></span>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Landscape">
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+        
+                                        <br/>
+        
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-landscape"></i></span>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Landscape">
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+        
+                                        <br/>
+        
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-landscape"></i></span>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Landscape">
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-sm-4">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-arrow-missed"></i></span>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Internet">
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+        
+                                        <br/>
+        
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-money"></i></span>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Notifications">
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+        
+                                        <br/>
+        
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-layers"></i></span>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Layers">
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+        
+                                        <br/>
+        
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-dialpad"></i></span>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Messages">
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <br/>
+                                <br/>
+                                <br/>
+        
+                                 
+                            </div>
+        
+                            <br/>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="content__header">
+                            <h2>Cuenta</h2>
+
+                            <div class="actions">
+                                <div class="dropdown">
+                                    <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="">Change Date Range</a></li>
+                                        <li><a href="">Change Graph Type</a></li>
+                                        <li><a href="">Other Settings</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__header">
+                                <h2 align="center"><img src="img/usu.png" width="30%" alt=""> <br><br> <small>No se como lo vayas a poner gustavin, osea sobre las acciones con una sola cuenta jejeje.</small></h2>
+                                <br>
+                                <div class="col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <select class="select2" multiple data-placeholder="Medidores">
+                                            <option>001</option>
+                                            <option>002</option>
+                                            <option>003</option>
+                                            <option>004</option>
+                                            <option>005</option>
+                                            <option>025</option>
+                                            <option>049</option>
+                                            <option>135</option>
+                                            <option>209</option>
+                                            <option>248</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card__header">
+                                <h2 align="center"><img class="avatar-img" src="img/usuarios/ees.png" alt=""> <br><br> Aviso Importante<small>Recuerda que la lectura del medidor debe ser mayor o igual a la lectura anterior, en caso que la lectura sea menor debes dejarlo en blanco.</small></h2>
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__header">
+                        <h2>Input Groups <small>Extend form controls by adding text or buttons before, after, or on both sides of any text-based inputs.</small></h2>
+                    </div>
+
+                    <div class="card__body">
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <form action="" method="POST" enctype="multipart/form-data">
+                                    <div class="container">
+                                      <div class="row">
+                                        <div class="col-md-4">
+                                          <div class="form-group">
+                                            <div class="preview-zone hidden">
+                                              <div class="box box-solid">
+                                                <div class="box-header with-border">
+                                                  <div><b>Vista previa</b></div>
+                                                  <div class="box-tools pull-right">
+                                                    <button type="button" class="btn btn-danger btn-xs remove-preview">
+                                                      <i class="fa fa-times"></i> Resetear carga
+                                                    </button>
+                                                  </div>
+                                                </div>
+                                                <div class="box-body"></div>
+                                              </div>
+                                            </div>
+                                            <div class="dropzone-wrapper">
+                                              <div class="dropzone-desc">
+                                                <i class="glyphicon glyphicon-download-alt"></i>
+                                                <p>Seleccione una imagen.</p>
+                                              </div>
+                                              <input type="file" name="img_logo" class="dropzone">
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </form>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-landscape"></i></span>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Landscape">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+
+                                <br/>
+
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-landscape"></i></span>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Landscape">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+
+                                <br/>
+
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-landscape"></i></span>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Landscape">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+
+                                <br/>
+
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-landscape"></i></span>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Landscape">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+
+                                <br/>
+
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-landscape"></i></span>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Landscape">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-arrow-missed"></i></span>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Internet">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+
+                                <br/>
+
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-money"></i></span>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Notifications">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+
+                                <br/>
+
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-layers"></i></span>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Layers">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+
+                                <br/>
+
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-dialpad"></i></span>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Messages">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br/>
+                        <br/>
+                        <br/>
+
+                         
+                    </div>
+
+                    <br/>
+                </div>
+
+
+                <div class="card">
+                    <div class="card__header">
+                        <h2>Toggle Switch <small>CSS only Checkbox based toggle Switches.</small></h2>
+                    </div>
+
+                    <div class="card__body">
+                        <div class="row">
+                            <div class="col-sm-4 col-md-3">
+                                <p>Basic Example</p>
+
+                                <div class="form-group">
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" class="toggle-switch__checkbox">
+                                        <i class="toggle-switch__helper"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4 col-md-3">
+                                <p>Active State</p>
+
+                                <div class="form-group">
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" class="toggle-switch__checkbox" checked>
+                                        <i class="toggle-switch__helper"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4 col-md-3">
+                                <p>Disabled</p>
+
+                                <div class="form-group">
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" class="toggle-switch__checkbox" disabled>
+                                        <i class="toggle-switch__helper"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__header">
+                        <h2>Input Slider <small>noUiSlider is a range slider without bloat. It offers a ton off features, and it is as small, lightweight and minimal as possible, which is great for mobile use on the many supported devices.</small></h2>
+                    </div>
+
+                    <div class="card__body">
+                        <p>Basic Example</p>
+
+                        <div id="slider-basic"></div>
+
+                        <br/>
+                        <br/>
+
+                        <p>Range Slider</p>
+
+                        <div id="slider-range"></div>
+
+                        <br/>
+                        <br/>
+
+                        <p>Output Values</p>
+
+                        <div>
+                            <div id="slider-complete"></div>
+
+                            <div class="clearfix m-t-15">
+                                <div class="pull-left" id="slider-complete-upper"></div>
+                                <div class="pull-right" id="slider-complete-lower"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__header">
+                        <h2>Date Time Picker <small>Date/time picker widget based on twitter bootstrap</small></h2>
+                    </div>
+
+                    <div class="card-padding card__header">
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <p>Basic Example - Date and Time Picker</p>
+
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                        <div class="form-group">
+                                        <input type='text' class="form-control date-time-picker" placeholder="Click here...">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-4">
+                                <p>Date Picker only</p>
+
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                        <div class="form-group">
+                                        <input type='text' class="form-control date-picker" placeholder="Click here...">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <p>Time Picker only</p>
+
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-time"></i></span>
+                                        <div class="form-group">
+                                        <input type='text' class="form-control time-picker" placeholder="Click here...">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__header">
+                        <h2>Color Picker <small>Simplt HEX and HSL color picker with customizable options</small></h2>
+                    </div>
+
+                    <div class="card__body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="color-picker">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="zmdi zmdi-invert-colors"></i></span>
+                                        <div class="form-group dropdown">
+                                            <input type="text" class="form-control color-picker__value" value="#03A9F4" data-toggle="dropdown">
+                                            <i class="form-group__bar"></i>
+
+                                            <div class="color-picker__value"></div>
+                                            <div class="dropdown-menu">
+                                                <div class="color-picker__target"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="color-picker">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="zmdi zmdi-invert-colors"></i></span>
+                                        <div class="form-group dropdown">
+                                            <input type="text" class="form-control color-picker__value" value="#8BC34A" data-toggle="dropdown">
+                                            <i class="form-group__bar"></i>
+
+                                            <div class="color-picker__value"></div>
+                                            <div class="dropdown-menu">
+                                                <div class="color-picker__target"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="color-picker">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="zmdi zmdi-invert-colors"></i></span>
+                                        <div class="form-group dropdown">
+                                            <input type="text" class="form-control color-picker__value" value="#F44336" data-toggle="dropdown">
+                                            <i class="form-group__bar"></i>
+
+                                            <div class="color-picker__value"></div>
+                                            <div class="dropdown-menu">
+                                                <div class="color-picker__target"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="color-picker">
+                                    <div class="input-group form-group">
+                                        <span class="input-group-addon"><i class="zmdi zmdi-invert-colors"></i></span>
+                                        <div class="form-group dropdown">
+                                            <input type="text" class="form-control color-picker__value" value="#FFC107" data-toggle="dropdown">
+
+                                            <div class="color-picker__value"></div>
+                                            <div class="dropdown-menu">
+                                                <div class="color-picker__target"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__header">
+                        <h2>Simple File Input <small>This file input plugin allows you to create a visually appealing file or image input widgets</small></h2>
+                    </div>
+
+                    <div class="card__body">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <p >Basic Example</p>
+
+                                <div class="fileinput fileinput-new" data-provides="fileinput">
+                                    <span class="btn btn-default btn-file">
+                                        <span class="fileinput-new">Select file</span>
+                                        <span class="fileinput-exists">Change</span>
+                                        <input type="file" name="...">
+                                    </span>
+                                    <span class="fileinput-filename"></span>
+                                    <a href="#" class="fileinput__close fileinput-exists" data-dismiss="fileinput">
+                                        <i class="zmdi zmdi-close-circle"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br/>
+                        <br/>
+
+                        <p>Image Preview</p>
+
+                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                            <div class="fileinput-preview" data-trigger="fileinput"></div>
+
+                            <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                            <span class="btn btn-default btn-file">
+                                <span class="fileinput-new">Select image</span>
+                                <span class="fileinput-exists">Change</span>
+                                <input type="file" name="...">
+                            </span>
+                        </div>
+
+                        <br/>
+                        <br/>
+                        <p><em>Image preview only works in IE10+, FF3.6+, Safari6.0+, Chrome6.0+ and Opera11.1+. In older browsers the filename is shown instead.</em></p>
+                    </div>
+                </div>
+            </section>
 
             <footer id="footer">
-                    Copyright &copy; s@u!_m@n!ch 2020
-    
-                    <ul class="footer__menu">
-                        <li><a href="#">Avanzados</a></li>
-                        <li><a href="#">Contactame</a></li>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Soporte</a></li>
-                        <li><a href="#">Calendario</a></li>
+                Copyright &copy; s@u-Crgt 2020
+
+                <ul class="footer__menu">
+                    <li><a href="#">¿Problemas?</a></li>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">¡Soporte!</a></li>
+                </ul>
+            </footer>
+
+        </section>
+
+        <!-- Older IE Warning -->
+        <!--[if lt IE 9]>
+            <div class="ie-warning">
+                <h1>Warning!!</h1>
+                <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+                <div class="ie-warning__container">
+                    <ul class="ie-warning__download">
+                        <li>
+                            <a href="http://www.google.com/chrome/">
+                                <img src="img/browsers/chrome.png" alt="">
+                                <div>Chrome</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.mozilla.org/en-US/firefox/new/">
+                                <img src="img/browsers/firefox.png" alt="">
+                                <div>Firefox</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.opera.com">
+                                <img src="img/browsers/opera.png" alt="">
+                                <div>Opera</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.apple.com/safari/">
+                                <img src="img/browsers/safari.png" alt="">
+                                <div>Safari</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                                <img src="img/browsers/ie.png" alt="">
+                                <div>IE (New)</div>
+                            </a>
+                        </li>
                     </ul>
-                </footer>
-    
-            </section>
-    
-            <!-- Older IE Warning -->
-            <!--[if lt IE 9]>
-                <div class="ie-warning">
-                    <h1>Warning!!</h1>
-                    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
-                    <div class="ie-warning__container">
-                        <ul class="ie-warning__download">
-                            <li>
-                                <a href="http://www.google.com/chrome/">
-                                    <img src="img/browsers/chrome.png" alt="">
-                                    <div>Chrome</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.mozilla.org/en-US/firefox/new/">
-                                    <img src="img/browsers/firefox.png" alt="">
-                                    <div>Firefox</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://www.opera.com">
-                                    <img src="img/browsers/opera.png" alt="">
-                                    <div>Opera</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.apple.com/safari/">
-                                    <img src="img/browsers/safari.png" alt="">
-                                    <div>Safari</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                                    <img src="img/browsers/ie.png" alt="">
-                                    <div>IE (New)</div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <p>Sorry for the inconvenience!</p>
                 </div>
-            <![endif]-->
-    
-    
-            <!-- Javascript Libraries -->
-    
-            <!-- jQuery -->
-            <script src="vendors/jquery/dist/jquery.min.js"></script>
-    
-            <!-- Bootstrap -->
-            <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    
-            <!-- Malihu ScrollBar -->
-            <script src="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-    
-            <!-- Bootstrap Notify -->
-            <script src="vendors/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
-    
-            <!-- Moment -->
-            <script src="vendors/moment/min/moment.min.js"></script>
-    
-            <!-- FullCalendar -->
-            <script src="vendors/fullcalendar/dist/fullcalendar.min.js"></script>
-    
-            <!-- Simple Weather -->
-            <script src="vendors/simpleWeather/jquery.simpleWeather.min.js"></script>
-    
-            <!-- Salvattore -->
-            <script src="vendors/salvattore/dist/salvattore.min.js"></script>
-    
-            <!-- Flot Charts -->
-            <script src="vendors/flot/jquery.flot.js"></script>
-            <script src="vendors/flot/jquery.flot.resize.js"></script>
-            <script src="vendors/flot.curvedlines/curvedLines.js"></script>
-    
-            <!-- Sparkline Charts -->
-            <script src="vendors/jquery.sparkline/jquery.sparkline.min.js"></script>
-    
-            <!-- EasyPie Charts -->
-            <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
-    
-            <!-- Placeholder for IE9 -->
-            <!--[if IE 9 ]>
-                <script src="vendors/jquery-placeholder/jquery.placeholder.min.js"></script>
-            <![endif]-->
-    
-            <!-- Demo Only -->
-            <script src="demo/js/flot-charts/curved-line.js"></script>
-            <script src="demo/js/flot-charts/line.js"></script>
-            <script src="demo/js/easy-pie-charts.js"></script>
-            <script src="demo/js/sparkline-charts.js"></script>
-            <script src="demo/js/calendar.js"></script>
-    
-            <!-- Site Functions & Actions -->
-            <script src="js/app.min.js"></script>
-    
-            <!-- PWA script -->
-            <script src="script.js"></script>
-        </body>
-    </html>
-    
+                <p>Sorry for the inconvenience!</p>
+            </div>
+        <![endif]-->
+
+        <!-- Javascript Libraries -->
+
+        <!-- jQuery -->
+        <script src="vendors/jquery/dist/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Malihu ScrollBar -->
+        <script src="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <!-- Bootstrap Notify -->
+        <script src="vendors/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
+        
+        <!-- Moment -->
+        <script src="vendors/moment/min/moment.min.js"></script>
+
+        <!-- NoUiSlider -->
+        <script src="vendors/nouislider/distribute/nouislider.min.js"></script>
+
+        <!-- Bootstrap Date/Time Picker -->
+        <script src="vendors/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+        <!-- Select 2 -->
+        <script src="vendors/select2/dist/js/select2.full.min.js"></script>
+
+        <!-- Simple File Input -->
+        <script src="vendors/fileinput/fileinput.min.js"></script>
+
+        <!-- jQuery Mask -->
+        <script src="vendors/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+
+        <!-- Farbtastic Color Picker -->
+        <script src="vendors/farbtastic/farbtastic.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <!-- File -->
+        <script src="js/file.js"></script>
+
+
+        <!-- Site Functions & Actions -->
+        <script src="js/app.min.js"></script>
+
+         <!-- PWA script -->
+         <script src="script.js"></script>
+    </body>
+</html>
