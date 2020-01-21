@@ -24,13 +24,12 @@
 
 
 
-
         <title>ACUOTB PWA</title>
 
         <!-- Vendors -->
 
-        <!-- File CSS -->
-        <link href="css/file.css" rel="stylesheet">
+        <!-- Animate CSS -->
+        <link href="css/calendario.css" rel="stylesheet">
 
         <!-- Animate CSS -->
         <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
@@ -41,20 +40,17 @@
         <!-- Malihu Scrollbar -->
         <link href="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
 
-        <!-- NoUiSlider -->
-        <link href="vendors/nouislider/distribute/nouislider.min.css" rel="stylesheet">
+        <!-- Full Calendar -->
+        <link href="vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
 
-        <!-- Farbtastic Color Picker-->
-        <link href="vendors/farbtastic/farbtastic.css" rel="stylesheet">
+        <!-- Bootstrap Date/Time picker -->
+        <link href="vendors/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
         <!-- Select 2 -->
         <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet">
 
         <!-- Site CSS -->
         <link href="css/app-1.min.css" rel="stylesheet">
-        
-        <!-- Calendario -->
-        <link href="css/calendario.css" rel="stylesheet">
 
         <!-- Page loader -->
         <script src="js/page-loader.min.js"></script>
@@ -86,8 +82,8 @@
 
             <ul class="top-menu">
                 <li class="top-menu__trigger hidden-lg hidden-md">
-                        <h4 style="margin-left: -30%;">ACUOTB</h4>
-                        <h6 style="margin-left: -55%;">Sistema Cobro de Agua</h6>
+                    <h4 style="margin-left: -30%;">ACUOTB</h4>
+                    <h6 style="margin-left: -55%;">Sistema Cobro de Agua</h6>
                 </li>
                 
                 <li class="top-menu__apps dropdown hidden-xs hidden-sm">
@@ -143,7 +139,7 @@
                             <a data-mae-action="clear-localstorage" href=""><i class="zmdi zmdi-delete"></i> Eliminar Caches</a>
                         </li>
                         <li>
-                            <a href=""><i class="zmdi zmdi-face"></i> Configuración Perfil</a>
+                            <a href=""><i class="zmdi zmdi-face"></i> Configuracion Perfil</a>
                         </li>
                         <li>
                             <a href=""><i class="zmdi zmdi-settings"></i> Avanzados</a>
@@ -376,11 +372,11 @@
                         <li class="navigation__sub navigation__active">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
                             <ul>
-                                <li><a href="lecturaMedidor.html">Medidor</a></li class="navigation__active">
-                                <li class="navigation__active"><a href="nuevoEvento.html">Asistencia Reunión</a></li class="navigation__active">
+                                <li><a href="lecturaMedidor.html">Medidor</a></li>
+                                <li class="navigation__active"><a href="nuevoEvento.html">Asistencia Reunión</a></li>
                             </ul>
                         </li>
-                        <li class="navigation__sub">
+                        <li class="navigation__sub ">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-widgets"></i> Acciones</a>
 
                             <ul>
@@ -402,7 +398,7 @@
                         </li>
                         
                         
-                        <li class="navigation__sub ">
+                        <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-item"></i> Configuración</a>
                             <ul>
                                 <li><a href="cuenta.html">Cuentas</a></li>
@@ -414,7 +410,7 @@
                     </ul>
                 </div>
             </aside>
-            
+
             <section id="content">
                 <div class="row">
                     <div class="col-md-8">
@@ -480,7 +476,17 @@
                                     </li>
                                 </div>
                                 <div class="col-sm-12 col-md-12  text-right">
-                                    <div class="col-sm-3">
+                                    <div class="col-sm-2">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                            <div class="form-group">
+                                                <input type='text' class="form-control date-picker" placeholder="Calendarion...">
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+                                        <br>
+                                    </div>
+                                    <div class="col-sm-2">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="zmdi zmdi-money-box"></i></span>
                                             <div class="form-group form-group--float">
@@ -491,7 +497,7 @@
                                         </div>
                                         <br>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-3">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="zmdi zmdi-assignment"></i></span>
                                             <div class="form-group form-group--float">
@@ -974,16 +980,17 @@
                 
             </section>
 
-        <footer id="footer">
-            Copyright  2020 &copy; s@u!_m@n!ch
 
-            <ul class="footer__menu">
-                <li><a href="#">¿Problema?</a></li>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">¡Soporte!</a></li>
-            </ul>
-        </footer>
 
+            <footer id="footer">
+                Copyright &copy; s@u-Crgt 2020
+
+                <ul class="footer__menu">
+                    <li><a href="#">¿Problemas?</a></li>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">¡Soporte!</a></li>
+                </ul>
+            </footer>
     
             </section>
     
@@ -1041,19 +1048,15 @@
     
             <!-- Malihu ScrollBar -->
             <script src="vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-
-            <!-- Light Gallery -->
-            <script src="vendors/lightgallery/lib/lightgallery-all.min.js"></script>
-
-            <!-- Auto Size Textarea -->
-            <script src="vendors/autosize/dist/autosize.min.js"></script>
-
     
             <!-- Bootstrap Notify -->
             <script src="vendors/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
     
             <!-- Moment -->
             <script src="vendors/moment/min/moment.min.js"></script>
+    
+            <!-- FullCalendar -->
+            <script src="vendors/fullcalendar/dist/fullcalendar.min.js"></script>
     
             <!-- Simple Weather -->
             <script src="vendors/simpleWeather/jquery.simpleWeather.min.js"></script>
@@ -1072,8 +1075,14 @@
             <!-- EasyPie Charts -->
             <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
 
-            <!-- Select 2 -->
+            <!-- Bootstrap Date/Time Picker -->
+        <script src="vendors/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+        <!-- Select 2 -->
         <script src="vendors/select2/dist/js/select2.full.min.js"></script>
+
+        <!-- Simple File Input -->
+        <script src="vendors/fileinput.min.js"></script>
     
             <!-- Placeholder for IE9 -->
             <!--[if IE 9 ]>
@@ -1085,12 +1094,13 @@
             <script src="demo/js/flot-charts/line.js"></script>
             <script src="demo/js/easy-pie-charts.js"></script>
             <script src="demo/js/sparkline-charts.js"></script>
+            <script src="demo/js/calendar.js"></script>
+
+            <!-- calendario -->
+            <script src="js/calendario.js"></script>
     
             <!-- Site Functions & Actions -->
             <script src="js/app.min.js"></script>
-
-            <!-- Site Functions & Actions -->
-            <script src="js/calendario.js"></script>
     
             <!-- PWA script -->
             <script src="script.js"></script>
