@@ -40,6 +40,12 @@
         <!-- Full Calendar -->
         <link href="vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
 
+        <!-- Bootstrap Date/Time picker -->
+        <link href="vendors/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+        <!-- Select 2 -->
+        <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+
         <!-- Site CSS -->
         <link href="css/app-1.min.css" rel="stylesheet">
 
@@ -73,8 +79,8 @@
 
             <ul class="top-menu">
                 <li class="top-menu__trigger hidden-lg hidden-md">
-                        <h4 style="margin-left: -10%;">ACUOTB</h4>
-                        <h6 style="margin-left: -30%;">Sistema Cobro de Agua</h6>
+                    <h4 style="margin-left: -30%;">ACUOTB</h4>
+                    <h6 style="margin-left: -55%;">Sistema Cobro de Agua</h6>
                 </li>
                 
                 <li class="top-menu__apps dropdown hidden-xs hidden-sm">
@@ -156,7 +162,7 @@
                             <a href=""><i class="zmdi zmdi-settings"></i> Ajustes</a>
                         </li>
                         <li>
-                            <a href=""><i class="zmdi zmdi-time-restore"></i> Salir</a>
+                            <a href="login.html"><i class="zmdi zmdi-time-restore"></i> Salir</a>
                         </li>
                     </ul>
                 </li>
@@ -357,24 +363,25 @@
                 <div class="navigation__menu c-overflow">
                     <ul>
                         <li>
-                            <a href="index.html"><i class="zmdi zmdi-home"></i> Tablero</a>
+                            <a href="tablero.html"><i class="zmdi zmdi-home"></i> Tablero</a>
                         </li>
                         <li><a href="cobroFacturacion.html"><i class="zmdi zmdi-layers"></i> Cobro y facturación</a></li>
+                        <li class="navigation__sub">
+                            <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
+                            <ul>
+                                <li><a href="lecturaMedidor.html">Medidor</a></li>
+                                <li><a href="nuevoEvento.html">Asistencia Reunión</a></li>
+                            </ul>
+                        </li>
                         <li class="navigation__sub navigation__active">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-widgets"></i> Acciones</a>
 
                             <ul>
                                 <li><a href="registroSocio.html">Registro de Socios</a></li>
-                                <li><a href="registroMedidor.html">Registro Medidores</a></li>
+                                <li class="navigation__active"><a href="registroMedidor.html">Registro Medidores</a></li>
                             </ul>
                         </li>
-                        <li class="navigation__sub">
-                            <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
-                            <ul>
-                                <li><a href="lecturaMedidor.html">Medidor</a></li>
-                                <li><a href="lecturaAsistencia.html">Asistencia Reunión</a></li>
-                            </ul>
-                        </li>
+                        
                         
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-trending-up"></i>Reportes</a>
@@ -387,14 +394,13 @@
                             </ul>
                         </li>
                         
-                        <li><a href="calendario.html"><i class="zmdi zmdi-calendar"></i> Calendario</a></li>
                         
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-item"></i> Configuración</a>
                             <ul>
-                                <li><a href="perfil.html">Perfil</a></li>
-                                <li><a href="chat.html">Chat AcuOTB</a></li>
-                                <li><a href="login.html">Login</a></li>
+                                <li><a href="cuenta.html">Cuentas</a></li>
+                                <li><a href="avisos.html">Avisos</a></li>
+                                <li><a href="backup.html">Backup (BD)</a></li>
                                 
                             </ul>
                         </li>
@@ -402,17 +408,265 @@
                 </div>
             </aside>
 
+            <section id="content">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="content__header">
+                            <h2>Medidor</h2>
+
+                            <div class="actions">
+                                <div class="dropdown">
+                                    <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="">Refrescar</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__header">
+                                <h2 align="center"><img class="avatar-img" src="img/usuarios/ees.png" alt=""> <br><br> <small>Ingresa la lectura Actual del medidor para que el sistema pueda interactuar con las con el pago.</small></h2>
+                                <br>
+                                <div class="input-group">
+                                    <div class="form-group">
+                                        <span class="input-group-addon"></span>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control text-center" placeholder="0000 M/I" disabled>
+                                            <i class="form-group__bar"></i>
+                                        </div>
+                                    </div>
+                                    <span class="input-group-addon"><i class="zmdi zmdi-input-svideo"></i></span>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control text-center" placeholder="Medida Actual">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card__header">
+                                <h2 align="center">Nuevo Medidor<small>Crearemos un nuevo medidor, asegurate de registrar los datos correctamente.</small></h2>
+                            </div>
+        
+                            <div class="card__body">
+        
+                                <div class="row">
+                                    <div class="col-sm-1"><br>
+                                       <br><br>
+                                    </div>
+                                    <div class="col-sm-2"><br>
+                                        <img src="img/512.png" width="80%" alt="">
+                                       <br><br>
+                                    </div>
+        
+                                    <div class="col-sm-5">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-balance"></i></span>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Orden del medidor">
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+        
+                                        <br/>
+        
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                                            <div class="form-group">
+                                                <input type="number" class="form-control" placeholder="Numero del medidor">
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+        
+                                        <br/>
+
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                            <div class="form-group">
+                                                <input type='text' class="form-control date-picker" placeholder="Fecha Nacimiento...">
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+        
+                                        <br/>
+
+                                        
+                                        
+                                    </div>
+        
+                                    <div class="col-sm-4">
+
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-pin"></i></span>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Dirección">
+                                                <i class="form-group__bar"></i>
+                                            </div>
+                                        </div>
+
+                                        <br/><br/>
+                                        
+                                        <p align="center">
+                                            <button class="btn btn-default btn--icon" data-trigger="hover" data-toggle="popover" data-placement="left" data-content="Se almacenara en nuestra base de datos" title="" data-original-title="Guardar"><i class="zmdi zmdi-cloud-outline"></i></button>
+                                            <button class="btn btn--light btn--icon"data-trigger="hover" data-toggle="popover" data-placement="right" data-content="Se cancelara el formulario registrado ahora" title="" data-original-title="Cancelar"><i class="zmdi zmdi-close"></i></button>
+                                        </p>
+                                    </div><br>
+
+                                    
+                                </div><br>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="card">
+                    <div class="action-header">
+                        <div class="action-header__label" align="left"><span class="hidden-xs">Lista de Medidores activos </span></div>
+
+                        <div class="action-header__search">
+                            <input type="text" placeholder="Busquemos al socio.." class="action-header__input">
+                            <i class="action-header__close zmdi zmdi-long-arrow-left"></i>
+                        </div>
+
+                        <div class="actions action-header__actions">
+                            <a href="" class="action-header__toggle"><i class="zmdi zmdi-search"></i></a>
+
+                            <div class="dropdown ">
+                                <a href="" data-toggle="dropdown">
+                                    <i class="zmdi zmdi-more-vert"></i>
+                                </a>
+
+                                <ul class="dropdown-menu pull-right">
+                                    <li>
+                                        <a href="">Refrescar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__header">
+                        <h2 align="center">Medidores OTB-21 <small>Si realizas algun cambio recuerda mantener el número de medidor actual.</small></h2>
+                    </div>
+
+                    <div class="card__body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                    <th>Nickname</th>
+                                    <th>Acción</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Alexandra</td>
+                                    <td>Christopher</td>
+                                    <td>@makinton</td>
+                                    <td>Ducky</td>
+                                    <td><button class="btn btn--light btn--icon"><i class="zmdi zmdi-brush"></i></button>
+                                        <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Madeleine</td>
+                                    <td>Hollaway</td>
+                                    <td>@hollway</td>
+                                    <td>Cheese</td>
+                                    <td><button class="btn btn--light btn--icon"><i class="zmdi zmdi-brush"></i></button>
+                                        <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Sebastian</td>
+                                    <td>Johnston</td>
+                                    <td>@sebastian</td>
+                                    <td>Jaycee</td>
+                                    <td><button class="btn btn--light btn--icon"><i class="zmdi zmdi-brush"></i></button>
+                                        <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Mitchell</td>
+                                    <td>Christin</td>
+                                    <td>@mitchell4u</td>
+                                    <td>AdskiDeAnus</td>
+                                    <td><button class="btn btn--light btn--icon"><i class="zmdi zmdi-brush"></i></button>
+                                        <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Elizabeth</td>
+                                    <td>Belkitt</td>
+                                    <td>@belkitt</td>
+                                    <td>Goat</td>
+                                    <td><button class="btn btn--light btn--icon"><i class="zmdi zmdi-brush"></i></button>
+                                        <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Benjamin</td>
+                                    <td>Parnell</td>
+                                    <td>@wayne234</td>
+                                    <td>Pokie</td>
+                                    <td><button class="btn btn--light btn--icon"><i class="zmdi zmdi-brush"></i></button>
+                                        <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Katherine</td>
+                                    <td>Buckland</td>
+                                    <td>@anitabelle</td>
+                                    <td>Wokie</td>
+                                    <td><button class="btn btn--light btn--icon"><i class="zmdi zmdi-brush"></i></button>
+                                        <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Nicholas</td>
+                                    <td>Walmart</td>
+                                    <td>@mwalmart</td>
+                                    <td>Spike</td>
+                                    <td><button class="btn btn--light btn--icon"><i class="zmdi zmdi-brush"></i></button>
+                                        <button class="btn btn--light btn--icon"><i class="zmdi zmdi-close"></i></button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+               
+            </section>
+
+
             <footer id="footer">
-                    Copyright &copy; s@u!_m@n!ch 2020
-    
-                    <ul class="footer__menu">
-                        <li><a href="#">Avanzados</a></li>
-                        <li><a href="#">Contactame</a></li>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Soporte</a></li>
-                        <li><a href="#">Calendario</a></li>
-                    </ul>
-                </footer>
+                Copyright &copy; s@u-Crgt 2020
+
+                <ul class="footer__menu">
+                    <li><a href="#">¿Problemas?</a></li>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">¡Soporte!</a></li>
+                </ul>
+            </footer>
     
             </section>
     
@@ -496,6 +750,15 @@
     
             <!-- EasyPie Charts -->
             <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+
+            <!-- Bootstrap Date/Time Picker -->
+        <script src="vendors/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+        <!-- Select 2 -->
+        <script src="vendors/select2/dist/js/select2.full.min.js"></script>
+
+        <!-- Simple File Input -->
+        <script src="vendors/fileinput.min.js"></script>
     
             <!-- Placeholder for IE9 -->
             <!--[if IE 9 ]>
@@ -508,6 +771,7 @@
             <script src="demo/js/easy-pie-charts.js"></script>
             <script src="demo/js/sparkline-charts.js"></script>
             <script src="demo/js/calendar.js"></script>
+            
     
             <!-- Site Functions & Actions -->
             <script src="js/app.min.js"></script>
