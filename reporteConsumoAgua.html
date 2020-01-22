@@ -39,8 +39,10 @@
 
         <!-- Full Calendar -->
         <link href="vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
-        
-        
+
+        <!-- Bootstrap Date/Time picker -->
+        <link href="vendors/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
         <!-- Select 2 -->
         <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet">
 
@@ -363,7 +365,7 @@
                         <li>
                             <a href="tablero.html"><i class="zmdi zmdi-home"></i> Tablero</a>
                         </li>
-                        <li class="navigation__active"><a href="cobroFacturacion.html"><i class="zmdi zmdi-layers"></i> Cobro y facturación</a></li>
+                        <li><a href="cobroFacturacion.html"><i class="zmdi zmdi-layers"></i> Cobro y facturación</a></li>
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
                             <ul>
@@ -381,10 +383,10 @@
                         </li>
                         
                         
-                        <li class="navigation__sub">
+                        <li class="navigation__sub navigation__active">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-trending-up"></i>Reportes</a>
                             <ul>
-                                <li><a href="reporteConsumoAgua">Consumo de Agua</a></li>
+                                <li class="navigation__active"><a href="reporteConsumoAgua">Consumo de Agua</a></li>
                                 <li><a href="reporteAsamblea">Asambleas</a></li>
                             </ul>
                         </li>
@@ -393,7 +395,6 @@
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-item"></i> Configuración</a>
                             <ul>
-                                <li><a href="cuenta.html">Cuentas</a></li>
                                 <li><a href="avisos.html">Avisos</a></li>
                                 <li><a href="backup.html">Backup (BD)</a></li>
                                 
@@ -404,287 +405,118 @@
             </aside>
 
             <section id="content">
-                <div class="">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="card wall__posting">
-                                
-                                <div class="card__header card__header--highlight text-center">
-                                    <h2 align="center"><img class="avatar-img" src="img/serr.png" alt=""><br><br></h2>
-                                    <div class="col-sm-8 col-md-12">
-                                        <div class="form-group">
-                                            <select class="select2" data-placeholder="Busqueda avanzada de medidor y socio">
-                                                <option>&nbsp;</option>
-                                                <option>001 - Guillermo Pelusa</option>
-                                                <option>002 - Juvenal Galarza</option>
-                                                <option>003 - Mario Chacon</option>
-                                                <option>004 - Rossa Mery </option>
-                                                <option>005 - Gustavo Cereso</option>
-                                                <option>006 - Saul Mamani</option>
-                                                <option>007 - Douglas Añez</option>
-                                                <option>008 - Evo Morales</option>
-                                                <option>009 - Fernando Camacho</option>
-                                                <option>010 - Romero Cruz</option>
-                                                <option>011 - Andronico Quispe</option>
-                                                <option>012 - Diana Mayta</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <button class="btn btn--float"><i class="zmdi zmdi-search"></i></button>
-                                </div>
-    
-                                <div class="wall__actions">
-                                    <div class="wall__actions__items">
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <div class="card__header">
-                                    <h2 align="center"><img class="avatar-img" src="img/usuarios/ees.png" alt=""> <br><br> Aviso Importante<small>El socio podra tener 1 o más acciones, recuerda factura la correcta, tanto las multas de asambleas y consumo de agua.</small></h2>
-                                </div
-                                
-                                <div class="wall__actions">
-                                    <div class="wall__actions__items">
-                                        <br>
-                                    </div>
-                                </div>
+                <div class="col-md-4">
+                    <div class="content__header">
+                        <h2>Cubos de agua</h2>
+
+                        <div class="actions">
+                            <div class="dropdown">
+                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="">Refrescar</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card__header">
-                            <h2 align="center">Lista de Socios OTB-21 <small>Selecciona al socio correcto para poder efectuar el cobro.</small></h2>
-                            <div class="actions">
-                                <div class="dropdown">
-                                    <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="">Refrescar</a></li>
-                                    </ul>
+                            <h2 align="center"><img class="avatar-img" src="img/usuarios/ees.png" alt=""> <br><br> <small>Ingresa la lectura Actual del medidor para que el sistema pueda interactuar con las con el pago.</small></h2>
+                            <br>
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                        <div class="form-group">
+                                        <input type='text' class="form-control date-picker" placeholder="Fecha Nacimiento...">
+                                        <i class="form-group__bar"></i>
+                                    </div>
                                 </div>
+                                    <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                    <div class="form-group">
+                                        <input type='text' class="form-control date-picker" placeholder="Fecha Nacimiento...">
+                                        <i class="form-group__bar"></i>
+                                    </div>
                             </div>
-                        </div>
-
-                        <div class="list-group">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/boy-5.png" alt="">
-                                        </div>
-        
-                                        <div class="media-body">
-                                            <div class="list-group__heading">001 - David Villa Jacobs</div>
-                                            <small class="list-group__text">Sorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis lobortis sapien non posuere</small>
-                                        </div>
-                                    </a>
-        
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/boy-4.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="list-group__heading">002 - Candice Barnes</div>
-                                            <small class="list-group__text">Quisque non tortor ultricies, posuere elit id, lacinia purus curabitur.</small>
-                                        </div>
-                                    </a>
-        
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/girl.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="list-group__heading">003 - Jeannette Lawson</div>
-                                            <small class="list-group__text">Donec congue tempus ligula, varius hendrerit mi hendrerit sit amet. Duis ac quam sit amet leo feugiat iaculis</small>
-                                        </div>
-                                    </a>
-        
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/girl-7.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="list-group__heading">004 - Darla Mckinney</div>
-                                            <small class="list-group__text">Duis tincidunt augue nec sem dignissim scelerisque. Vestibulum rhoncus sapien sed nulla aliquam lacinia</small>
-                                        </div>
-                                    </a>
-        
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/girl-5.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="list-group__heading">005 - Rudolph Perez</div>
-                                            <small class="list-group__text">Phasellus a ullamcorper lectus, sit amet viverra quam. In luctus tortor vel nulla pharetra bibendum</small>
-                                        </div>
-                                    </a>
-
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/boy-5.png" alt="">
-                                        </div>
-        
-                                        <div class="media-body">
-                                            <div class="list-group__heading">006 - David Villa Jacobs</div>
-                                            <small class="list-group__text">Sorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis lobortis sapien non posuere</small>
-                                        </div>
-                                    </a>
-        
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/boy-4.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="list-group__heading">007 - Candice Barnes</div>
-                                            <small class="list-group__text">Quisque non tortor ultricies, posuere elit id, lacinia purus curabitur.</small>
-                                        </div>
-                                    </a>
-        
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/girl.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="list-group__heading">008 - Jeannette Lawson</div>
-                                            <small class="list-group__text">Donec congue tempus ligula, varius hendrerit mi hendrerit sit amet. Duis ac quam sit amet leo feugiat iaculis</small>
-                                        </div>
-                                    </a>
-        
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/girl-7.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="list-group__heading">009 - Darla Mckinney</div>
-                                            <small class="list-group__text">Duis tincidunt augue nec sem dignissim scelerisque. Vestibulum rhoncus sapien sed nulla aliquam lacinia</small>
-                                        </div>
-                                    </a>
-        
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/girl-5.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="list-group__heading">010 - Rudolph Perez</div>
-                                            <small class="list-group__text">Phasellus a ullamcorper lectus, sit amet viverra quam. In luctus tortor vel nulla pharetra bibendum</small>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-6">
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/boy-5.png" alt="">
-                                        </div>
-        
-                                        <div class="media-body">
-                                            <div class="list-group__heading">011 - David Villa Jacobs</div>
-                                            <small class="list-group__text">Sorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis lobortis sapien non posuere</small>
-                                        </div>
-                                    </a>
-        
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/boy-4.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="list-group__heading">012 - Candice Barnes</div>
-                                            <small class="list-group__text">Quisque non tortor ultricies, posuere elit id, lacinia purus curabitur.</small>
-                                        </div>
-                                    </a>
-        
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/girl.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="list-group__heading">013 - Jeannette Lawson</div>
-                                            <small class="list-group__text">Donec congue tempus ligula, varius hendrerit mi hendrerit sit amet. Duis ac quam sit amet leo feugiat iaculis</small>
-                                        </div>
-                                    </a>
-        
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/girl-7.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="list-group__heading">014 - Darla Mckinney</div>
-                                            <small class="list-group__text">Duis tincidunt augue nec sem dignissim scelerisque. Vestibulum rhoncus sapien sed nulla aliquam lacinia</small>
-                                        </div>
-                                    </a>
-        
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/girl-5.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="list-group__heading">015 - Rudolph Perez</div>
-                                            <small class="list-group__text">Phasellus a ullamcorper lectus, sit amet viverra quam. In luctus tortor vel nulla pharetra bibendum</small>
-                                        </div>
-                                    </a>
-
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/boy-5.png" alt="">
-                                        </div>
-        
-                                        <div class="media-body">
-                                            <div class="list-group__heading">016 - David Villa Jacobs</div>
-                                            <small class="list-group__text">Sorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis lobortis sapien non posuere</small>
-                                        </div>
-                                    </a>
-        
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/boy-4.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="list-group__heading">017 - Candice Barnes</div>
-                                            <small class="list-group__text">Quisque non tortor ultricies, posuere elit id, lacinia purus curabitur.</small>
-                                        </div>
-                                    </a>
-        
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/girl.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="list-group__heading">018 - Jeannette Lawson</div>
-                                            <small class="list-group__text">Donec congue tempus ligula, varius hendrerit mi hendrerit sit amet. Duis ac quam sit amet leo feugiat iaculis</small>
-                                        </div>
-                                    </a>
-        
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/girl-7.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="list-group__heading">019 - Darla Mckinney</div>
-                                            <small class="list-group__text">Duis tincidunt augue nec sem dignissim scelerisque. Vestibulum rhoncus sapien sed nulla aliquam lacinia</small>
-                                        </div>
-                                    </a>
-        
-                                    <a href="cobroAgua.html" class="list-group-item media">
-                                        <div class="pull-left">
-                                            <img class="avatar-img" src="img/usuarios/girl-5.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="list-group__heading">020 - Rudolph Perez</div>
-                                            <small class="list-group__text">Phasellus a ullamcorper lectus, sit amet viverra quam. In luctus tortor vel nulla pharetra bibendum</small>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="" class="view-more">
-                                <i class="zmdi zmdi-long-arrow-right"></i> Ver todos..
-                            </a>
                         </div>
                     </div>
 
-                    <div class="text-center m-t-20">
-                        <a href="" class="btn btn--icon-text btn-default"><i class="zmdi zmdi-refresh-alt"></i> Refrescar...</a>
+                    
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="content__header">
+                        <h2>Consumo de auga</h2>
+
+                        <div class="actions">
+                            <div class="dropdown">
+                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="">Refrescar</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+                    <div class="card">
+                        <div class="card__header">
+                            <h2 align="center"><img class="avatar-img" src="img/usuarios/ees.png" alt=""> <br><br> <small>Ingresa la lectura Actual del medidor para que el sistema pueda interactuar con las con el pago.</small></h2>
+                            <br>
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                        <div class="form-group">
+                                        <input type='text' class="form-control date-picker" placeholder="Fecha Nacimiento...">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                                    <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                    <div class="form-group">
+                                        <input type='text' class="form-control date-picker" placeholder="Fecha Nacimiento...">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="content__header">
+                        <h2>Multa consumo Agua</h2>
+
+                        <div class="actions">
+                            <div class="dropdown">
+                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="">Refrescar</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__header">
+                            <h2 align="center"><img class="avatar-img" src="img/usuarios/ees.png" alt=""> <br><br> <small>Ingresa la lectura Actual del medidor para que el sistema pueda interactuar con las con el pago.</small></h2>
+                            <br>
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                        <div class="form-group">
+                                        <input type='text' class="form-control date-picker" placeholder="Fecha Nacimiento...">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                                    <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                    <div class="form-group">
+                                        <input type='text' class="form-control date-picker" placeholder="Fecha Nacimiento...">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
                 </div>
             </section>
 
@@ -782,8 +614,14 @@
             <!-- EasyPie Charts -->
             <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
 
-            <!-- Select 2 -->
+            <!-- Bootstrap Date/Time Picker -->
+        <script src="vendors/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+        <!-- Select 2 -->
         <script src="vendors/select2/dist/js/select2.full.min.js"></script>
+
+        <!-- Simple File Input -->
+        <script src="vendors/fileinput.min.js"></script>
     
             <!-- Placeholder for IE9 -->
             <!--[if IE 9 ]>
@@ -796,6 +634,7 @@
             <script src="demo/js/easy-pie-charts.js"></script>
             <script src="demo/js/sparkline-charts.js"></script>
             <script src="demo/js/calendar.js"></script>
+            
     
             <!-- Site Functions & Actions -->
             <script src="js/app.min.js"></script>

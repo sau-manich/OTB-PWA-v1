@@ -365,12 +365,12 @@
                         <li>
                             <a href="tablero.html"><i class="zmdi zmdi-home"></i> Tablero</a>
                         </li>
-                        <li class="navigation__active"><a href="cobroFacturacion.html"><i class="zmdi zmdi-layers"></i> Cobro y facturación</a></li>
+                        <li><a href="cobroFacturacion.html"><i class="zmdi zmdi-layers"></i> Cobro y facturación</a></li>
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
                             <ul>
                                 <li><a href="lecturaMedidor.html">Medidor</a></li>
-                                <li><a href="nuevoEvento.html">Asistencia Reunión</a></li>
+                                <li><a href="lecturaReunion.html">Reuniones</a></li>
                             </ul>
                         </li>
                         <li class="navigation__sub">
@@ -383,14 +383,11 @@
                         </li>
                         
                         
-                        <li class="navigation__sub">
+                        <li class="navigation__sub navigation__active">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-trending-up"></i>Reportes</a>
                             <ul>
-                                <li><a href="#">Cubos de agua</a></li>
-                                <li><a href="#">Consumo de agua</a></li>
-                                <li><a href="#">Multas consumo de agua</a></li>
-                                <li><a href="#">Asistencia reunión</a></li>
-                                <li><a href="#">Multas inasistencia reunión</a></li>
+                                <li><a href="reporteConsumoAgua">Consumo de Agua</a></li>
+                                <li class="navigation__active"><a href="reporteAsamblea">Asambleas</a></li>
                             </ul>
                         </li>
                         
@@ -398,7 +395,6 @@
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-item"></i> Configuración</a>
                             <ul>
-                                <li><a href="cuenta.html">Cuentas</a></li>
                                 <li><a href="avisos.html">Avisos</a></li>
                                 <li><a href="backup.html">Backup (BD)</a></li>
                                 
@@ -408,208 +404,122 @@
                 </div>
             </aside>
 
+            
             <section id="content">
-                <div class="row">
-                    <div class="col-md-3">
+                <div class="col-md-4">
+                    <div class="content__header">
+                        <h2>Inasistencia Reunión</h2>
 
-                        <div class="card">
-                            <div class="card__header">
-                                <h2 align="center"><img class="avatar-img" src="img/usuarios/ees.png" alt=""> <br><br> Aviso Importante<small>Este socio cuenta con 2 acciones, elige la correcta para poder realizar el pago.</small></h2>
+                        <div class="actions">
+                            <div class="dropdown">
+                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="">Refrescar</a></li>
+                                </ul>
                             </div>
                         </div>
-                         <!-- Tabs -->
+                    </div>
                     <div class="card">
                         <div class="card__header">
-                            <h2>Reuniones<small>Reuniones y publicaciones</small></h2>
-                        </div>
-
-                        <ul class="tab-nav tab-nav--justified tab-nav--icon">
-                            <li class="active">
-                                <a class="col-sx-4" href="#tab-1" data-toggle="tab">
-                                    Asambleas
-                                </a>
-                            </li>
-                            <li>
-                                <a class="col-xs-4" href="#tab-2" data-toggle="tab">
-                                    Publicaciones
-                                </a>
-                            </li>
-                        </ul>
-
-                        <div class="card__body">
-                            <div class="tab-content">
-                                <div class="tab-pane fade in active" id="tab-1">
-                                    <p><img src="img/4.png" class="img-responsive" alt=""></p>
-                                    Morbi id orci lacus. Nunc semper condimentum sem vel imperdiet. Praesent tristique purus id est dictum, vel vestibulum ante interdum.
-                                    <br><br><br>
-                                    <p><img src="demo/img/headers/sm/6.png" class="img-responsive" alt=""></p>
-                                    Morbi id orci lacus. Nunc semper condimentum sem vel imperdiet. Praesent tristique purus id est dictum, vel vestibulum ante interdum.
-                                </div>
-
-                                <div class="tab-pane fade" id="tab-2">
-                                    <p><img src="img/4.png" class="img-responsive" alt=""></p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet dapibus tellus. Nullam aliquet dignissim semper. Cras sit amet ligula congue, dapibus enim id, dapibus tellus.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                        
-
-                    </div>
-                    <div class="col-md-9">
-                                <!-- Profile -->
-                        <div class="card widget-profile">
-                            <div class="card__header card__header--highlight text-center">
-                                <h2> Acción Nº 153<small>Gustavo Angel Cerezo Mamani</small> </h2>    
-                                <a href="cobroAgua.html">
-                                    <button class="btn btn--float" data-trigger="hover" data-toggle="popover" data-placement="left" data-content="Ver multas de las inasistencias a las reuniones." title="" data-original-title="Asambleas"><i class="zmdi zmdi-assignment"></i></button>
-                                </a>
-                            </div><br>
-
-                            <div class="card">
-            
-                                <div class="card__body">
-                                    <div class="table-responsive">
-                                        <table class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>Número</th>
-                                                    <th>Lectura Anterior</th>
-                                                    <th>Lectura Actual</th>
-                                                    <th>Fecha</th>
-                                                    <th>Pago</th>
-                                                    <th>Multa</th>
-                                                    <th>Acción</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td>001</td>
-                                                <td>43243</td>
-                                                <td>43243</td>
-                                                <td>Enero 2020</td>
-                                                <td><blockquote><footer>NO </footer></blockquote></td>
-                                                <td><blockquote><footer>BS.- 30.00 </footer></blockquote></td>
-                                                <td><button class="btn btn--light btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Ver Recivo" ><i class="zmdi zmdi-eye"></i></button>
-                                                    <button class="btn btn-warning btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Pagar sin Recivo" ><i class="zmdi zmdi-card"></i></button>
-                                                    <a href="imprimirRecivo.html">
-                                                        <button class="btn btn-success btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Pagar e imprimir Recivo" ><i class="zmdi zmdi-local-printshop"></i> </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>002</td>
-                                                <td>3737</td>
-                                                <td>43243</td>
-                                                <td>Diciembre 2019</td>
-                                                <td><blockquote><footer>NO </footer></blockquote></td>
-                                                <td> Bs.- 0.00</td>
-                                                <td><button class="btn btn--light btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Ver Recivo" ><i class="zmdi zmdi-eye"></i></button>
-                                                    <button class="btn btn-warning btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Pagar sin Recivo" ><i class="zmdi zmdi-card"></i></button>
-                                                    <a href="imprimirRecivo.html">
-                                                        <button class="btn btn-success btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Pagar e imprimir Recivo" ><i class="zmdi zmdi-local-printshop"></i> </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>003</td>
-                                                <td>3273</td>
-                                                <td>43243</td>
-                                                <td>Noviembre 2019</td>
-                                                <td><blockquote><footer>NO </footer></blockquote></td>
-                                                <td> Bs.- 0.00</td>
-                                                <td><button class="btn btn--light btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Ver Recivo" ><i class="zmdi zmdi-eye"></i></button>
-                                                    <button class="btn btn-warning btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Pagar sin Recivo" ><i class="zmdi zmdi-card"></i></button>
-                                                    <a href="imprimirRecivo.html">
-                                                        <button class="btn btn-success btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Pagar e imprimir Recivo" ><i class="zmdi zmdi-local-printshop"></i> </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>004</td>
-                                                <td>737</td>
-                                                <td>43243</td>
-                                                <td>Octubre 2019</td>
-                                                <td><blockquote><footer>NO </footer></blockquote></td>
-                                                <td><blockquote><footer>BS.- 30.00 </footer></blockquote></td>
-                                                <td><button class="btn btn--light btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Ver Recivo" ><i class="zmdi zmdi-eye"></i></button>
-                                                    <button class="btn btn-warning btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Pagar sin Recivo" ><i class="zmdi zmdi-card"></i></button>
-                                                    <a href="imprimirRecivo.html">
-                                                        <button class="btn btn-success btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Pagar e imprimir Recivo" ><i class="zmdi zmdi-local-printshop"></i> </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>005</td>
-                                                <td>3766</td>
-                                                <td>43243</td>
-                                                <td>Septiembre 2019</td>
-                                                <td><blockquote><footer>NO </footer></blockquote></td>
-                                                <td> Bs.- 0.00</td>
-                                                <td><button class="btn btn--light btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Ver Recivo" ><i class="zmdi zmdi-eye"></i></button>
-                                                    <button class="btn btn-warning btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Pagar sin Recivo" ><i class="zmdi zmdi-card"></i></button>
-                                                    <a href="imprimirRecivo.html">
-                                                        <button class="btn btn-success btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Pagar e imprimir Recivo" ><i class="zmdi zmdi-local-printshop"></i> </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>006</td>
-                                                <td>4465</td>
-                                                <td>43243</td>
-                                                <td>Agosto 2019</td>
-                                                <td><blockquote><footer>NO </footer></blockquote></td>
-                                                <td> Bs.- 0.00</td>
-                                                <td><button class="btn btn--light btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Ver Recivo" ><i class="zmdi zmdi-eye"></i></button>
-                                                    <button class="btn btn-warning btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Pagar sin Recivo" ><i class="zmdi zmdi-card"></i></button>
-                                                    <a href="imprimirRecivo.html">
-                                                        <button class="btn btn-success btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Pagar e imprimir Recivo" ><i class="zmdi zmdi-local-printshop"></i> </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>007</td>
-                                                <td>4359</td>
-                                                <td>43243</td>
-                                                <td>Julio 2019</td>
-                                                <td>SI</td>
-                                                <td> Bs.- 0.00</td>
-                                                <td><button class="btn btn--light btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Ver Recivo" ><i class="zmdi zmdi-eye"></i></button>
-                                                    <button class="btn btn-warning btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Pagar sin Recivo" ><i class="zmdi zmdi-card"></i></button>
-                                                    <a href="imprimirRecivo.html">
-                                                        <button class="btn btn-success btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Pagar e imprimir Recivo" ><i class="zmdi zmdi-local-printshop"></i> </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>008</td>
-                                                <td>93453</td>
-                                                <td>43243</td>
-                                                <td>Junio 2019</td>
-                                                <td>SI</td>
-                                                <td> Bs.- 0.00</td>
-                                                <td><button class="btn btn--light btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Ver Recivo" ><i class="zmdi zmdi-eye"></i></button>
-                                                    <button class="btn btn-warning btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Pagar sin Recivo" ><i class="zmdi zmdi-card"></i></button>
-                                                    <a href="imprimirRecivo.html">
-                                                        <button class="btn btn-success btn--icon" data-trigger="hover" data-toggle="popover" data-placement="top" title="" data-original-title="Pagar e imprimir Recivo" ><i class="zmdi zmdi-local-printshop"></i> </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
+                            <h2 align="center"><img class="avatar-img" src="img/usuarios/ees.png" alt=""> <br><br> <small>Pon un rango de una fecha a otra para ver el reporte de los socios que faltaron a las asambleas.</small></h2>
+                            <br>
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                        <div class="form-group">
+                                        <input type='text' class="form-control date-picker" placeholder="Fecha Nacimiento...">
+                                        <i class="form-group__bar"></i>
                                     </div>
                                 </div>
+                                    <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                    <div class="form-group">
+                                        <input type='text' class="form-control date-picker" placeholder="Fecha Nacimiento...">
+                                        <i class="form-group__bar"></i>
+                                    </div>
                             </div>
-                            
                         </div>
                     </div>
+
                     
+
                 </div>
 
-               
-            </section>
+                <div class="col-md-4">
+                    <div class="content__header">
+                        <h2>Multas pagadas</h2>
 
+                        <div class="actions">
+                            <div class="dropdown">
+                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="">Refrescar</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__header">
+                            <h2 align="center"><img class="avatar-img" src="img/usuarios/ees.png" alt=""> <br><br> <small>Pon un rango de una fecha a otra para ver el reporte de socios que cancelaron las multas de asambleas.</small></h2>
+                            <br>
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                        <div class="form-group">
+                                        <input type='text' class="form-control date-picker" placeholder="Fecha Nacimiento...">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                                    <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                    <div class="form-group">
+                                        <input type='text' class="form-control date-picker" placeholder="Fecha Nacimiento...">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="content__header">
+                        <h2>Multas Asambleas</h2>
+
+                        <div class="actions">
+                            <div class="dropdown">
+                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="">Refrescar</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__header">
+                            <h2 align="center"><img class="avatar-img" src="img/usuarios/ees.png" alt=""> <br><br> <small>Pon un rango de una fecha a otra para ver el reporte de multas que aun no fueron canceladas.</small></h2>
+                            <br>
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                        <div class="form-group">
+                                        <input type='text' class="form-control date-picker" placeholder="Fecha Nacimiento...">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                                    <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                    <div class="form-group">
+                                        <input type='text' class="form-control date-picker" placeholder="Fecha Nacimiento...">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </section>
 
             <footer id="footer">
                 Copyright &copy; s@u-Crgt 2020
@@ -705,13 +615,13 @@
             <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
 
             <!-- Bootstrap Date/Time Picker -->
-            <script src="vendors/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="vendors/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 
-            <!-- Select 2 -->
-            <script src="vendors/select2/dist/js/select2.full.min.js"></script>
+        <!-- Select 2 -->
+        <script src="vendors/select2/dist/js/select2.full.min.js"></script>
 
-            <!-- Simple File Input -->
-            <script src="vendors/fileinput.min.js"></script>
+        <!-- Simple File Input -->
+        <script src="vendors/fileinput.min.js"></script>
     
             <!-- Placeholder for IE9 -->
             <!--[if IE 9 ]>
@@ -724,6 +634,7 @@
             <script src="demo/js/easy-pie-charts.js"></script>
             <script src="demo/js/sparkline-charts.js"></script>
             <script src="demo/js/calendar.js"></script>
+            
     
             <!-- Site Functions & Actions -->
             <script src="js/app.min.js"></script>
