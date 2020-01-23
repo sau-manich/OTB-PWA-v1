@@ -413,39 +413,139 @@
             </aside>
 
             
-            <section>
+            <section id="content">
+
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="card">
+                            <div class="card__header">
+                                <h2 align="center">Datos estadisticos</h2>
+                            </div>
+
+                            <div class="card__body">
+                                <div id="chart-line" class="flot-chart"></div>
+                                <div class="flot-chart-legend flot-chart-legend--line"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="card widget-past-days">
+                            <div class="card__header">
+                                <h2 align="center">Gestión - 2020<small>Cada mes ejecutado se sumara y se mostrara generalemnte</small></h2>
+                                <div class="actions">
+                                    <div class="dropdown">
+                                        <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                        <ul class="dropdown-menu pull-right">
+                                            <li><a href="">Anterior</a></li>
+                                            <li><a href="">Siguiente</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="list-group list-group--striped">
+    
+                                <div class="list-group-item">
+                                    <div class="widget-past-days__chart hidden-sm">
+                                        <div class="chart-sparkline-bar">6,9,5,6,3,7,5,4,6,5,6,4,2,5,8,2,6,9</div>
+                                    </div>
+        
+                                        <div class="widget-past-days__info">
+                                            <small>Consumo de Agua</small>
+                                            <h3>Bs.- 45,000.00</h3>
+                                        </div>
+                                    </div>
+
+                                <div class="list-group-item">
+                                    <div class="widget-past-days__chart hidden-sm">
+                                        <div class="chart-sparkline-bar">6,9,5,6,3,7,5,4,6,5,6,4,2,5,8,2,6,9</div>
+                                    </div>
+    
+                                    <div class="widget-past-days__info">
+                                        <small>Multas Consumo de Agua</small>
+                                        <h3>Bs. 27,030.00</h3>
+                                    </div>
+                                </div>
+    
+                                <div class="list-group-item">
+                                    <div class="widget-past-days__chart hidden-sm">
+                                        <div class="chart-sparkline-bar">6,9,5,6,3,7,5,4,6,5,6,4,2,5,8,2,6,9</div>
+                                    </div>
+    
+                                    <div class="widget-past-days__info">
+                                        <small>Multas Asambleas</small>
+                                        <h3>Bs. 15,000.00</h3>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="content__grid" data-columns>
+                    <div class="card widget-analytic">
+                        <div class="card__header">
+                            <h2>Socios Activos <small>Socios Activos y con doble acción</small></h2>
+                            <div class="actions">
+                                <div class="dropdown">
+                                    <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="">Refrescar</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__body">
+                            <div class="widget-analytic__info">
+                                <h2><button class="btn btn-default btn--icon"><i class="zmdi zmdi-account-box"></i></button> 248 | <button class="btn btn-default btn--icon"><i class="zmdi zmdi-account-box"></i></button> 26</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card widget-analytic">
+                        <div class="card__header">
+                            <h2>Compra de Acciones Total<small>La compra de acciones varia segun al año de ingreso</small></h2>
+                            <div class="actions">
+                                <div class="dropdown">
+                                    <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="">Refrescar</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__body">
+                            <div class="widget-analytic__info">
+                                <h2><button class="btn btn-default btn--icon"><i class="zmdi zmdi-money"></i></button> Bs.- 501,870.00</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card widget-analytic">
+                        <div class="card__header">
+                            <h2>Cambio de Nombre <small>La suma de cambios de nombres seran generales</small></h2>
+                            <div class="actions">
+                                <div class="dropdown">
+                                    <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="">Refrescar</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__body">
+                            <div class="widget-analytic__info">
+                                <h2><button class="btn btn-default btn--icon"><i class="zmdi zmdi-money"></i></button> Bs.- 11,500.00</h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
 
                 
-                <form action="" method="POST" enctype="multipart/form-data">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <div class="preview-zone hidden">
-                            <div class="box box-solid">
-                              <div class="box-header with-border">
-                                <div><b>Vista previa</b></div>
-                                <div class="box-tools pull-right">
-                                  <button type="button" class="btn btn-danger btn-xs remove-preview">
-                                    <i class="fa fa-times"></i> Resetear carga
-                                  </button>
-                                </div>
-                              </div>
-                              <div class="box-body"></div>
-                            </div>
-                          </div>
-                          <div class="dropzone-wrapper">
-                            <div class="dropzone-desc">
-                              <i class="glyphicon glyphicon-download-alt"></i>
-                              <p>Seleccione una imagen.</p>
-                            </div>
-                            <input type="file" name="img_logo" class="dropzone">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
               </section>
               
               <script src="assets/app.js"></script>
