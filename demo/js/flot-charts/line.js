@@ -10,19 +10,19 @@ $(document).ready(function(){
     // Create an Array push the data + Draw the bars
     var barData = [
         {
-            label: 'Tokyo',
+            label: 'Primavera',
             data: data1,
-            color: '#edeff0'
+            color: '#3f8c42'
         },
         {
-            label: 'Seoul',
+            label: '21 de Septiembre',
             data: data2,
             color: '#8a99a0'
         },
         {
-            label: 'Beijing',
+            label: 'Teniente Benavides',
             data: data3,
-            color: '#415158'
+            color: '#00bcd4'
         }
     ]
 
