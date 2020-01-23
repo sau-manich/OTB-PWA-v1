@@ -160,17 +160,15 @@
                     </a>
 
                     <ul class="dropdown-menu pull-right dropdown-menu--icon">
-                        <li>
-                            <a href="profile-about.html"><i class="zmdi zmdi-account"></i> Ver Perfil</a>
-                        </li>
+                        
                         <li>
                             <a href=""><i class="zmdi zmdi-input-antenna"></i> Comprobar Red</a>
                         </li>
                         <li>
-                            <a href=""><i class="zmdi zmdi-settings"></i> Ajustes</a>
+                            <a data-mae-action="fullscreen" href=""><i class="zmdi zmdi-fullscreen"></i> Pantalla Completa</a>
                         </li>
                         <li>
-                            <a href=""><i class="zmdi zmdi-time-restore"></i> Salir</a>
+                            <a href="login.html"><i class="zmdi zmdi-time-restore"></i> Salir</a>
                         </li>
                     </ul>
                 </li>
@@ -378,7 +376,7 @@
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-text"></i> Lecturas</a>
                             <ul>
                                 <li><a href="lecturaMedidor.html">Medidor</a></li>
-                                <li><a href="nuevoEvento.html">Asistencia Reunión</a></li>
+                                <li><a href="lecturaReunion.html">Reuniones</a></li>
                             </ul>
                         </li>
                         <li class="navigation__sub">
@@ -394,11 +392,8 @@
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-trending-up"></i>Reportes</a>
                             <ul>
-                                <li><a href="#">Cubos de agua</a></li>
-                                <li><a href="#">Consumo de agua</a></li>
-                                <li><a href="#">Multas consumo de agua</a></li>
-                                <li><a href="#">Asistencia reunión</a></li>
-                                <li><a href="#">Multas inasistencia reunión</a></li>
+                                <li><a href="reporteConsumoAgua">Consumo de Agua</a></li>
+                                <li><a href="reporteAsamblea">Asambleas</a></li>
                             </ul>
                         </li>
                         
@@ -406,7 +401,6 @@
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-collection-item"></i> Configuración</a>
                             <ul>
-                                <li><a href="cuenta.html">Cuentas</a></li>
                                 <li><a href="avisos.html">Avisos</a></li>
                                 <li><a href="backup.html">Backup (BD)</a></li>
                                 
@@ -417,37 +411,139 @@
             </aside>
 
             
-            <section>
-                <form action="" method="POST" enctype="multipart/form-data">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <div class="preview-zone hidden">
-                            <div class="box box-solid">
-                              <div class="box-header with-border">
-                                <div><b>Vista previa</b></div>
-                                <div class="box-tools pull-right">
-                                  <button type="button" class="btn btn-danger btn-xs remove-preview">
-                                    <i class="fa fa-times"></i> Resetear carga
-                                  </button>
-                                </div>
-                              </div>
-                              <div class="box-body"></div>
+            <section id="content">
+
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="card">
+                            <div class="card__header">
+                                <h2 align="center">Datos estadisticos</h2>
                             </div>
-                          </div>
-                          <div class="dropzone-wrapper">
-                            <div class="dropzone-desc">
-                              <i class="glyphicon glyphicon-download-alt"></i>
-                              <p>Seleccione una imagen.</p>
+
+                            <div class="card__body">
+                                <div id="chart-line" class="flot-chart"></div>
+                                <div class="flot-chart-legend flot-chart-legend--line"></div>
                             </div>
-                            <input type="file" name="img_logo" class="dropzone">
-                          </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
-                </form>
+
+                    <div class="col-md-5">
+                        <div class="card widget-past-days">
+                            <div class="card__header">
+                                <h2 align="center">Gestión - 2020<small>Cada mes ejecutado se sumara y se mostrara generalemnte</small></h2>
+                                <div class="actions">
+                                    <div class="dropdown">
+                                        <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                        <ul class="dropdown-menu pull-right">
+                                            <li><a href="">Anterior</a></li>
+                                            <li><a href="">Siguiente</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="list-group list-group--striped">
+    
+                                <div class="list-group-item">
+                                    <div class="widget-past-days__chart hidden-sm">
+                                        <div class="chart-sparkline-bar">6,9,5,6,3,7,5,4,6,5,6,4,2,5,8,2,6,9</div>
+                                    </div>
+        
+                                        <div class="widget-past-days__info">
+                                            <small>Consumo de Agua</small>
+                                            <h3>Bs.- 45,000.00</h3>
+                                        </div>
+                                    </div>
+
+                                <div class="list-group-item">
+                                    <div class="widget-past-days__chart hidden-sm">
+                                        <div class="chart-sparkline-bar">6,9,5,6,3,7,5,4,6,5,6,4,2,5,8,2,6,9</div>
+                                    </div>
+    
+                                    <div class="widget-past-days__info">
+                                        <small>Multas Consumo de Agua</small>
+                                        <h3>Bs. 27,030.00</h3>
+                                    </div>
+                                </div>
+    
+                                <div class="list-group-item">
+                                    <div class="widget-past-days__chart hidden-sm">
+                                        <div class="chart-sparkline-bar">6,9,5,6,3,7,5,4,6,5,6,4,2,5,8,2,6,9</div>
+                                    </div>
+    
+                                    <div class="widget-past-days__info">
+                                        <small>Multas Asambleas</small>
+                                        <h3>Bs. 15,000.00</h3>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="content__grid" data-columns>
+                    <div class="card widget-analytic">
+                        <div class="card__header">
+                            <h2>Socios Activos <small>Socios Activos y con doble acción</small></h2>
+                            <div class="actions">
+                                <div class="dropdown">
+                                    <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="">Refrescar</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__body">
+                            <div class="widget-analytic__info">
+                                <h2><button class="btn btn-default btn--icon"><i class="zmdi zmdi-account-box"></i></button> 248 | <button class="btn btn-default btn--icon"><i class="zmdi zmdi-account-box"></i></button> 26</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card widget-analytic">
+                        <div class="card__header">
+                            <h2>Compra de Acciones Total<small>La compra de acciones varia segun al año de ingreso</small></h2>
+                            <div class="actions">
+                                <div class="dropdown">
+                                    <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="">Refrescar</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__body">
+                            <div class="widget-analytic__info">
+                                <h2><button class="btn btn-default btn--icon"><i class="zmdi zmdi-money"></i></button> Bs.- 501,870.00</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card widget-analytic">
+                        <div class="card__header">
+                            <h2>Cambio de Nombre <small>La suma de cambios de nombres seran generales</small></h2>
+                            <div class="actions">
+                                <div class="dropdown">
+                                    <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="">Refrescar</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__body">
+                            <div class="widget-analytic__info">
+                                <h2><button class="btn btn-default btn--icon"><i class="zmdi zmdi-money"></i></button> Bs.- 11,500.00</h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                
               </section>
               
               <script src="assets/app.js"></script>
