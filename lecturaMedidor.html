@@ -29,6 +29,9 @@
 
         <!-- Vendors -->
 
+        <!-- calendario CSS -->
+        <link href="css/calendario.css" rel="stylesheet">
+
         <!-- File CSS -->
         <link href="css/file.css" rel="stylesheet">
 
@@ -381,8 +384,8 @@
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-widgets"></i> Acciones</a>
 
                             <ul>
-                                <li><a href="reporteConsumoAgua">Consumo de Agua</a></li>
-                                <li><a href="reporteAsamblea">Asambleas</a></li>
+                                <li><a href="registroSocio.html">Registro de Socios</a></li>
+                                <li><a href="registroMedidor.html">Registro Medidores</a></li>
                             </ul>
                         </li>
                         
@@ -390,8 +393,8 @@
                         <li class="navigation__sub">
                             <a href="" data-mae-action="submenu-toggle"><i class="zmdi zmdi-trending-up"></i>Reportes</a>
                             <ul>
-                                <li><a href="#">Consumo de Agua</a></li>
-                                <li><a href="#">Asambleas</a></li>
+                                <li><a href="reporteConsumoAgua.html">Consumo de Agua</a></li>
+                                <li><a href="reporteAsamblea.html">Asambleas</a></li>
                             </ul>
                         </li>
                         
@@ -411,30 +414,89 @@
             <section id="content">
                 <div class="row">
                     <div class="col-md-8">
-                        <div class="card wall__posting">
-                            
+                        <div class="content__header">
+                            <h2>Nuevo Lectura</h2>
+        
+                            <div class="actions">
+                                <div class="dropdown">
+                                    <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="">Refrescar</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><br>
+                        <div class="card">
                             <div class="card__header card__header--highlight text-center">
-                                <h2 align="center"><img class="avatar-img" src="img/med.png" alt=""><br><br></h2>
-                                <div class="col-sm-8 col-md-12">
-    
-                                    <div class="form-group">
-                                        <select class="select2" data-placeholder="Seleccione un mes para poder crearlo">
-                                            <option>&nbsp;</option>
-                                            <option>Enero - 2020</option>
-                                            <option>Febrero - 2020</option>
-                                            <option>Marzo - 2020</option>
-                                            <option>Abril - 2020</option>
-                                            <option>Mayo - 2020</option>
-                                            <option>Junio - 2020</option>
-                                            <option>Julio - 2020</option>
-                                            <option>Agosto - 2020</option>
-                                            <option>Septiembre - 2020</option>
-                                            <option>Octubre - 2020</option>
-                                            <option>Noviembre - 2020</option>
-                                            <option>Diciembre - 2020</option>
-                                        </select>
+                                <!-- main codes start -->
+                                <div class="signboard outer">
+                                    <div class="signboard front inner anim04c">
+                                        <li class="year anim04c">
+                                            <span></span>
+                                        </li>
+                                        <ul class="calendarMain anim04c" >
+                                            <li class="month anim04c" >
+                                                <span style="color: #fffdfd;"></span>
+                                            </li>
+                                            <li class="date anim04c">
+                                                <span style="color: #fffdfd;"></span>
+                                            </li>
+                                            <li class="day anim04c">
+                                                <span style="color: #fffdfd;"></span>
+                                            </li>
+                                        </ul>
+                                        <li class="clock minute anim04c">
+                                            <span></span>
+                                        </li>
+                                        <li class="calendarNormal date2 anim04c">
+                                            <span></span>
+                                        </li>
+                                    </div>
+                                    <div class="signboard left inner anim04c">
+                                        <li class="clock hour anim04c">
+                                            <span></span>
+                                        </li>
+                                        <li class="calendarNormal day2 anim04c">
+                                            <span></span>
+                                        </li>
+                                    </div>
+                                    <div class="signboard right inner anim04c">
+                                        <li class="clock second anim04c">
+                                            <span></span>
+                                        </li>
+                                        <li class="calendarNormal month2 anim04c">
+                                            <span></span>
+                                        </li>
                                     </div>
                                 </div>
+                                <!-- main codes end -->
+                                <div class="designer anim04c">
+                                    <li>
+                                        <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/t5/1117447_100001638983788_1284464661_q.jpg" alt="">
+                                    </li>
+                                </div>
+                                <div class="col-sm-12 col-md-12  text-center">
+                                    
+                                    <div class="col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <select class="select2" data-placeholder="Selecciona un mes para crearlo..">
+                                                <option>&nbsp;</option>
+                                                <option>Enero - 2020</option>
+                                                <option>Febrero - 2020</option>
+                                                <option>Marzo - 2020</option>
+                                                <option>Abril - 2020</option>
+                                                <option>Mayo - 2020</option>
+                                                <option>Junio - 2020</option>
+                                                <option>Julio - 2020</option>
+                                                <option>Agosto - 2020</option>
+                                                <option>Septiembre - 2020</option>
+                                                <option>Octubre - 2020</option>
+                                                <option>Noviembre - 2020</option>
+                                                <option>Diciembre - 2020</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div><br>
                                 <button class="btn btn--float"><i class="zmdi zmdi-plus"></i></button>
                             </div>
 
@@ -444,11 +506,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card wall__posting">
-                            
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card__header">
+                                <h2 align="center"><img class="avatar-img" src="img/usuarios/ees.png" alt=""> <br><br> Aviso Importante<small>Recuerda que la lectura del medidor debe ser mayor o igual a la lectura anterior, en caso que la lectura sea menor debes dejarlo en blanco.</small></h2>
+                            </div>
                             <div class="card__header card__header--highlight text-center">
-                                <div class="col-sm-8 col-md-12">
-    
+                                <div class="col-sm-12 col-md-12">
                                     <div class="form-group">
                                         <select class="select2" data-placeholder="Busquemos un mes para lecturar..">
                                             <option>&nbsp;</option>
@@ -477,44 +542,36 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card__header">
-                                <h2 align="center"><img class="avatar-img" src="img/usuarios/ees.png" alt=""> <br><br> Aviso Importante<small>Recuerda que la lectura del medidor debe ser mayor o igual a la lectura anterior, en caso que la lectura sea menor debes dejarlo en blanco.</small></h2>
-                            </div>
-                            <div class="card__header card__header--highlight text-center">
-                                <div class="col-sm-12 col-md-12">
-                                    <div class="form-group">
-                                        <select class="select2" data-placeholder="Busquemos al socio o medidor..">
-                                            <option>&nbsp;</option>
-                                            <option>001 - Guillermo Pelusa</option>
-                                            <option>002 - Juvenal Galarza</option>
-                                            <option>003 - Mario Chacon</option>
-                                            <option>004 - Rossa Mery </option>
-                                            <option>005 - Gustavo Cereso</option>
-                                            <option>006 - Saul Mamani</option>
-                                            <option>007 - Douglas Añez</option>
-                                            <option>008 - Evo Morales</option>
-                                            <option>009 - Fernando Camacho</option>
-                                            <option>010 - Romero Cruz</option>
-                                            <option>011 - Andronico Quispe</option>
-                                            <option>012 - Diana Mayta</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <button class="btn btn--float"><i class="zmdi zmdi-search"></i></button>
-                            </div>
-
-                            <div class="wall__actions">
-                                <div class="wall__actions__items">
-                                    <br>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
+                        <div class="action-header">
+                            <div class="action-header__label" align="center"><span class="hidden-xs">Lista de Socios / </span>Febrero - 2020</div>
+
+                            <div class="action-header__search">
+                                <input type="text" placeholder="Busquemos al socio.." class="action-header__input">
+                                <i class="action-header__close zmdi zmdi-long-arrow-left"></i>
+                            </div>
+
+                            <div class="actions action-header__actions">
+                                <a href="" class="action-header__toggle"><i class="zmdi zmdi-search"></i></a>
+
+                                <div class="dropdown ">
+                                    <a href="" data-toggle="dropdown">
+                                        <i class="zmdi zmdi-more-vert"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="">Refrescar</a>
+                                        </li>
+                                        <li>
+                                            <a href="">1º lectura mes anterior - 2º Lectura mes actual</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                         <div class="content--boxed">
 
                             <div class="">
@@ -1136,6 +1193,9 @@
             <script src="demo/js/easy-pie-charts.js"></script>
             <script src="demo/js/sparkline-charts.js"></script>
             <script src="demo/js/calendar.js"></script>
+
+             <!-- calendario -->
+             <script src="js/calendario.js"></script>
     
             <!-- Site Functions & Actions -->
             <script src="js/app.min.js"></script>
