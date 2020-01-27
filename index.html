@@ -415,133 +415,101 @@
 
                 <div class="row">
                     <div class="col-md-7">
-                        <div class="card">
-                            <div class="card__header">
-                                <h2 align="center">Datos estadisticos</h2>
-                            </div>
+                        
+                        <div class="content__header">
+                            <h2>Tablero Abanzado</h2>
 
-                            <div class="card__body">
-                                <div id="chart-line" class="flot-chart"></div>
-                                <div class="flot-chart-legend flot-chart-legend--line"></div>
+                            <div class="actions">
+                                <div class="dropdown">
+                                    <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="">Refrescar</a></li>
+                                    </ul>
+                                </div>
                             </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__header card__header--highlight">
+                                <h2 align="center">Rendimiento de la OTB <small>Mostramos cada calle de nuestra OTB y su rendimiento</small></h2><br><br>
+                                    <div id="chart-line" class="flot-chart"></div>
+                                    <div class="flot-chart-legend flot-chart-legend--line"></div>
+                            </div>
+                            
                         </div>
                     </div>
 
                     <div class="col-md-5">
-                        <div class="card">
-        
-                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        
-                                    
-        
-                                    <!-- Wrapper for slides -->
-                                    <div class="carousel-inner">
-                                        <div class="item active">
-                                            <div class="card widget-past-days">
-                                                <div class="card__header">
-                                                    <h2 align="center">Gestión - 2018<small>Cada mes ejecutado se sumara y se mostrara generalemnte</small></h2>
-                                                </div>
-                        
-                                                <div class="list-group list-group--striped text-center">
-                        
-                                                    <div class="list-group-item">
-                                                        <div class="widget-past-days__info">
-                                                            <small>Consumo de Agua</small>
-                                                            <h3>Bs.- 23,670.00</h3>
-                                                        </div>
-                                                    </div>
-                    
-                                                    <div class="list-group-item">
-                                                        <div class="widget-past-days__info">
-                                                            <small>Multas Consumo de Agua</small>
-                                                            <h3>Bs. 13,030.00</h3>
-                                                        </div>
-                                                    </div>
-                        
-                                                    <div class="list-group-item">
-                                                        <div class="widget-past-days__info">
-                                                            <small>Multas Asambleas</small>
-                                                            <h3>Bs. 9,050.00</h3>
-                                                        </div>
-                                                    </div>
-                        
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="card widget-past-days">
-                                                <div class="card__header">
-                                                    <h2 align="center">Gestión - 2019<small>Cada mes ejecutado se sumara y se mostrara generalemnte</small></h2>
-                                                </div>
-                        
-                                                <div class="list-group list-group--striped text-center">
-                        
-                                                    <div class="list-group-item">
-                                                        <div class="widget-past-days__info">
-                                                            <small>Consumo de Agua</small>
-                                                            <h3>Bs.- 44,020.00</h3>
-                                                        </div>
-                                                    </div>
-                    
-                                                    <div class="list-group-item">
-                                                        <div class="widget-past-days__info">
-                                                            <small>Multas Consumo de Agua</small>
-                                                            <h3>Bs. 17,080.00</h3>
-                                                        </div>
-                                                    </div>
-                        
-                                                    <div class="list-group-item">
-                                                        <div class="widget-past-days__info">
-                                                            <small>Multas Asambleas</small>
-                                                            <h3>Bs. 15,400.00</h3>
-                                                        </div>
-                                                    </div>
-                        
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="card widget-past-days">
-                                                <div class="card__header">
-                                                    <h2 align="center">Gestión - 2020<small>Cada mes ejecutado se sumara y se mostrara generalemnte</small></h2>
-                                                </div>
-                        
-                                                <div class="list-group list-group--striped text-center">
-                        
-                                                    <div class="list-group-item">
-                                                        <div class="widget-past-days__info">
-                                                            <small>Consumo de Agua</small>
-                                                            <h3>Bs.- 45,000.00</h3>
-                                                        </div>
-                                                    </div>
-                    
-                                                    <div class="list-group-item">
-                                                        <div class="widget-past-days__info">
-                                                            <small>Multas Consumo de Agua</small>
-                                                            <h3>Bs. 27,030.00</h3>
-                                                        </div>
-                                                    </div>
-                        
-                                                    <div class="list-group-item">
-                                                        <div class="widget-past-days__info">
-                                                            <small>Multas Asambleas</small>
-                                                            <h3>Bs. 15,000.00</h3>
-                                                        </div>
-                                                    </div>
-                        
-                                                </div>
-                                            </div>
+                        <div class="card widget-analytic">
+                            <div class="card__header">
+                                <h2 align="center"><img src="img/direc.png" width="40%" alt=""> <br><br> <small>Seleccione la directica de Comición de agua.</small></h2>
+                                <div class="actions">
+                                    <div class="dropdown">
+                                        <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                        <ul class="dropdown-menu pull-right">
+                                            <li><a href="">Guardar</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__body">
+                                <div class="input-group">
+                                    <div class="form-group">
+                                        <span class="input-group-addon"></span>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control text-center" placeholder="Presidente(a) Comite Agua" disabled>
+                                            <i class="form-group__bar"></i>
                                         </div>
                                     </div>
-        
-                                    <!-- Controls -->
-                                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                                        <span class="zmdi zmdi-chevron-left"></span>
-                                    </a>
-                                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                                        <span class="zmdi zmdi-chevron-right"></span>
-                                    </a>
+                                    <span class="input-group-addon"><button class="btn btn-default btn--icon"><i class="zmdi zmdi-account"></i></button></span>
+                                    <div class="form-group">
+                                        <select class="select2" data-placeholder="Seleccione al socio correcto">
+                                            <option>&nbsp;</option>
+                                            <option>001 - Saul Mamani</option>
+                                            <option>002 - Gustavo Cerezo</option>
+                                            <option>003 - Pamela Poma</option>
+                                            <option>004 - Fabiola Poma</option>
+                                        </select>
+                                    </div>
                                 </div>
+                                <div class="input-group">
+                                    <div class="form-group">
+                                        <span class="input-group-addon"></span>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control text-center" placeholder="Secretario(a) Comite Agua" disabled>
+                                            <i class="form-group__bar"></i>
+                                        </div>
+                                    </div>
+                                    <span class="input-group-addon"><button class="btn btn-default btn--icon"><i class="zmdi zmdi-account"></i></button></span>
+                                    <div class="form-group">
+                                        <select class="select2" data-placeholder="Seleccione al socio correcto">
+                                            <option>&nbsp;</option>
+                                            <option>001 - Saul Mamani</option>
+                                            <option>002 - Gustavo Cerezo</option>
+                                            <option>003 - Pamela Poma</option>
+                                            <option>004 - Fabiola Poma</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <div class="form-group">
+                                        <span class="input-group-addon"></span>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control text-center" placeholder="Tesorero(a) Comite Agua" disabled>
+                                            <i class="form-group__bar"></i>
+                                        </div>
+                                    </div>
+                                    <span class="input-group-addon"><button class="btn btn-default btn--icon"><i class="zmdi zmdi-account"></i></button></span>
+                                    <div class="form-group">
+                                        <select class="select2" data-placeholder="Seleccione al socio correcto">
+                                            <option>&nbsp;</option>
+                                            <option>001 - Saul Mamani</option>
+                                            <option>002 - Gustavo Cerezo</option>
+                                            <option>003 - Pamela Poma</option>
+                                            <option>004 - Fabiola Poma</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         
                     </div>
@@ -557,7 +525,7 @@
                                 <div class="dropdown">
                                     <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
                                     <ul class="dropdown-menu pull-right">
-                                        <li><a href="">Refrescar</a></li>
+                                        <li><a href="">Registrar</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -588,7 +556,7 @@
                                 <div class="dropdown">
                                     <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
                                     <ul class="dropdown-menu pull-right">
-                                        <li><a href="">Refrescar</a></li>
+                                        <li><a href="">Registrar</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -619,7 +587,7 @@
                                 <div class="dropdown">
                                     <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
                                     <ul class="dropdown-menu pull-right">
-                                        <li><a href="">Refrescar</a></li>
+                                        <li><a href="">Registrar</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -751,6 +719,14 @@
     
             <!-- EasyPie Charts -->
             <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+
+            <!-- Flot Charts -->
+        <script src="vendors/bower_components/flot/jquery.flot.js"></script>
+        <script src="vendors/bower_components/flot/jquery.flot.resize.js"></script>
+        <script src="vendors/bower_components/flot/jquery.flot.pie.js"></script>
+        <script src="vendors/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+        <script src="vendors/bower_components/flot-orderBars/js/jquery.flot.orderBars.js"></script>
+        <script src="vendors/bower_components/flot.curvedlines/curvedLines.js"></script>  
     
             <!-- Placeholder for IE9 -->
             <!--[if IE 9 ]>
@@ -761,6 +737,7 @@
             <script src="demo/js/flot-charts/curved-line.js"></script>
             <script src="demo/js/flot-charts/line.js"></script>
             <script src="demo/js/easy-pie-charts.js"></script>
+            <script src="demo/js/flot-charts/bar.js"></script>
             <script src="demo/js/sparkline-charts.js"></script>
             <script src="demo/js/calendar.js"></script>
 
