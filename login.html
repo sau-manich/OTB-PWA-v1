@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <!--[if IE 9 ]><html class="ie9"><![endif]-->
     <head>
         <meta charset="utf-8">
@@ -21,7 +21,7 @@
         <link rel="apple-touch-startup-image" href="img/ico.png">
         <!-- importante -->
         <link rel="manifest" href="manifest.json">
-        <title>Material Admin</title>
+        <title>CAP-21 PWA</title>
 
         <!-- Vendors -->
 
@@ -51,8 +51,8 @@
                             <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
 
                             <ul class="dropdown-menu pull-right">
-                                <li><a data-block="#l-register" href="">Crear una cuenta</a></li>
-                                <li><a data-block="#l-forget-password" href="">¿Olvidaste tu contraseña?</a></li>
+                                <li><a data-block="#l-register" href="">Cambiar cuenta</a></li>
+                                <li><a data-block="#l-forget-password" href="">¿Olvidaste tu cuenta y contraseña?</a></li>
                             </ul>
                         </div>
                     </div>
@@ -91,14 +91,14 @@
             <div class="login__block" id="l-register">
                 <div class="login__block__header palette-Blue bg">
                     <i class="zmdi zmdi-account-circle"></i>
-                    Crea una nueva cuenta
+                    Cambiemos algunos datos
 
                     <div class="actions login__block__actions">
                         <div class="dropdown">
                             <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
 
                             <ul class="dropdown-menu pull-right">
-                                <li><a data-block="#l-login" href="">Ya tengo una cuenta</a></li>
+                                <li><a data-block="#l-login" href="">Olvidar cambios</a></li>
                                 <!-- <li><a data-block="#l-forget-password" href="">Terminos y condiciones</a></li> -->
                             </ul>
                         </div>
@@ -107,11 +107,6 @@
 
                 <form action="../Controlador/usuarioControlador.php?opc=guardar" method="post">
                 <div class="login__block__body">
-                    <div class="form-group form-group--float form-group--centered">
-                        <input type="text" name="usuario" class="form-control">
-                        <label>Nombre</label>
-                        <i class="form-group__bar"></i>
-                    </div>
 
                     <div class="form-group form-group--float form-group--centered">
                         <input type="text" name="email" class="form-control">
@@ -144,7 +139,7 @@
             <div class="login__block" id="l-forget-password">
                 <div class="login__block__header palette-Purple bg">
                     <i class="zmdi zmdi-account-circle"></i>
-                    ¿Olvidaste tu contraseña?
+                    ¿Olvidaste tu cuenta y contraseña?
 
                     <div class="actions login__block__actions">
                         <div class="dropdown">
@@ -152,22 +147,21 @@
 
                             <ul class="dropdown-menu pull-right">
                                 <li><a data-block="#l-login" href="">Ya la recorde!</a></li>
-                                <li><a data-block="#l-register" href="">Crear una cuenta</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="login__block__body">
-                    <p class="m-t-30">Descuida, enviaremos un mensaje de ayuda al desarrollador.</p>
+                    <p class="m-t-30">Descuida, enviaremos un mensaje de ayuda al desarrollador para poder brindarle lo más antes posible los datos necesarios.</p>
 
                     <div class="form-group form-group--float form-group--centered">
                         <input type="text" class="form-control">
-                        <label>Escriba su Email</label>
+                        <label>Escriba asi: Nombre y Apellido , Nº Acción</label>
                         <i class="form-group__bar"></i>
                     </div>
 
-                    <button class="btn btn--light btn--icon m-t-15"><i class="zmdi zmdi-check"></i></button>
+                    <button class="btn btn--light btn--icon m-t-15"><i class="zmdi zmdi-email"></i></button>
                 </div>
             </div>
         </div>
