@@ -24,7 +24,7 @@
 
 
 
-        <title>ACUOTB PWA</title>
+        <title>CAP-21 PWA</title>
 
         <!-- Vendors -->
 
@@ -79,16 +79,16 @@
         <header id="header">
             <div class="logo">
                 <a href="index.html" class="hidden-xs" align="center">
-                    ACUOTB
-                    <small>Sistema de Agua-21</small>
+                    CAP-21
+                    <small>Sistema de Cobro</small>
                 </a>
                 <i class="logo__trigger zmdi zmdi-menu" data-mae-action="block-open" data-mae-target="#navigation"></i>
             </div>
 
             <ul class="top-menu">
                 <li class="top-menu__trigger hidden-lg hidden-md">
-                    <h4 style="margin-left: -30%;">ACUOTB</h4>
-                    <h6 style="margin-left: -55%;">Sistema Cobro de Agua</h6>
+                    <h4 style="margin-left: -30%;">CAP-21</h4>
+                    <h6 style="margin-left: -55%;">Sistema de Cobro OTB</h6>
                 </li>
                 
                 <li class="top-menu__apps dropdown hidden-xs hidden-sm">
@@ -351,7 +351,7 @@
 
             <aside id="navigation">
                 <div class="navigation__header">
-                    <i class="zmdi zmdi-long-arrow-left" data-mae-action="block-close"></i> <h4 align="center" style="margin-top: -30px;">ACUOTB</h4>
+                    <i class="zmdi zmdi-long-arrow-left" data-mae-action="block-close"></i> <h4 align="center" style="margin-top: -30px;">CAP-21</h4>
                 </div>
 
                 <div class="navigation__toggles">
@@ -414,104 +414,169 @@
             <section id="content">
 
                 <div class="row">
+                    <div class="content__header">
+                        <h2>Tablero Avanzado</h2>
+
+                        <div class="actions">
+                            <div class="dropdown">
+                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="">Refrescar</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-7">
                         
-                        <div class="content__header">
-                            <h2>Tablero Abanzado</h2>
+                        
+                        <div class="row pricing-table">
+                            <div class="col-sm-6">
+                                <div class="pricing-table__item">
+                                    <div class="pricing-table__header">
+                                        <h2 align="center"><img src="img/tanke3.png" width="30%" alt=""></h2>
+                                    </div>
 
-                            <div class="actions">
-                                <div class="dropdown">
-                                    <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="">Refrescar</a></li>
-                                    </ul>
+                                    <div class="alert alert-info">APORTE PARA NUEVO POZO </div>
+                                    <div class="pricing-table__body">
+                                        <div class="pricing-table__list">
+                                            El aporte para el nuevo pozo sera visible en todas las cuentas de los socios activos
+                                            adjuntando la suma que se hablo en una asamblea con la OTB
+                                        </div>
+                                        <div class="col-sm-2">
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="zmdi zmdi-money-box"></i></span>
+                                                <div class="form-group">
+                                                    <input type="number" class="form-control" placeholder="Ingrese el monto">
+                                                    <i class="form-group__bar"></i>
+                                                </div>
+                                            </div><br>
+                                        </div>
+
+                                        <div class="col-sm-3">
+                                            <span class="input-group-addon"><button class="btn btn-default btn--icon"><i class="zmdi zmdi-mail-send"></i></button></span><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="pricing-table__item">
+                                    <div class="pricing-table__header">
+                                        <h2 align="center"><img src="img/hab.png" width="30%" alt=""></h2>
+                                    </div>
+
+                                    <div class="alert alert-success">NUEVO ADMINISTRADOR </div>
+                                    Un Administrador tendra acceso a <br> lectura y escritura del sistema <br><br>
+                                    <div class="pricing-table__body">
+                                        
+                                        <div class="col-sm-9">
+
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="zmdi zmdi-face"></i></span>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Escriba su usuario">
+                                                    <i class="form-group__bar"></i>
+                                                </div>
+                                            </div><br>
+
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                                                <div class="form-group">
+                                                    <input type="password" class="form-control" placeholder="Escriba su contraseña">
+                                                    <i class="form-group__bar"></i>
+                                                </div>
+                                            </div><br>
+                                                
+                                        </div>
+
+                                        <div class="col-sm-3">
+
+                                            <br><span class="input-group-addon"><button class="btn btn-default btn--icon"><i class="zmdi zmdi-thumb-up"></i></button></span><br>
+                                                
+                                        </div>
+
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card__header card__header--highlight">
-                                <h2 align="center">Rendimiento de la OTB <small>Mostramos cada calle de nuestra OTB y su rendimiento</small></h2><br><br>
-                                    <div id="chart-line" class="flot-chart"></div>
-                                    <div class="flot-chart-legend flot-chart-legend--line"></div>
-                            </div>
-                            
-                        </div>
+
+                        
                     </div>
 
                     <div class="col-md-5">
                         <div class="card widget-analytic">
                             <div class="card__header">
-                                <h2 align="center"><img src="img/direc.png" width="40%" alt=""> <br><br> <small>Seleccione la directica de Comición de agua.</small></h2>
-                                <div class="actions">
-                                    <div class="dropdown">
-                                        <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
-                                        <ul class="dropdown-menu pull-right">
-                                            <li><a href="">Guardar</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <h2 align="center"><img src="img/direc.png" width="40%" alt=""> <br><br> <small>Lista de Administradores del sistema CAP-21.</small></h2>
                             </div>
-                            <div class="card__body">
-                                <div class="input-group">
-                                    <div class="form-group">
-                                        <span class="input-group-addon"></span>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control text-center" placeholder="Presidente(a) Comite Agua" disabled>
-                                            <i class="form-group__bar"></i>
+                            <div class="list-group list-group--striped">
+                                <div class="list-group-item media">
+                                    <div class="pull-left">
+                                        <img class="avatar-img" src="img/usuarios/boy-5.png" alt="">
+                                    </div>
+                                    <div class="pull-right">
+                                        <div class="actions">
+                                            <div class="dropdown">
+                                                <a data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+    
+                                                <ul class="dropdown-menu pull-right">
+                                                    <li><a href="">Eliminar Administrador</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
-                                    <span class="input-group-addon"><button class="btn btn-default btn--icon"><i class="zmdi zmdi-account"></i></button></span>
-                                    <div class="form-group">
-                                        <select class="select2" data-placeholder="Seleccione al socio correcto">
-                                            <option>&nbsp;</option>
-                                            <option>001 - Saul Mamani</option>
-                                            <option>002 - Gustavo Cerezo</option>
-                                            <option>003 - Pamela Poma</option>
-                                            <option>004 - Fabiola Poma</option>
-                                        </select>
+                                    <div class="media-body">
+                                        <div class="list-group__heading"> Usuario: admin@otb21.com </div>
+                                        <small class="list-group__text">Contraseña: **********</small>
                                     </div>
                                 </div>
-                                <div class="input-group">
-                                    <div class="form-group">
-                                        <span class="input-group-addon"></span>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control text-center" placeholder="Secretario(a) Comite Agua" disabled>
-                                            <i class="form-group__bar"></i>
+    
+                                <div class="list-group-item media">
+                                    <div class="pull-right">
+                                        <div class="actions">
+                                            <div class="dropdown">
+                                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+    
+                                                <ul class="dropdown-menu pull-right">
+                                                    <li><a href="">Eliminar Administrador</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
-                                    <span class="input-group-addon"><button class="btn btn-default btn--icon"><i class="zmdi zmdi-account"></i></button></span>
-                                    <div class="form-group">
-                                        <select class="select2" data-placeholder="Seleccione al socio correcto">
-                                            <option>&nbsp;</option>
-                                            <option>001 - Saul Mamani</option>
-                                            <option>002 - Gustavo Cerezo</option>
-                                            <option>003 - Pamela Poma</option>
-                                            <option>004 - Fabiola Poma</option>
-                                        </select>
+                                    <div class="pull-left">
+                                        <img class="avatar-img" src="img/usuarios/boy-5.png" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="list-group__heading"> Usuario: juvenal@otb21.com </div>
+                                        <small class="list-group__text">Contraseña: **************</small>
                                     </div>
                                 </div>
-                                <div class="input-group">
-                                    <div class="form-group">
-                                        <span class="input-group-addon"></span>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control text-center" placeholder="Tesorero(a) Comite Agua" disabled>
-                                            <i class="form-group__bar"></i>
+    
+                                <div class="list-group-item media">
+                                    <div class="pull-right">
+                                        <div class="actions">
+                                            <div class="dropdown">
+                                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+    
+                                                <ul class="dropdown-menu pull-right">
+                                                    <li><a href="">Eliminar Administrador</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
-                                    <span class="input-group-addon"><button class="btn btn-default btn--icon"><i class="zmdi zmdi-account"></i></button></span>
-                                    <div class="form-group">
-                                        <select class="select2" data-placeholder="Seleccione al socio correcto">
-                                            <option>&nbsp;</option>
-                                            <option>001 - Saul Mamani</option>
-                                            <option>002 - Gustavo Cerezo</option>
-                                            <option>003 - Pamela Poma</option>
-                                            <option>004 - Fabiola Poma</option>
-                                        </select>
+                                    <div class="pull-left">
+                                        <img class="avatar-img" src="img/usuarios/boy-5.png" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="list-group__heading"> Usuario: eliceo@otb21.com </div>
+                                        <small class="list-group__text">Contraseña: **************</small>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
-                        
                     </div>
                 </div>
 
@@ -608,7 +673,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>z
                     
                 </div>
 
