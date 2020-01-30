@@ -405,22 +405,20 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="content__header">
-                            <h2>Cuenta</h2>
+                            <h2>Medidores</h2>
 
                             <div class="actions">
                                 <div class="dropdown">
                                     <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
                                     <ul class="dropdown-menu pull-right">
-                                        <li><a href="">Change Date Range</a></li>
-                                        <li><a href="">Change Graph Type</a></li>
-                                        <li><a href="">Other Settings</a></li>
+                                        <li><a href="">Refrescar</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="card">
                             <div class="card__header">
-                                <h2 align="center"><img src="img/usu.png" width="30%" alt=""> <br><br> <small>No se como lo vayas a poner gustavin, osea sobre las acciones con una sola cuenta jejeje.</small></h2>
+                                <h2 align="center"><img src="img/usu.png" width="30%" alt=""> <br><br> <small>Seleccione los medidores pertenecientes al socio que registraras.</small></h2>
                                 <br>
                                 <div class="col-sm-12 col-md-12">
                                     <div class="form-group">
@@ -442,9 +440,18 @@
                             </div>
                         </div>
 
-                        <div class="card hidden-xs hidden-sm">
+                        <div class="card">
                             <div class="card__header">
-                                <h2 align="center"><img class="avatar-img" src="img/usuarios/ees.png" alt=""> <br><br> Aviso Importante<small>Si se decea hacer el cambio de nombre debe de cancelar una suma de Bs.- 500.00 muy aparte de la compra de acción.</small></h2>
+                                <h2 align="center"><img class="avatar-img" src="img/usuarios/ees.png" alt=""> <br><br> Aviso Importante<small>Esta acción de cambio de nombre se mostrara en las targetas del perfil del socio.</small></h2><br>
+                                    <div class="col-md-12" align="center">
+                                        <div class="form-group">Habilita si cambio de nombre
+                                            <div class="toggle-switch">
+                                            <input type="checkbox" class="toggle-switch__checkbox">
+                                            <i class="toggle-switch__helper" ></i>.
+                                            </div>
+                                        </div>
+                                    </div><br>
+                                
                             </div>
                         </div>
 
@@ -493,7 +500,7 @@
                                                 <i class="form-group__bar"></i>
                                             </div>
                                             <div class="form-group">
-                                                <select class="select2" data-placeholder="Tipo de Cambio">
+                                                <select class="select2" data-placeholder="Tipo de Pago">
                                                     <option>&nbsp;</option>
                                                     <option>Bolivianos</option>
                                                     <option>Dolares</option>
@@ -615,7 +622,7 @@
                                         </div>
         
                                         <br/><br>
-
+                                        
                                         <p align="center">
                                             <label class="checkbox-inline">
                                                 <input type="checkbox" value="option2">
