@@ -144,6 +144,9 @@ create table recivo
     lecturaActual int,
     numeroRecivo int not null,
     fechaRecivo date not null,
+    monto double,
+    multa double,
+    /* Esas multas hay que jalar de las tablas de multas */
     FOREIGN KEY(idSocio)REFERENCES socio(idSocio)ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY(lecturaActual)REFERENCES lecturaMedidor(lecturaActual)ON UPDATE CASCADE ON DELETE CASCADE
 );
