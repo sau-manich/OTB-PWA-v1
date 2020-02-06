@@ -1,7 +1,7 @@
 {
-    "name": "ACUOTB-PWA",
-    "short_name": "ACUOTB",
-    "description": "Bienvenido a ACUOTB, la primera aplicacion PWA para uso personal de accionistas socios :)",
+    "name": "CAP-21",
+    "short_name": "CAP-21",
+    "description": "Bienvenido a CAP-21, la primera aplicacion PWA para uso personal de accionistas socios :)",
     "background_color": "#1E2A31",
     "theme_color": "#22313A",
     "orientation": "portrait",
